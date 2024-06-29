@@ -13,24 +13,10 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SQL.md",
+                "file": "Summaries/Airflow.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "1723f5dcf3ca8f1c",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "c6e155ae4e864ee3",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           }
         ]
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SQL.md",
+                "file": "Summaries/Airflow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SQL.md",
+                "file": "Summaries/Airflow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SQL.md"
+                "file": "Summaries/Airflow.md"
               }
             }
           }
@@ -160,11 +146,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ab69a536cc7bb049",
+  "active": "eebf894de0eface0",
   "lastOpenFiles": [
+    "Summaries/Pasted image 20240121114012.png",
+    "Summaries/Pasted image 20240121094706.png",
+    "Summaries/Pasted image 20240121093700.png",
+    "Summaries/Pasted image 20240613093353.png",
+    "Summaries/Pasted image 20240617091414.png",
+    "Summaries/Pasted image 20240622101024.png",
+    "Summaries/Pasted image 20240622095606.png",
+    "Summaries/Pasted image 20240622095322.png",
+    "Summaries/Pasted image 20240617084933.png",
+    "Summaries/Pasted image 20240120211123.png",
+    "Summaries/Pasted image 20240120210431.png",
+    "Summaries/SQL.md",
     "Questions",
     "Summaries/Python.md",
-    "Summaries/SQL.md",
     "Summaries/GCP.md",
     "Summaries/Airflow.md",
     "Summaries/Spark.md",

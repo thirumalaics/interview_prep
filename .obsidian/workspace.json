@@ -1,0 +1,175 @@
+{
+  "main": {
+    "id": "dcb7c87bce5e544b",
+    "type": "split",
+    "children": [
+      {
+        "id": "b2869c88e4c588cb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "eebf894de0eface0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Summaries/SQL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "1723f5dcf3ca8f1c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c6e155ae4e864ee3",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b968422b115bf227",
+    "type": "split",
+    "children": [
+      {
+        "id": "f8096d2fc5b4ac10",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ab69a536cc7bb049",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "629bf254231d7454",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b1ecb7eb66eec398",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1a43fe8818ee1be4",
+    "type": "split",
+    "children": [
+      {
+        "id": "f2cf50bde75ad489",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1a6222f8158ee77a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Summaries/SQL.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9e45ec31e420b9bf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Summaries/SQL.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "faf31ea73c086531",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "af88e7c6e6910cef",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Summaries/SQL.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "ab69a536cc7bb049",
+  "lastOpenFiles": [
+    "Questions",
+    "Summaries/Python.md",
+    "Summaries/SQL.md",
+    "Summaries/GCP.md",
+    "Summaries/Airflow.md",
+    "Summaries/Spark.md",
+    "Untitled.md",
+    "Summaries",
+    "Welcome.md"
+  ]
+}

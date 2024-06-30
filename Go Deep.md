@@ -1,0 +1,1 @@
+1. [java - What is the difference between JVM, JDK, JRE & OpenJDK? - Stack Overflow](https://stackoverflow.com/questions/11547458/what-is-the-difference-between-jvm-jdk-jre-openjdk) [[Executor memory#What is JVM?]]

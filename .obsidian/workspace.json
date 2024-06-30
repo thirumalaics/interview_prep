@@ -18,6 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "97c19b35ffb677ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Go Deep.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -149,9 +161,10 @@
   },
   "active": "eebf894de0eface0",
   "lastOpenFiles": [
+    "Go Deep.md",
+    "Summaries/SPARK/Executor memory.md",
     "Pasted image 20240630092806.png",
     "Summaries/Spark.md",
-    "Summaries/SPARK/Executor memory.md",
     "Summaries/SPARK",
     "Summaries/Airflow.md",
     "Summaries/Pasted image 20240121114012.png",
@@ -163,12 +176,10 @@
     "Summaries/Pasted image 20240622095606.png",
     "Summaries/Pasted image 20240622095322.png",
     "Summaries/Pasted image 20240617084933.png",
-    "Summaries/Pasted image 20240120211123.png",
     "Summaries/SQL.md",
     "Questions",
     "Summaries/Python.md",
     "Summaries/GCP.md",
-    "Untitled.md",
     "Summaries",
     "Welcome.md"
   ]

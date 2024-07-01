@@ -65,13 +65,17 @@
 - the concurrent tasks running inside executor share the JVM's on-heap memory
 - spark supports three mem regions within an executor
 	- reserved memory
+		- used to store spark internal objects
+		- executor mem should be at least 1.5 times reserved memory, other wise the app will fail stating that the exec mem is too low
+
 	- user memory
 		- set by (exec mem - reserved)\*(1 - `spark.memory.fraction`)
 	- spark memory
 		- set by (executor mem - reserved)\*`spark.memory.fraction`
 		- spark mem = storage mem + execution mem
-			- storage mem = `spark.memory.storageFraction` *
+			- storage mem = `spark.memory.storageFraction` \* spark mem
+
 
 [Spark Memory Management - Cloudera Community - 317794](https://community.cloudera.com/t5/Community-Articles/Spark-Memory-Management/ta-p/317794#toc-hId-1674349369)
-
+[pyspark - What is user memory in spark? - Stack Overflow](https://stackoverflow.com/questions/74586108/what-is-user-memory-in-spark)
 [(6) Apache Spark Memory Management: Deep Dive | LinkedIn](https://www.linkedin.com/pulse/apache-spark-memory-management-deep-dive-deepak-rajak/)

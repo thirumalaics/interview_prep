@@ -33,3 +33,30 @@
 			- on-heap > off-heap > disk
 		- is off-heap within the memory available to JVM?
 			- uses [direct-memory portion]([Configuring Off-Heap Store (softwareag.com)](https://documentation.softwareag.com/terracotta/terracotta_440/webhelp/bigmemory-go-webhelp/index.html#page/bmg-webhelp/co-tiers_configuring_offheap_store.html)) of the JVM
+## Mem Management
+- divided into two types:
+	- Static memory manager
+		- deprecated due to lack of flexibility
+	- Unified mem manager(default from spark 1.6.0)
+- in both memory managers, portion of Java Heap is allocated for processing spark apps
+- rest is used for Java class references and md usage
+
+## SMM
+- traditional model
+- divides mem into two fixed partitions statically
+	- size of storage, execution and other memory is fixed during application processing
+	- configurable before app start
+## UMM
+- provides dynamic memory allocation
+- allocates region of memory as a unified memory container that is shared by execution and storage
+- borrowing of memory is possible bw storage and execution
+	- storage can borrow unused execution memory
+	- execution can borrow storage memory irrespective of whether it is in use or not
+- additional to heap and off-heap, there is external process memory
+	- kind of memory is mainly used for PySpark and SparkR applications
+	- these processes reside outside the JVM
+#### Heap memory
+
+[Spark Memory Management - Cloudera Community - 317794](https://community.cloudera.com/t5/Community-Articles/Spark-Memory-Management/ta-p/317794#toc-hId-1674349369)
+
+[(6) Apache Spark Memory Management: Deep Dive | LinkedIn](https://www.linkedin.com/pulse/apache-spark-memory-management-deep-dive-deepak-rajak/)

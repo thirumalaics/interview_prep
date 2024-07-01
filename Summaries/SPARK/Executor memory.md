@@ -1,9 +1,10 @@
 ## What is a VM?
 - is no different than any physical computer
-- it has cpu, mem, disks and nwing capability
+- it has cpu, mem, disks and nw-ing capability
 - VMs are sw defined computers within physical servers, existing only as code
 - sw based version of a computer with resources borrowed from a physical host computer
 - VM is a computer file, typically called an image that behaves like an actual computer
+	- specs of the VM goes in the image
 - partitioned from the host system - isolated
 ## What is JVM?
 - virtual machine that enables a computer to run
@@ -13,7 +14,7 @@
 - understands \*.class
 	- class files are compiled \*.java files
 	- class files contains byte codes that JVM understands
-- this is the entity that makes java to be a portable language
+- JVM is the entity that makes java to be a portable language
 - there are specific implementations of the JVM for different systems(windows, Linux, mac)
 ## JVM Heap
 - now what the hell is heap?
@@ -33,6 +34,7 @@
 			- on-heap > off-heap > disk
 		- is off-heap within the memory available to JVM?
 			- uses [direct-memory portion]([Configuring Off-Heap Store (softwareag.com)](https://documentation.softwareag.com/terracotta/terracotta_440/webhelp/bigmemory-go-webhelp/index.html#page/bmg-webhelp/co-tiers_configuring_offheap_store.html)) of the JVM
+			- there is confusion, because above, off-heap memory is described as mem outside JVM
 ## Mem Management
 - divided into two types:
 	- Static memory manager
@@ -48,14 +50,27 @@
 	- configurable before app start
 ## UMM
 - provides dynamic memory allocation
-- allocates region of memory as a unified memory container that is shared by execution and storage
+- allocates region of memory as a unified memory container 
+	- shared by execution and storage
 - borrowing of memory is possible bw storage and execution
 	- storage can borrow unused execution memory
 	- execution can borrow storage memory irrespective of whether it is in use or not
 - additional to heap and off-heap, there is external process memory
-	- kind of memory is mainly used for PySpark and SparkR applications
+	- this kind of memory is mainly used for PySpark and SparkR applications
 	- these processes reside outside the JVM
 #### Heap memory
+- by default spark uses on-heap mem only
+	- this size is configured by `spark.executor.memory` parameter when the spark application starts
+	- can be set while initiating spark session
+- the concurrent tasks running inside executor share the JVM's on-heap memory
+- spark supports three mem regions within an executor
+	- reserved memory
+	- user memory
+		- set by (exec mem - reserved)\*(1 - `spark.memory.fraction`)
+	- spark memory
+		- set by (executor mem - reserved)\*`spark.memory.fraction`
+		- spark mem = storage mem + execution mem
+			- storage mem = `spark.memory.storageFraction` *
 
 [Spark Memory Management - Cloudera Community - 317794](https://community.cloudera.com/t5/Community-Articles/Spark-Memory-Management/ta-p/317794#toc-hId-1674349369)
 

@@ -1,0 +1,16 @@
+ - how are nulls handled in bq order by and group by?
+	- in bq order by nulls are considered the least possible values, so in ascending they appear first and in descending they appear last
+	- they are considered less than negatives
+- NaN is a term used to represent a value that is undefined or unrepresentable
+	- floating point
+	- we get it usually when we try to perform an operation that is mathematically not defined
+		- for example ln -4, sqrt(-2) but not 1/0 this gives inf
+	- aka Not a number
+	- [math - What is NaN (Not a Number) in the words of a beginner? - Stack Overflow](https://stackoverflow.com/questions/59335027/what-is-nan-not-a-number-in-the-words-of-a-beginner)
+- where as null is used to indicate absence of value or missing value
+- null is considered less than NaN
+	- -inf greater than NaN and null in bq
+- division by 0 is not possible in bq
+	- I manually tested it
+- grouping on columns with nulls considers null to be part of one group or in other words groups the nulls together
+- but when we try an equi join on columns with nulls, the rows with nulls are not returned

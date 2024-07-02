@@ -11,8 +11,12 @@
             "id": "2f7b73c576076c70",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Summaries/GCP.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Summaries/GCP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Summaries/GCP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Summaries/GCP.md"
+              }
             }
           }
         ]
@@ -140,10 +149,10 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/Spark.md",
     "Go Deep.md",
     "Summaries/SPARK/Executor memory.md",
     "Pasted image 20240630092806.png",
-    "Summaries/Spark.md",
     "Summaries/SPARK",
     "Summaries/Airflow.md",
     "Summaries/Pasted image 20240121114012.png",

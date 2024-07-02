@@ -88,6 +88,12 @@
 		- set by (executor mem - reserved)\*`spark.memory.fraction`
 		- spark mem = storage mem + execution mem
 			- storage mem = `spark.memory.storageFraction` \* spark mem
+				- LRU to clear out old objects
+			- execution mem = 1- storage mem
+				- used to store objects required during the execution of spark tasks
+					- ex: stores hash map for hash agg step
+				- 
+				- used for shuffles, joins, sorts and aggs
 - there is YARN memory overhead
 	- this causes OOM errors
 	- off-heap mem allocated to executor

@@ -72,13 +72,38 @@
 
 	- user memory
 		- set by (exec mem - reserved)\*(1 - `spark.memory.fraction`)
+		- spark internal md, including 
+		- used for user defined objects like UDfs, hashmap
+			- stores RDD dependency and transformations info
+			- data in here cannot spill into disk
+			- throws OOM error if objects exceed the given space
+			- user defined data structures: custom classes, collections or any other structures required for processing logics
+			- md and data structures related to RDD partitions may reside in user mem
+			- any external lib used, their objects and data structures will be allocated from user mem
+			- md related to the broadcast variables reside in user mem
 	- spark memory
+		- memory pool managed by Spark
+		- used to store intermediate states while doing task execution
+		- cached persistent data stored here in storage mem
 		- set by (executor mem - reserved)\*`spark.memory.fraction`
 		- spark mem = storage mem + execution mem
 			- storage mem = `spark.memory.storageFraction` \* spark mem
-
+- there is YARN memory overhead
+	- this causes OOM errors
+	- off-heap mem allocated to executor
+	- stores spark internal objects, language specific objects
+		- thread stacks - maintains state of individual threads in a multithread app
+		- [Java NIO direct buffers]([Java NIO (oracle.com)](https://docs.oracle.com/en/java/javase//21/core/java-nio.html)) - 
+			- buffers: containers for data, and other structures such as charsets, channels and selectable channels
+			- charsets are mapping bw bytes and unicode characters
+			- channels represent connections to entities capable of performing IO operations
+	- by default 10% of executor mem or 384 mb, whichever is higher
+	- [Resolve the error "Container killed by YARN for exceeding memory limits" in Spark on Amazon EMR | AWS re:Post (repost.aws)](https://repost.aws/knowledge-center/emr-spark-yarn-memory-limit)
+		- reducing the num of cores reduces the max number of tasks
+			- which reduces the amount of memory required
 
 [Spark Memory Management - Cloudera Community - 317794](https://community.cloudera.com/t5/Community-Articles/Spark-Memory-Management/ta-p/317794#toc-hId-1674349369)
 [pyspark - What is user memory in spark? - Stack Overflow](https://stackoverflow.com/questions/74586108/what-is-user-memory-in-spark)
 [(6) Apache Spark Memory Management: Deep Dive | LinkedIn](https://www.linkedin.com/pulse/apache-spark-memory-management-deep-dive-deepak-rajak/)
 https://stackoverflow.com/questions/77812120/what-does-data-is-stored-in-deserialized-format-in-spark-mean
+[Apache Spark: Tackling Out-of-Memory Errors &Memory Management | LinkedIn](https://www.linkedin.com/pulse/apache-spark-tackling-out-of-memory-errors-memory-management-kumar/)

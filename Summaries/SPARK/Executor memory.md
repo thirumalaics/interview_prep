@@ -67,6 +67,8 @@
 	- reserved memory
 		- used to store spark internal objects
 		- executor mem should be at least 1.5 times reserved memory, other wise the app will fail stating that the exec mem is too low
+		- still this value is hardcoded
+		- https://stackoverflow.com/questions/78692374/spark-executor-memory-overhead
 
 	- user memory
 		- set by (exec mem - reserved)\*(1 - `spark.memory.fraction`)

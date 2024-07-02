@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/GCP.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/GCP.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/GCP.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/GCP.md"
+                "file": "Summaries/SPARK/Executor memory.md"
               }
             }
           }
@@ -149,6 +149,7 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/GCP.md",
     "Summaries/Spark.md",
     "Go Deep.md",
     "Summaries/SPARK/Executor memory.md",
@@ -167,7 +168,6 @@
     "Summaries/SQL.md",
     "Questions",
     "Summaries/Python.md",
-    "Summaries/GCP.md",
     "Summaries",
     "Welcome.md"
   ]

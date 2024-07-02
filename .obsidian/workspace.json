@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/Spark.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/Spark.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/Spark.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/Spark.md"
+                "file": "Summaries/SPARK/Executor memory.md"
               }
             }
           }
@@ -146,12 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2f7b73c576076c70",
+  "active": "ab69a536cc7bb049",
   "lastOpenFiles": [
+    "Summaries/Spark.md",
     "Summaries/SPARK/Spark shuffling.md",
     "Summaries/SPARK/Executor memory.md",
     "Summaries/GCP.md",
-    "Summaries/Spark.md",
     "Go Deep.md",
     "Pasted image 20240630092806.png",
     "Summaries/SPARK",

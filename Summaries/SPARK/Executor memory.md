@@ -92,8 +92,24 @@
 			- execution mem = 1- storage mem
 				- used to store objects required during the execution of spark tasks
 					- ex: stores hash map for hash agg step
-				- 
+				- blocks from this pool cannot be forcefully evicted by other threads
+				- evicted immideately after each operation
 				- used for shuffles, joins, sorts and aggs
+
+#### off-Heap memory
+- allocate memory objects(serialized to byte array) to memory outside the heap of JVM
+	- directly managed by the OS and not the Virtual machine
+	- garbage collector does not have access to this
+- slower read writes to this space
+- user has to deal with managing the allocated memory
+- by default off-heap memory is disabled
+- off heap mem utilization can be seen in UI
+- execution memory and storage mem once the off heap mem is abled
+	- exec mem and storage mem =  inside heap + outside heap
+- offheap mem usage can improve performance as it is safe from GC
+- when an executor is killed, all cached data for that executor would be gone but with off-heap mem, the data would persist
+
+
 - there is YARN memory overhead
 	- this causes OOM errors
 	- off-heap mem allocated to executor

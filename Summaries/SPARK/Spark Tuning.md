@@ -1,0 +1,14 @@
+- concurrent tasks execute the same operations
+- each stage contains a sequence of transformations that can be completed without shuffling the full data
+- [coalesce and repartition](https://stackoverflow.com/questions/31610971/spark-repartition-vs-coalesce)
+	- coalesce is an optimized version of repartition
+	- allows avoiding data movement for decreasing number of RDD partitions
+	- coalesce avoids a full shuffle
+		- as per the given value to coalesce, spark keeps the data on these many number of partitions
+		- moves the data off the extra nodes on to the nodes where data did not move
+		- repartition internally calls same method as coalesce but with shuffle argument set to True
+		- both are narrow transformation
+		- repartition algo creates new partitions with data distributed evenly
+		- whereas coalesce may result in partitions with different amounts of data
+			- and remember unequal sized partitions are generally slower to work with than equal sized partitions
+			- 

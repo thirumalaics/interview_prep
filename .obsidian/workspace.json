@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Executor memory.md",
+                "file": "Summaries/SPARK/Spark Tuning.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Executor memory.md",
+                "file": "Summaries/SPARK/Spark Tuning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Executor memory.md",
+                "file": "Summaries/SPARK/Spark Tuning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Executor memory.md"
+                "file": "Summaries/SPARK/Spark Tuning.md"
               }
             }
           }
@@ -149,8 +150,9 @@
   "active": "ab69a536cc7bb049",
   "lastOpenFiles": [
     "Summaries/Spark.md",
-    "Summaries/SPARK/Spark shuffling.md",
+    "Summaries/SPARK/Spark Tuning.md",
     "Summaries/SPARK/Executor memory.md",
+    "Summaries/SPARK/Spark shuffling.md",
     "Summaries/GCP.md",
     "Go Deep.md",
     "Pasted image 20240630092806.png",

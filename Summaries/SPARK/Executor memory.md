@@ -119,6 +119,7 @@
 			- buffers: containers for data, and other structures such as charsets, channels and selectable channels
 			- charsets are mapping bw bytes and unicode characters
 			- channels represent connections to entities capable of performing IO operations
+		- [interned strings](https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-2/#:~:text=for%20example%20for%20interned%20Strings%20and%20direct%20byte%20buffers.)
 	- by default 10% of executor mem or 384 mb, whichever is higher
 	- [Resolve the error "Container killed by YARN for exceeding memory limits" in Spark on Amazon EMR | AWS re:Post (repost.aws)](https://repost.aws/knowledge-center/emr-spark-yarn-memory-limit)
 		- reducing the num of cores reduces the max number of tasks

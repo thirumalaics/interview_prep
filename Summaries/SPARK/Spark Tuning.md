@@ -33,10 +33,10 @@
 	- we can avoid setting this by turning dynamic allocation `spark.dynamicAllocation.enabled`
 	- dynamic allocations enables a Spark application to request executors when there is a backlog of pending tasks and frees up executors when idle
 - YARN has configurations that constrain the amount of resources that spark can use
-	- `yarn.nodemanager.resource.memory-mb` controls the max sum of memory used by ***containers*** on each node
-	- `yarn.nodemanager.resource.cup-vc`
-
-
-
+	- `yarn.nodemanager.resource.memory-mb` controls the max sum of memory used by ***containers(plural)*** on each node
+	- `yarn.nodemanager.resource.cup-vcords` controls the maximum sum of cores used by the ***containers(plural)*** on each node
+- full mem requested to YARN for each executor `spark.yarn.executor.memoryOverhead` + `spark.executor.memory`
+- yarn may also increment the requested memory up a little
+- running executors with too much mem often results in excessive garbage collection delays, good upper limit is 65 gb
 - shuffle partitions
 - 

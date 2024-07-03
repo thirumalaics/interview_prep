@@ -55,5 +55,10 @@
 		- what this configuration does not consider
 			- 63
 - in yarn running mode, the default for the following are:
-	- spark.executor.instances = 2
-	- spark.driver.cores has a default of 1
+	- [reference](https://spark.apache.org/docs/latest/running-on-yarn.html) for the following
+		- spark.executor.instances = 2
+		- spark.driver.cores has a default of 1
+	- [reference](https://spark.apache.org/docs/latest/configuration.html) for the ollowing
+		- spark.executor.cores has a default of 1 in YARN mode
+		- spark.driver.memory has a default of 1GB
+		- spark.executor.memory has a default of 1GB

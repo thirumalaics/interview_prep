@@ -38,5 +38,19 @@
 - full mem requested to YARN for each executor `spark.yarn.executor.memoryOverhead` + `spark.executor.memory`
 - yarn may also increment the requested memory up a little
 - running executors with too much mem often results in excessive garbage collection delays, good upper limit is 65 gb
+	- total mem available is an important factor affecting GC performance
+	- throughput is [inversely proportional](https://docs.oracle.com/en/java/javase/17/gctuning/factors-affecting-garbage-collection-performance.html) to the amount of mem available
 - shuffle partitions
-- 
+- cluster with 6 nodes, 16 cores and 64 GB mem/ node
+	- `yarn.nodemanager.resource.memory-mb` = 63GB * 1024
+	- `yarn.nodemanager.resource.cpu-vcores` = 15
+	- we avoid allocating 100% resources to the containers themselves, because the node needs some resources to run the OS and Hadoop daemons
+		- so a gig and a core for these system processes on every machine
+- the instinctive approach would be:
+	- --num-executors 6 --executor-cores 15 --executor-memory 63G
+		- this means
+			- 1 executor per available node
+			- all cores available to each executor
+			- all available memory allocated to the executor alone
+		- what this configuration does not consider
+			- 63

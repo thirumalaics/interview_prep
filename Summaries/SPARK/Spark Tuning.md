@@ -54,3 +54,6 @@
 			- all available memory allocated to the executor alone
 		- what this configuration does not consider
 			- 63
+- in yarn running mode, the default for the following are:
+	- spark.executor.instances = 2
+	- spark.driver.cores has a default of 1

@@ -147,14 +147,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ab69a536cc7bb049",
+  "active": "2f7b73c576076c70",
   "lastOpenFiles": [
-    "Summaries/Spark.md",
+    "Go Deep.md",
     "Summaries/SPARK/Spark Tuning.md",
+    "Summaries/Spark.md",
     "Summaries/SPARK/Executor memory.md",
     "Summaries/SPARK/Spark shuffling.md",
     "Summaries/GCP.md",
-    "Go Deep.md",
     "Pasted image 20240630092806.png",
     "Summaries/SPARK",
     "Summaries/Airflow.md",

@@ -11,4 +11,8 @@
 		- repartition algo creates new partitions with data distributed evenly
 		- whereas coalesce may result in partitions with different amounts of data
 			- and remember unequal sized partitions are generally slower to work with than equal sized partitions
-			- 
+- at each stage boundary, data is written to disks by tasks in the parent stages and then fetched over the nw by tasks in the child stage
+	- involves heavy disk and nw IO
+- avoid GBK when performing an associative reductive operation
+	- sum, count
+	- gbk transfers the entire dataset across the nw, rbk will compute local sums for each key in each partition and shuffles

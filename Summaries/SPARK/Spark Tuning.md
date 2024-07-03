@@ -1,3 +1,4 @@
+[Part I](https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-1/)
 - concurrent tasks execute the same operations
 - each stage contains a sequence of transformations that can be completed without shuffling the full data
 - [coalesce and repartition](https://stackoverflow.com/questions/31610971/spark-repartition-vs-coalesce)
@@ -16,3 +17,26 @@
 - avoid GBK when performing an associative reductive operation
 	- sum, count
 	- gbk transfers the entire dataset across the nw, rbk will compute local sums for each key in each partition and shuffles
+- when shuffles are better
+	- when the data arrives in large unsplittable files
+		- repartitioning can will allow operations that come after it to leverage more of the cluster's CPU
+
+[PART II](https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-2/)
+#### Tuning resource allocation
+- every executor in an application has the same fixed number of cores and heap size
+- --executor-cores or `spark.executor.cores`
+	- determines max num of concurrent tasks an executor can run
+- `spark.executor.memory`
+	- impacts the amount of data Spark can cache, as well as the maximum sizes of the shuffle data structures
+- `spark.executor.instances`
+	- num of executors requested
+	- we can avoid setting this by turning dynamic allocation `spark.dynamicAllocation.enabled`
+	- dynamic allocations enables a Spark application to request executors when there is a backlog of pending tasks and frees up executors when idle
+- YARN has configurations that constrain the amount of resources that spark can use
+	- `yarn.nodemanager.resource.memory-mb` controls the max sum of memory used by ***containers*** on each node
+	- `yarn.nodemanager.resource.cup-vc`
+
+
+
+- shuffle partitions
+- 

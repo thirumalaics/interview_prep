@@ -108,11 +108,16 @@
 	- exec mem and storage mem =  inside heap + outside heap
 - offheap mem usage can improve performance as it is safe from GC
 - when an executor is killed, all cached data for that executor would be gone but with off-heap mem, the data would persist
-
+- The maximum memory size of container to running executor is determined by the sum of `spark.executor.memoryOverhead`, `spark.executor.memory`, `spark.memory.offHeap.size` and `spark.executor.pyspark.memory`.
+	- [ref](The maximum memory size of container to running executor is determined by the sum of `spark.executor.memoryOverhead`, `spark.executor.memory`, `spark.memory.offHeap.size` and `spark.executor.pyspark.memory`.)
 
 - there is YARN memory overhead
+	- 
 	- this causes OOM errors
 	- off-heap mem allocated to executor
+		- this is a wrong statement with proofs that I have now
+			- memory over head is not part of off-heap
+			- https://stackoverflow.com/questions/63561233/spark-memory-overhead
 	- stores spark internal objects, language specific objects
 		- thread stacks - maintains state of individual threads in a multithread app
 		- [Java NIO direct buffers]([Java NIO (oracle.com)](https://docs.oracle.com/en/java/javase//21/core/java-nio.html)) - 

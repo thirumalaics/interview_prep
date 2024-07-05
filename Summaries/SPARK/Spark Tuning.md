@@ -53,7 +53,10 @@
 			- all cores available to each executor
 			- all available memory allocated to the executor alone
 		- what this configuration does not consider
-			- 63
+			- ![[Executor memory#^dd1ddf]]
+				- if all mem available to container is allocated just to the executor, it leaves out: memoryOverhead, pyspark memory, offheap size(if enabled)
+			- if we assign one executor per core with 15 cores, concurrency problem comes up
+			- we do not account for the driver
 - in yarn running mode, the default for the following are:
 	- [reference](https://spark.apache.org/docs/latest/running-on-yarn.html) for the following
 		- spark.executor.instances = 2

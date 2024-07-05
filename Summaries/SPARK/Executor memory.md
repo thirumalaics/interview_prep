@@ -108,8 +108,9 @@
 	- exec mem and storage mem =  inside heap + outside heap
 - offheap mem usage can improve performance as it is safe from GC
 - when an executor is killed, all cached data for that executor would be gone but with off-heap mem, the data would persist
-- The maximum memory size of container to running executor is determined by the sum of `spark.executor.memoryOverhead`, `spark.executor.memory`, `spark.memory.offHeap.size` and `spark.executor.pyspark.memory`.
+- The maximum memory size of container to running executor is determined by the sum of `spark.executor.memoryOverhead`, `spark.executor.memory`, `spark.memory.offHeap.size` and `spark.executor.pyspark.memory`. ^dd1ddf
 	- [ref](The maximum memory size of container to running executor is determined by the sum of `spark.executor.memoryOverhead`, `spark.executor.memory`, `spark.memory.offHeap.size` and `spark.executor.pyspark.memory`.)
+
 
 - there is YARN memory overhead
 	- 
@@ -129,7 +130,13 @@
 	- [Resolve the error "Container killed by YARN for exceeding memory limits" in Spark on Amazon EMR | AWS re:Post (repost.aws)](https://repost.aws/knowledge-center/emr-spark-yarn-memory-limit)
 		- reducing the num of cores reduces the max number of tasks
 			- which reduces the amount of memory required
-
+- `spark.executor.pyspark.memory`
+	- amount of mem allocated to pyspark in each executor
+	- in MB unless specified otherwise
+	- if set, pyspark mem will be limited to this number
+	- if not set, spark will not limit python's mem use
+		- it is app's responsibility to avoid exceeding the overhead memory space shared with other non-JVM processes
+		- when pyspark is run in YARN or Kubernetes, this memory is added to executor resource requests
 [Spark Memory Management - Cloudera Community - 317794](https://community.cloudera.com/t5/Community-Articles/Spark-Memory-Management/ta-p/317794#toc-hId-1674349369)
 [pyspark - What is user memory in spark? - Stack Overflow](https://stackoverflow.com/questions/74586108/what-is-user-memory-in-spark)
 [(6) Apache Spark Memory Management: Deep Dive | LinkedIn](https://www.linkedin.com/pulse/apache-spark-memory-management-deep-dive-deepak-rajak/)

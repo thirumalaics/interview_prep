@@ -56,7 +56,14 @@
 			- ![[Executor memory#^dd1ddf]]
 				- if all mem available to container is allocated just to the executor, it leaves out: memoryOverhead, pyspark memory, offheap size(if enabled)
 			- if we assign one executor per core with 15 cores, concurrency problem comes up
-			- we do not account for the driver
+			- we do not account for the driver, where will it be located if executors consumed all the available resource
+- will the number of executors be equally distributed across the available nodes?
+- better config:
+	- --num-executors 17 --executor-cores 5 --executor-memory 19G
+		- 17 / 6(nodes) = 3 executors per node except one 
+		- why this is a better option:
+		    - starting with mem, 19G per executor
+			    - since there with be max 3 executors per node, total executor mem for all nodes is 57 this leaves out 3.99 specifically for memory overhead, we might also have to allocate mem for pyspark(ignored here)
 - in yarn running mode, the default for the following are:
 	- [reference](https://spark.apache.org/docs/latest/running-on-yarn.html) for the following
 		- spark.executor.instances = 2
@@ -65,3 +72,7 @@
 		- spark.executor.cores has a default of 1 in YARN mode
 		- spark.driver.memory has a default of 1GB
 		- spark.executor.memory has a default of 1GB
+
+[Distribution of Executors, Cores and Memory for a Spark Application running in Yarn: | spark-notes (spoddutur.github.io)](https://spoddutur.github.io/spark-notes/distribution_of_executors_cores_and_memory_for_spark_application.html)
+
+[apache spark - What is the relationship between a Node, Worker, Executor, Task and Partition - Stack Overflow](https://stackoverflow.com/questions/68560515/what-is-the-relationship-between-a-node-worker-executor-task-and-partition)

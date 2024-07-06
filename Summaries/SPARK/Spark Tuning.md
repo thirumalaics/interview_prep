@@ -92,6 +92,21 @@
 ### AQE Design principle
 - AQE principle is not to make the execution plan final
 	- allow for reviews at each stage boundary
+- catalyst now stops at each stage boundary to try and apply additional optimizations given the information available on the intermediate data
+- drawbacks
+	- execution stops at each stage boundary for spark to review its plan
+	- Spark UI is more difficult to read because spark creates more jobs for a given app and those jobs do not pick up the job group and description we set
+		- what is job group and description
+
+
+
+
+
+
+
+
+
+
 - in yarn running mode, the default for the following are:
 	- [reference](https://spark.apache.org/docs/latest/running-on-yarn.html) for the following
 		- spark.executor.instances = 2

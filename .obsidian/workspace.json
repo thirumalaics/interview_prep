@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Spark Tuning.md",
+                "file": "Summaries/SPARK/Spark shuffling.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Spark Tuning.md",
+                "file": "Summaries/SPARK/Spark shuffling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Spark Tuning.md",
+                "file": "Summaries/SPARK/Spark shuffling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Spark Tuning.md"
+                "file": "Summaries/SPARK/Spark shuffling.md"
               }
             }
           }
@@ -162,9 +161,10 @@
   },
   "active": "ab0e2f0ae638871d",
   "lastOpenFiles": [
+    "Summaries/SPARK/Spark OOM.md",
+    "Summaries/SPARK/Spark Tuning.md",
     "Pasted image 20240706101615.png",
     "Summaries/SPARK/Executor memory.md",
-    "Summaries/SPARK/Spark Tuning.md",
     "Go Deep.md",
     "Summaries/Spark.md",
     "Summaries/SPARK/Spark shuffling.md",
@@ -180,7 +180,6 @@
     "Summaries/Pasted image 20240622101024.png",
     "Summaries/Pasted image 20240622095606.png",
     "Summaries/Pasted image 20240622095322.png",
-    "Summaries/Pasted image 20240617084933.png",
     "Summaries/SQL.md",
     "Questions",
     "Summaries/Python.md",

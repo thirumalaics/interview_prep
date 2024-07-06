@@ -67,6 +67,12 @@
 			    - so consideration for memory other than the executor mem is there
 			- driver is accounted for, as the node with 2 executors will be hosting the driver
 			- each executor has a good 5 cores 
+			- 
+- memory available to each task is a factor of the executor cores
+	- (`spark.executor.memory` * `spark.shuffle.memoryFraction` * `spark.shuffle.safetyFraction`)/`spark.executor.cores`
+	- these shuffle configs are not seen in the spark3+ doc
+- much of the blog was filled with components that are not applicable to dataframes
+- many configs mentioned are also not found in doc
 - in yarn running mode, the default for the following are:
 	- [reference](https://spark.apache.org/docs/latest/running-on-yarn.html) for the following
 		- spark.executor.instances = 2
@@ -77,6 +83,6 @@
 		- spark.executor.memory has a default of 1GB
 - [Spark Task Memory allocation - Stack Overflow](https://stackoverflow.com/questions/45553492/spark-task-memory-allocation)
 [Distribution of Executors, Cores and Memory for a Spark Application running in Yarn: | spark-notes (spoddutur.github.io)](https://spoddutur.github.io/spark-notes/distribution_of_executors_cores_and_memory_for_spark_application.html)
-
+[Advanced Apache Spark Training - Sameer Farooqui (Databricks) (youtube.com)](https://www.youtube.com/watch?v=7ooZ4S7Ay6Y)
 [apache spark - What is the relationship between a Node, Worker, Executor, Task and Partition - Stack Overflow](https://stackoverflow.com/questions/68560515/what-is-the-relationship-between-a-node-worker-executor-task-and-partition)
 https://stackoverflow.com/questions/71922559/in-spark-is-it-better-to-have-many-small-workers-or-few-bigger-workers

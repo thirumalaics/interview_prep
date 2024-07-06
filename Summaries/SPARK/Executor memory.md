@@ -113,7 +113,7 @@
 
 
 - there is YARN memory overhead
-	- 
+	- set by spark.executor.memoryOverhead
 	- this causes OOM errors
 	- off-heap mem allocated to executor
 		- this is a wrong statement with proofs that I have now

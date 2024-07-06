@@ -9,5 +9,6 @@
 	- fetch-decode-execute cycle repeated on a loop
 - memory is a place to have our instructions and store the values that we calculate
 	- RAM
-![[Pasted image 20240706180039.png]]- memory holds instruction and instruction has 2 parts
+![[Pasted image 20240706180039.png]]
+- memory holds instruction and instruction has 2 parts
 	- the actual instruction itself and usually a memory address

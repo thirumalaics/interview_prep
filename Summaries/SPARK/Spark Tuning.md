@@ -63,7 +63,10 @@
 		- 17 / 6(nodes) = 3 executors per node except one 
 		- why this is a better option:
 		    - starting with mem, 19G per executor
-			    - since there with be max 3 executors per node, total executor mem for all nodes is 57 this leaves out 3.99 specifically for memory overhead, we might also have to allocate mem for pyspark(ignored here)
+			    - since there with be max 3 executors per node, total executor mem for each node is (3\*19) = 57 this leaves out 3.99 specifically for memory overhead, we might also have to allocate mem for pyspark(ignored here)
+			    - so consideration for memory other than the executor mem is there
+			- driver is accounted for, as the node with 2 executors will be hosting the driver
+			- each executor has a good 5 cores 
 - in yarn running mode, the default for the following are:
 	- [reference](https://spark.apache.org/docs/latest/running-on-yarn.html) for the following
 		- spark.executor.instances = 2
@@ -72,7 +75,8 @@
 		- spark.executor.cores has a default of 1 in YARN mode
 		- spark.driver.memory has a default of 1GB
 		- spark.executor.memory has a default of 1GB
-
+- [Spark Task Memory allocation - Stack Overflow](https://stackoverflow.com/questions/45553492/spark-task-memory-allocation)
 [Distribution of Executors, Cores and Memory for a Spark Application running in Yarn: | spark-notes (spoddutur.github.io)](https://spoddutur.github.io/spark-notes/distribution_of_executors_cores_and_memory_for_spark_application.html)
 
 [apache spark - What is the relationship between a Node, Worker, Executor, Task and Partition - Stack Overflow](https://stackoverflow.com/questions/68560515/what-is-the-relationship-between-a-node-worker-executor-task-and-partition)
+https://stackoverflow.com/questions/71922559/in-spark-is-it-better-to-have-many-small-workers-or-few-bigger-workers

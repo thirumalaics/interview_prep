@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Spark shuffling.md",
+                "file": "Summaries/how does computers process data.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Spark shuffling.md",
+                "file": "Summaries/how does computers process data.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Spark shuffling.md",
+                "file": "Summaries/how does computers process data.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Spark shuffling.md"
+                "file": "Summaries/how does computers process data.md"
               }
             }
           }
@@ -161,13 +162,20 @@
   },
   "active": "ab0e2f0ae638871d",
   "lastOpenFiles": [
+    "Pasted image 20240706180039.png",
+    "Pasted image 20240706175908.png",
+    "Pasted image 20240706175850.png",
+    "Pasted image 20240706175428.png",
+    "Pasted image 20240706175424.png",
+    "Summaries/SPARK/Spark shuffling.md",
+    "Summaries/how does computers process data.md",
+    "Summaries/Untitled",
     "Summaries/SPARK/Spark OOM.md",
     "Summaries/SPARK/Spark Tuning.md",
     "Pasted image 20240706101615.png",
     "Summaries/SPARK/Executor memory.md",
     "Go Deep.md",
     "Summaries/Spark.md",
-    "Summaries/SPARK/Spark shuffling.md",
     "Summaries/GCP.md",
     "Pasted image 20240630092806.png",
     "Summaries/SPARK",
@@ -176,10 +184,6 @@
     "Summaries/Pasted image 20240121094706.png",
     "Summaries/Pasted image 20240121093700.png",
     "Summaries/Pasted image 20240613093353.png",
-    "Summaries/Pasted image 20240617091414.png",
-    "Summaries/Pasted image 20240622101024.png",
-    "Summaries/Pasted image 20240622095606.png",
-    "Summaries/Pasted image 20240622095322.png",
     "Summaries/SQL.md",
     "Questions",
     "Summaries/Python.md",

@@ -67,17 +67,36 @@
 			    - so consideration for memory other than the executor mem is there
 			- driver is accounted for, as the node with 2 executors will be hosting the driver
 			- each executor has a good 5 cores 
-			- 
 - memory available to each task is a factor of the executor cores
 	- (`spark.executor.memory` * `spark.shuffle.memoryFraction` * `spark.shuffle.safetyFraction`)/`spark.executor.cores`
 	- these shuffle configs are not seen in the spark3+ doc
 - much of the blog was filled with components that are not applicable to dataframes
 - many configs mentioned are also not found in doc
+
+
+[Spark 3 tuning]([How does Apache Spark 3.0 increase the performance of your SQL workloads - Cloudera Blog](https://blog.cloudera.com/how-does-apache-spark-3-0-increase-the-performance-of-your-sql-workloads/))
+- the following are the problems AQE solves
+### flaw in the initial catalyst design
+![[Pasted image 20240706101615.png]]
+- first stage has an optimum number of partitions for the first stage
+- for the second stage since shuffling is needed, it uses the default 200
+- bad for three reasons
+	- if the processing continues after the second stage we could miss potential opportunities for more opportunities
+	- if we write the output of that second stage to disk, we may end up with 200 small files
+- what we can do is to manually set the shuffle partitions
+	- setting this b4 each query is tedious
+	- these values will become outdated as the data evolves
+	- this setting will be applied to all shuffles in our query
+- spark does not know what will be the size of the output of stage 1 before hand in order to determine optimum num of partitions
+	- before AQE the plan that was generated was considered final, there were no refinements
+### AQE Design principle
+- AQE principle is not to make the execution plan final
+	- allow for reviews at each stage boundary
 - in yarn running mode, the default for the following are:
 	- [reference](https://spark.apache.org/docs/latest/running-on-yarn.html) for the following
 		- spark.executor.instances = 2
 		- spark.driver.cores has a default of 1
-	- [reference](https://spark.apache.org/docs/latest/configuration.html) for the ollowing
+	- [reference](https://spark.apache.org/docs/latest/configuration.html) for the following
 		- spark.executor.cores has a default of 1 in YARN mode
 		- spark.driver.memory has a default of 1GB
 		- spark.executor.memory has a default of 1GB

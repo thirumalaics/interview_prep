@@ -11,3 +11,26 @@
 		- billed for reading all bytes in the entire table
 		- `SELECT * EXCEPT (salary, id) from thiru.creating1` 
 	- use partitioned tables
+		- this can read only rows that are needed and in turn reducing IO
+		- there is also a mention of the following and I did not understand
+			- materializing results in a destination table and querying that table instead
+- avoid excessive wildcard tables
+	- when querying wildcard tables, we must use the most granular prefix
+	- wildcard tables are union of tables that match the wildcard expression
+		- so obviously schemas should match
+	- wildcard tables are useful if a dataset contains
+		- multiple similarly named tables with compatible schemas
+		- sharded tables
+			- dividing large datasets into separate tables and adding a suffix to each table name
+		- the more granular the prefix is the less number of tables read
+- avoid date sharded tables
+	- aka date named table
+	- partitioned tables perform better than date-named tables
+	- bq must maintain a copy of schema and md for each date-named table
+		- bq needs to verify permission for each and every table when a wildcard table is used
+		- adds query overhead
+- over-sharding tables
+	- bq storage is low cost
+	- creating large number of table shards has performance impacts that outweight any cost benefits
+	- each table in bq requires bq to maintain schema, md and permissions related to it
+- prune partitioned queries

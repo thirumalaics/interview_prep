@@ -34,3 +34,30 @@
 	- creating large number of table shards has performance impacts that outweight any cost benefits
 	- each table in bq requires bq to maintain schema, md and permissions related to it
 - prune partitioned queries
+	- filter based on the following columns:
+		- for ingestion time partitioned col: `_PARTITIONTIME`
+			- ![[Pasted image 20240707185908.png]]
+		- time-unit, column-based and integer-range, use the partitioning column
+	- group by is also an intensive operation, so use it when it benefits
+- reduce data before using a join
+	- perform aggs earlier in the query
+- use the where clause
+	- to limit the amount of data a query returns
+	- when possible use filters on BOOL, INT, float or DATE columns
+		- typically faster in these columns than STRING
+
+
+## Optimize Query operations
+- avoid repeatedly transforming data
+	- if we are using SQL to trim strings or extract data by using regular expressions, it is more performant to materialize results into a table and use it
+	- regex requires extra processing
+- avoid multiple evaluations of the same CTEs
+	- use instead
+		- variables
+		- procedural language
+		- temp tables
+		- automatically expiring tables
+	- these persist the calculation
+	- with clauses are used for query readability, not performance
+		- it does not mean bq materialize the CTEs as temp intermediate tables and reuse them
+	- WITH clause might be evaluated multiple times within a query, depending on query optimizer decisions

@@ -1,5 +1,11 @@
 - if a query stage writes more than other stages, filter early in the query
-
+https://cloud.google.com/bigquery/docs/best-practices-performance-compute#avoid-oversharding-tables
+https://cloud.google.com/bigquery/docs/multi-statement-queries#temporary_tables
+https://cloud.google.com/bigquery/docs/query-insights
+https://anywhere.epam.com/en/blog/google-cloud-interview-questions
+https://www.naukri.com/code360/library/google-cloud-platform-interview-questions
+https://towardsdatascience.com/14-ways-to-optimize-bigquery-sql-for-ferrari-speed-at-honda-cost-632ec705979
+https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 ## Reduce data processed
 - using the below options we can reduce the data processed
 - avoid select \*
@@ -60,4 +66,7 @@
 	- these persist the calculation
 	- with clauses are used for query readability, not performance
 		- it does not mean bq materialize the CTEs as temp intermediate tables and reuse them
-	- WITH clause might be evaluated multiple times within a query, depending on query optimizer decisions
+		- WITH clause might be evaluated multiple times within a query, depending on query optimizer decisions
+		- query optimizer attempts to detect parts of the query that can be executed once and be reused but it might not always be possible
+	- results can be stored in a var depending on the data returned
+	- CTEs might not help decrease complexity or resource consumptions

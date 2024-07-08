@@ -111,4 +111,34 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 	- push complex operations to the end of the query
 		- regex and mathematical fns
 		- reduces the data to be processed before the complex operations are performed
-	- 
+	- use limit clause when we do not need many rows in the output
+		- when trying to order a very large result set we may fase Resources exceeded error
+		- this can be solved if we use `limit`
+	- limit the data passed to the window function, if the amount of data passed to the window fn is high, performance will suffer
+		- ![[Pasted image 20240708183808.png]]
+		- this took 2 seconds
+
+## Split complex queries into smaller ones
+- leverage multi-statement query capabilities and stored procedures
+	- to split complex queries into smaller components
+	- regex, layered subqueries or joins can be slow and intensive
+	- trying to fit all computations in one huge select query is some times an anti pattern
+	- splitting up can help us materialize intermediate results as variables and temp tables
+	- especially when one result is needed in many places
+- use int64 data types in joins
+	- instead of string to reduce cost and improve comparison performance
+	- wider the join column, longer it takes
+
+## Reduce query outputs
+- materialize large result sets to a destination table
+	- bq limits cached results to approx 10 GB
+	- queries that return large results frequently result in `response too large`
+		- use filters to limit result set
+		- use a limit clause to reduce the result set especially if we are using order by
+		- write to a destination table
+			- writing has query performance impacts(i/o)
+
+## Avoid anti-sql patterns
+
+- temp tables
+- what is qualify

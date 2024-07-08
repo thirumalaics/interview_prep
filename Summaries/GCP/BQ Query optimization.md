@@ -70,3 +70,6 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 		- query optimizer attempts to detect parts of the query that can be executed once and be reused but it might not always be possible
 	- results can be stored in a var depending on the data returned
 	- CTEs might not help decrease complexity or resource consumptions
+- avoid repeated joins and subqueries
+	- avoid repeatedly joining the same tables and using the same subqueries
+	- use nested repeated data to represent the relationships

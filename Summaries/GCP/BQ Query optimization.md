@@ -139,6 +139,17 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 			- writing has query performance impacts(i/o)
 
 ## Avoid anti-sql patterns
-
+- avoid self join
+	- use window analytic fn or the pivot operator
+	- squares the number of output rows
+	- increase in output data can cause poor performance
+	- self joins usually used to compute row-dependent relationships
+- avoid cross join
+	- avoid joins that create more outputs than inputs
+	- when a cross join or any join that can give high outputs is required, agg the data
+	- window fns are often more efficient than cross joins
+	- some times cross joins do not even complete
+- avoid dmls that update or insert single rows
+	- batch our updates and inserts
 - temp tables
 - what is qualify

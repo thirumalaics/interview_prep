@@ -84,10 +84,23 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 		- `insert into thiru.books_owned (1, ['book1', 'book2']);`
 			- when inserting into a col with repeated mode, we have to ensure the square brackets
 			- when I used round brackets, it gave an error as () are interpreted as struct entries
+			- `SELECT books[1], books[Offset(1)], books[ORDINAL(2)] from thiru.books_owned;`
+			- ORDINAL is one based indexing, all the above columns access the second element of the array cols books
 	- nested repeated fields
 		- array of structs
+		- `CREATE TABLE thiru.books_owned_ext (cust_id INTEGER,books ARRAY<STRUCT<book_id INTEGER, book_name STRING>>);`
+		- `INSERT INTO thiru.books_owned_ext VALUES(1,[(1, 'Harry Potter'),(2, 'fooled by randomness')]);`
 		- ![[Pasted image 20240708094646.png]]
-  
+		- ![[Pasted image 20240708095240.png]]
+		- `SELECT (SELECT book_name from UNNEST(books) limit 1) as x from thiru.books_owned_ext;`
+		- displays only the first element
+	- nested repeated data saves us the performance impact of the comms bw to represent the relationship
+	- saves us the IO costs that we incur by repeatedly reading and writing the same data
+	- using the same subqueries multiple time leads to reprocessing
+		- materialize
+		- small cost of storing the materialized data outweighs the performance impact of repeated IO and query processing
+		- materializing our subquery results decreases the overall amount data read and written
+- optimize join patterns
+	- when joining data from multiple tables, optimize by starting with the largest table
+	- join clause should have the biggest table on the left, followed by tables in decreasing order ofsiz
 
-insert into thiru.orders VALUES(1,(1,'thiru'));`
-	- repeated 

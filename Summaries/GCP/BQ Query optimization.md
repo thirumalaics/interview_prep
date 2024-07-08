@@ -152,4 +152,15 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 - avoid dmls that update or insert single rows
 	- batch our updates and inserts
 - temp tables
+	- let's us save intermediate results to a table
+	- managed by bq, so we dont have to save or maintain them in a dataset
+	- charged for storage of the temp table
+	- default expiry time - 24 hrs
+	- or we can delete manually in our multi-statement query
+	- ![[Pasted image 20240708195255.png]]
+	- when we create a temp table, we should not use project or dataset qualifier
+		- created in a special dataset
+	- we can refer temp tables by name for the duration of the current multi-statement query
+		- this includes temp tables created by a procedure within 
+		- stored in a special dataset `_script%` with randomly generated names
 - what is qualify

@@ -73,3 +73,21 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 - avoid repeated joins and subqueries
 	- avoid repeatedly joining the same tables and using the same subqueries
 	- use nested repeated data to represent the relationships
+	- nesting allows us to represent foreign entities in line
+		- nested data is represented as a STRUCT type in Google sql
+		- `CREATE TABLE thiru.orders (id INTEGER,placed_by STRUCT<cust_id int, name STRING>);
+		- ![[Pasted image 20240708093943.png]]
+		- `insert into thiru.orders VALUES(1,(1,'thiru'));`
+	- repeated data allows us to store data with one-to-many relationships
+		- `CREATE TABLE thiru.books_owned (cust_id INTEGER, books ARRAY<STRING>`
+		- ![[Pasted image 20240708094150.png]]
+		- `insert into thiru.books_owned (1, ['book1', 'book2']);`
+			- when inserting into a col with repeated mode, we have to ensure the square brackets
+			- when I used round brackets, it gave an error as () are interpreted as struct entries
+	- nested repeated fields
+		- array of structs
+		- ![[Pasted image 20240708094646.png]]
+  
+
+insert into thiru.orders VALUES(1,(1,'thiru'));`
+	- repeated 

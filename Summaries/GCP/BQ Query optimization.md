@@ -102,5 +102,7 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 		- materializing our subquery results decreases the overall amount data read and written
 - optimize join patterns
 	- when joining data from multiple tables, optimize by starting with the largest table
-	- join clause should have the biggest table on the left, followed by tables in decreasing order ofsiz
+	- join clause should have the biggest table on the left, followed by tables in decreasing order of size in terms of rows
+	- when large on the left, small on the right - a broadcast join is created
+		- sends all the data in the smaller table to each slot that processes the table
 

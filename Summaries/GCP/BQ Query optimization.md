@@ -106,3 +106,9 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 	- when large on the left, small on the right - a broadcast join is created
 		- sends all the data in the smaller table to each slot that processes the table
 
+- optimize the order by clause
+	- use order by in the outer most query or within a window fn
+	- push complex operations to the end of the query
+		- regex and mathematical fns
+		- reduces the data to be processed before the complex operations are performed
+	- 

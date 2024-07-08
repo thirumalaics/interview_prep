@@ -161,6 +161,17 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 	- when we create a temp table, we should not use project or dataset qualifier
 		- created in a special dataset
 	- we can refer temp tables by name for the duration of the current multi-statement query
-		- this includes temp tables created by a procedure within 
+		- this includes temp tables created by a procedure within the multi-statement query
 		- stored in a special dataset `_script%` with randomly generated names
+		- `DROP TABLE table_name;`
+	- `_SESSION.temptablename` - explicitly mention that we are referring a temp table
+	- bq interprets any request with multiple statements as multi-statement query
 - what is qualify
+```SELECT
+
+ table_name, ddl
+
+FROM
+
+ `adept-box-428408-s6`.thiru.INFORMATION_SCHEMA.TABLES where table_name = 'creating1';
+```

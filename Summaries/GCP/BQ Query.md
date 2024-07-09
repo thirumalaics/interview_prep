@@ -1,6 +1,6 @@
 - limit is a booby trap
 	- speeds up performance by does not reduce cost
-	- limi puts a cap on the output rows, we need to move around less data on BQ nw
+	- limit puts a cap on the output rows, we need to move around less data on BQ nw
 - Select few columns
 - use exists instead of count
 	- exits processing cycle as soon as the first matching row is found
@@ -26,8 +26,13 @@
 	- ex: order = operator b4 like
 - utilize partitions and clusters
 - push order by to the end of query
-- relay resource intensive operations
+	- 
+- delay resource intensive operations
+	- LOWER(), TRIM(), CAST, regex and, mathematical
 - use SEARCH
+	- 
 - take adv of caching
 
 https://freedium.cfd/https://towardsdatascience.com/14-ways-to-optimize-bigquery-sql-for-ferrari-speed-at-honda-cost-632ec705979
+
+https://medium.com/firebase-developers/using-the-unnest-function-in-bigquery-to-analyze-event-parameters-in-analytics-fb828f890b42

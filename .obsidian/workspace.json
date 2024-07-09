@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -159,7 +160,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ab69a536cc7bb049",
+  "active": "ab0e2f0ae638871d",
   "lastOpenFiles": [
     "Summaries/GCP/BQ Query optimization(official).md",
     "Summaries/GCP/BQ Query.md",

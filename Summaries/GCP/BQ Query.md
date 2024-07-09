@@ -18,8 +18,12 @@
 		- all rules in collation adds to the complexity of string comparison
 - optimize anti joins
 	- instead of NOT IN, use NOT EXISTS operator to write anti joins because it triggers a more resource friendly query execution plan
-- trim data early and often
+	- [NOT IN](https://www.sqlshack.com/t-sql-commands-performance-comparison-not-vs-not-exists-vs-left-join-vs-except/) Triggers a few heavy operators that run nested looping and counting operations
+- filter data early and often
 - WHERE sequence matters
+	- bq assumes that user has provided best order of expressions in the where clause and does not attempt to reorder expressions
+	- expressions in where clauses should be ordered with most selective expression first
+	- ex: order = operator b4 like
 - utilize partitions and clusters
 - push order by to the end of query
 - relay resource intensive operations

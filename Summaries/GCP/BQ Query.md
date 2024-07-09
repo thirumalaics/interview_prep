@@ -30,7 +30,10 @@
 - delay resource intensive operations
 	- LOWER(), TRIM(), CAST, regex and, mathematical
 - use SEARCH
-	- 
+	- whether a BQ table or other search data contains a set of search terms
+	- returns true if all search terms appear in the data, based on the rules for search query
+	- `SEARCH(data_to_search, search_query)`
+	- no regex
 - take adv of caching
 
 https://freedium.cfd/https://towardsdatascience.com/14-ways-to-optimize-bigquery-sql-for-ferrari-speed-at-honda-cost-632ec705979

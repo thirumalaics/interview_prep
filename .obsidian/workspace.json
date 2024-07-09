@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/GCP/BQ Query.md",
+                "file": "Summaries/GCP/BQ Query optimization(official).md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/GCP/BQ Query.md",
+                "file": "Summaries/GCP/BQ Query optimization(official).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/GCP/BQ Query.md",
+                "file": "Summaries/GCP/BQ Query optimization(official).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/GCP/BQ Query.md"
+                "file": "Summaries/GCP/BQ Query optimization(official).md"
               }
             }
           }
@@ -160,10 +160,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ab0e2f0ae638871d",
+  "active": "ab69a536cc7bb049",
   "lastOpenFiles": [
-    "Summaries/GCP/BQ Query optimization(official).md",
     "Summaries/GCP/BQ Query.md",
+    "Summaries/GCP/BQ Query optimization(official).md",
     "Summaries/SQL.md",
     "Pasted image 20240708195255.png",
     "Pasted image 20240708183808.png",

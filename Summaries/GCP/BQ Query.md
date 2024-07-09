@@ -3,10 +3,21 @@
 	- limi puts a cap on the output rows, we need to move around less data on BQ nw
 - Select few columns
 - use exists instead of count
+	- exits processing cycle as soon as the first matching row is found
 - use approx agg fns
+	- count distinct will need more mem to keep count of unique ids
+		- spilling happens if mem not available
+	- error % 1-2
 - replace self join with window fn
+	- self join squares the number of rows
 - order by or join on int 64 columns
+	- bytes scanned is less in int
+	- ints have adv over strings because of collation
+	- [collation](https://stackoverflow.com/questions/4538732/what-does-collation-mean)
+		-  tells our db how to sort and compare strings
+		- all rules in collation adds to the complexity of string comparison
 - optimize anti joins
+	- instead of NOT IN, use NOT EXISTS operator to write anti joins because it triggers a more resource friendly query execution plan
 - trim data early and often
 - WHERE sequence matters
 - utilize partitions and clusters
@@ -14,3 +25,5 @@
 - relay resource intensive operations
 - use SEARCH
 - take adv of caching
+
+https://freedium.cfd/https://towardsdatascience.com/14-ways-to-optimize-bigquery-sql-for-ferrari-speed-at-honda-cost-632ec705979

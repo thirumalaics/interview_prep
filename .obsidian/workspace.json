@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SQL.md",
+                "file": "Summaries/GCP/BQ Query.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SQL.md",
+                "file": "Summaries/GCP/BQ Query.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SQL.md",
+                "file": "Summaries/GCP/BQ Query.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SQL.md"
+                "file": "Summaries/GCP/BQ Query.md"
               }
             }
           }
@@ -161,7 +162,9 @@
   },
   "active": "ab0e2f0ae638871d",
   "lastOpenFiles": [
-    "Summaries/GCP/BQ Query optimization.md",
+    "Summaries/GCP/BQ Query optimization(official).md",
+    "Summaries/GCP/BQ Query.md",
+    "Summaries/SQL.md",
     "Pasted image 20240708195255.png",
     "Pasted image 20240708183808.png",
     "Pasted image 20240708095240.png",
@@ -184,7 +187,6 @@
     "Summaries/GCP.md",
     "Summaries/SPARK",
     "Summaries/Airflow.md",
-    "Summaries/SQL.md",
     "Questions",
     "Summaries/Python.md",
     "Summaries",

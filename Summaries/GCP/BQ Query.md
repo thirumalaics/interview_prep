@@ -1,0 +1,16 @@
+- limit is a booby trap
+	- speeds up performance by does not reduce cost
+	- limi puts a cap on the output rows, we need to move around less data on BQ nw
+- Select few columns
+- use exists instead of count
+- use approx agg fns
+- replace self join with window fn
+- order by or join on int 64 columns
+- optimize anti joins
+- trim data early and often
+- WHERE sequence matters
+- utilize partitions and clusters
+- push order by to the end of query
+- relay resource intensive operations
+- use SEARCH
+- take adv of caching

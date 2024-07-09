@@ -1,0 +1,20 @@
+- FROM clause
+	- retrieve data From one or more tables or views 
+- on clause
+	- specifies conditions for joining tables
+- join operation
+	- after the ON clause, join operations are performed
+- where
+	- filter based on specified conditions
+- group by
+- having clause
+- select
+	- aliases defined
+- distinct
+	- applied after select
+- order by clause
+- offset and fetch
+- limit
+	- not part of SQL std
+- top
+	- not supported in bq

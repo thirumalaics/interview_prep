@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization.md",
+                "file": "Summaries/SQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization.md",
+                "file": "Summaries/SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization.md",
+                "file": "Summaries/SQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization.md"
+                "file": "Summaries/SQL.md"
               }
             }
           }
@@ -162,6 +161,7 @@
   },
   "active": "ab0e2f0ae638871d",
   "lastOpenFiles": [
+    "Summaries/GCP/BQ Query optimization.md",
     "Pasted image 20240708195255.png",
     "Pasted image 20240708183808.png",
     "Pasted image 20240708095240.png",
@@ -169,7 +169,6 @@
     "Pasted image 20240708094150.png",
     "Pasted image 20240708093943.png",
     "Summaries/SQL Query execution flow.md",
-    "Summaries/GCP/BQ Query optimization.md",
     "Pasted image 20240707185908.png",
     "Summaries/SPARK/Spark shuffling.md",
     "Summaries/GCP",
@@ -178,7 +177,6 @@
     "Summaries/how does computers process data.md",
     "Pasted image 20240706180039.png",
     "Pasted image 20240706175908.png",
-    "Pasted image 20240706175850.png",
     "Summaries/SPARK/Spark OOM.md",
     "Summaries/SPARK/Spark Tuning.md",
     "Summaries/SPARK/Executor memory.md",

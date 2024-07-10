@@ -28,7 +28,7 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 		- multiple similarly named tables with compatible schemas
 		- sharded tables
 			- dividing large datasets into separate tables and adding a suffix to each table name
-		- the more granular the prefix is the less number of tables read
+		- the ***more granular*** the prefix is the ***less number of tables read***
 - avoid date sharded tables
 	- aka date named table
 	- partitioned tables perform better than date-named tables
@@ -112,7 +112,7 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 		- regex and mathematical fns
 		- reduces the data to be processed before the complex operations are performed
 	- use limit clause when we do not need many rows in the output
-		- when trying to order a very large result set we may fase Resources exceeded error
+		- when trying to order a very large result set we may face Resources exceeded error
 		- this can be solved if we use `limit`
 	- limit the data passed to the window function, if the amount of data passed to the window fn is high, performance will suffer
 		- ![[Pasted image 20240708183808.png]]

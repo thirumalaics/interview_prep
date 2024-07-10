@@ -23,7 +23,7 @@
 - WHERE sequence matters
 	- bq assumes that user has provided best order of expressions in the where clause and does not attempt to reorder expressions
 	- expressions in where clauses should be ordered with most selective expression first
-	- ex: order = operator b4 like
+	- ex: order = operator b4 like operator
 - utilize partitions and clusters
 - push order by to the end of query
 	- 
@@ -38,4 +38,3 @@
 
 https://freedium.cfd/https://towardsdatascience.com/14-ways-to-optimize-bigquery-sql-for-ferrari-speed-at-honda-cost-632ec705979
 
-https://medium.com/firebase-developers/using-the-unnest-function-in-bigquery-to-analyze-event-parameters-in-analytics-fb828f890b42

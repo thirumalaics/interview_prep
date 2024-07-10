@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md",
+                "file": "Summaries/GCP/BQ Query.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8c34da0ad04366d8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Summaries/GCP/BQ Query.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -82,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -99,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md",
+                "file": "Summaries/GCP/BQ Query.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md",
+                "file": "Summaries/GCP/BQ Query.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md"
+                "file": "Summaries/GCP/BQ Query.md"
               }
             }
           }
@@ -162,11 +173,11 @@
   },
   "active": "ab69a536cc7bb049",
   "lastOpenFiles": [
-    "Go Deep.md",
-    "Summaries/GCP.md",
     "Summaries/GCP/BQ Query optimization(official).md",
-    "Summaries/SPARK/Executor memory.md",
+    "Go Deep.md",
     "Summaries/GCP/BQ Query.md",
+    "Summaries/GCP.md",
+    "Summaries/SPARK/Executor memory.md",
     "Summaries/SQL.md",
     "Pasted image 20240708195255.png",
     "Pasted image 20240708183808.png",

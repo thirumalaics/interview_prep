@@ -6,3 +6,4 @@
 6. https://spark.apache.org/docs/latest/job-scheduling.html#dynamic-resource-allocation
 7. https://stackoverflow.com/questions/69148991/difference-between-repartition1-and-coalesce1
 8. https://blog.cloudera.com/how-does-apache-spark-3-0-increase-the-performance-of-your-sql-workloads/
+9. https://medium.com/firebase-developers/using-the-unnest-function-in-bigquery-to-analyze-event-parameters-in-analytics-fb828f890b42

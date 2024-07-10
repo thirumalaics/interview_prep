@@ -16,3 +16,7 @@
 ## how does bq query execution happens
 - declarative sql statement converted into graph of execution **query stages**
 - query stages are composed of **sets of execution steps**
+- heavily distributed parallel architecture to execute query
+- stages denote the units of work that many workers may execute in parallel
+	- stages communicate with one another by using fast distributed shuffle arch
+- slot is an abstracted representation of multiple facets of query exect

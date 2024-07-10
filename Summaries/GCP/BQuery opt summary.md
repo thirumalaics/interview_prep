@@ -1,0 +1,31 @@
+[[BQ Query optimization(official)]]
+- avoid self joins, use window functions instead as it helps finding row level relationships. in worst case n square records and multiple scans
+- delay complex operations such as regex, string fns and mathematical functions until the very end
+- avoid oversharding, over sharding increases the md, schema and permissions that bq needs to manage. Adding over head
+- keep the bigger table on the left hand side of the join, it helps the query optimizer to choose broadcast join as a strategy. Add tables to join in their decreasing order
+- aggregate b4 joins, so as to decrease the amount of data that gets into the join operations
+- avoid multiple execution of the same CTEs, CTEs are for readability only. Not for performance. BQ query optimizer tries to execute components once which can be reused. but no guarantee. So materialize contents of CTEs if used in multiple places, use temp tables, vars
+- avoid select \*, use SELECT \* EXCEPT(x,x,x,x). As we are billed for the columns that we query
+- if there is a partitioning applied, filter on the partition column or the pseudo column: \_PARTITIONTIME
+- While using wildcard tables, use the most granular prefix in order to reduce the amount of tables that are read.
+- avoid cross joins or joins that give more op than ip. agg the data. window fns are often more efficient
+- avoid updates or insert single rows. Batch them instead.
+- use where on int, date, bool and numeric columns rather than string - faster by nature
+- join on int faster, use it when possible
+- avoid date sharded table, use date partitioned table instead
+- use order by in outer most query. use limit when there is no need to display many rows. This avoides resources exceeded error. also limit the amount of data passed to window fn
+- avoid repeated joins and subqueries. use nested repeated data instead
+- avoid repeatedly transforming data, regex and string fns. materialize
+- use multi statement queries and stored procedures. instead of having layered subqueries. Trying to fit all comp into one huge sql is anti pattern. split up and materialize
+- when the result set is large, put it into destination table instead
+
+[[BQ Query]]
+- limit speeds up performance but does not reduce the cost
+- use exists instead of COUNT when we do only care if there is a relationship,
+- use approx agg fns in place of normal agg fns. 1-2 % error
+- optimize anti join by using not exists rather than NOT IN. Not IN triggers heavy operators
+- order or join by int cols, as size is fixed. No collation to slow down.
+- WHERE sequence matters. Not proven but better to be safe than sorry. use equality checks before like operator
+- utilize partitions and clusters
+- use SEARCH() instead of unnesting nested structures
+- make use of bigquery cache. use deterministic fns in query. use tables which do not have streaming inserts. Wildcard tables are not cached

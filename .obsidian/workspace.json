@@ -25,38 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/GCP/BQ Query.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8c34da0ad04366d8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d1d7ca6e95c1c9de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Questions/UST - 2024-07-09.md",
+                "file": "Summaries/GCP/JOIN optimization.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -106,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -122,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Questions/UST - 2024-07-09.md",
+                "file": "Summaries/GCP/JOIN optimization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Questions/UST - 2024-07-09.md",
+                "file": "Summaries/GCP/JOIN optimization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Questions/UST - 2024-07-09.md"
+                "file": "Summaries/GCP/JOIN optimization.md"
               }
             }
           }
@@ -183,12 +160,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d1d7ca6e95c1c9de",
+  "active": "ab0e2f0ae638871d",
   "lastOpenFiles": [
+    "Summaries/GCP/BQ UI.md",
+    "Summaries/GCP/JOIN optimization.md",
+    "Summaries/GCP/BQuery opt summary.md",
+    "Summaries/GCP/BQ Interview questions.md",
     "Summaries/GCP/BQ Query.md",
-    "Questions/UST - 2024-07-09.md",
     "Summaries/GCP/BQ Query optimization(official).md",
-    "Summaries/GCP/dedup.md",
+    "Questions/UST - 2024-07-09.md",
     "Untitled.md",
     "Pasted image 20240710200116.png",
     "Pasted image 20240710190323.png",
@@ -197,9 +177,7 @@
     "Pasted image 20240710185320.png",
     "Pasted image 20240710185244.png",
     "Pasted image 20240710184944.png",
-    "Summaries/GCP/BQ Interview questions.md",
     "Summaries/GCP.md",
-    "Summaries/GCP/BQuery opt summary.md",
     "Go Deep.md",
     "Summaries/SPARK/Executor memory.md",
     "Summaries/SQL.md",

@@ -67,12 +67,3 @@
 	- also when the number of active units stays constant, while queued units of work increases this can mean reducing the number of concurrent queries can help
 https://cloud.google.com/bigquery/docs/query-plan-explanation?_gl=1*cm6jj3*_ga*Mzg0MzczOTM3LjE3MjAwNzc2Mzk.*_ga_WH2QY8WWF5*MTcyMDYxNjQwNC4xOC4xLjE3MjA2MTgxNDkuMzEuMC4w&_ga=2.111928070.-384373937.1720077639
 
-### Query performance
-- several factors to consider when evaluating query performance:
-	- how much data does my query read?
-	- how much data does my query write?(outputs and materialization)
-	- how much data does my query shuffle or pass onto the next stage or to each slot?
-	- how much CPU work does my query require?
-	- how many slots are available and how many other queries are running at the same time?
-	- are the queries following SQL best practices?
-	- 

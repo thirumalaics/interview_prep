@@ -153,7 +153,13 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 	- batch our updates and inserts
 	- UPDATE and DELETE in BQ are for periodic rewrites of data and not for single row mutations
 	- if our use case has frequent single row inserts, consider streaming the data instead
-
+	- insert DML statements consume the same modification quotas as load jobs
+	- make sure updates are tuple level replacement, have an update statement that updates based on keys
+		- stage updated records in a table other than the original, then apply a condition to update the records from one table to another
+- use aliases for clarity
+- use table constraints, engine can optimize plans using table constraints
+	- use [key]([Join Optimizations with BigQuery Primary and Foreign Keys | Google Cloud Blog](https://cloud.google.com/blog/products/data-analytics/join-optimizations-with-bigquery-primary-and-foreign-keys)) constraints where necessary
+	- bq does not check for [data integrity]([TABLE_CONSTRAINTS view  |  BigQuery  |  Google Cloud](https://cloud.google.com/bigquery/docs/information-schema-table-constraints#limitations)), we must ensure that our data meets the constraints specified in the table schema
 - temp tables
 	- let's us save intermediate results to a table
 	- managed by bq, so we dont have to save or maintain them in a dataset

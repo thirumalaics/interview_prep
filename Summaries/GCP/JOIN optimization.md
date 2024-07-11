@@ -47,4 +47,6 @@ ADD FOREIGN KEY(asd) REFERENCES item(ads) NOT ENFORCED
 
 ## Join reordering
 - when joins can't be eliminated, the query optimizer uses the table constraints to infer information about join cardinalities
-- the query optimizer may then use the information when performing join re
+- the query optimizer may then use the information when performing join reordering
+
+- user must make sure of enforcing the above constraints

@@ -33,7 +33,34 @@
 	- units of work completed, pending and active with query workers
 - we can get the query plan info as an api response
 	- contains more infor than the UI
+## Stage Overview
 - these fields are available for each stage
 ![[Pasted image 20240710200116.png]]
 
+#### Per-stage information
+- step represents granular operation that each worker must execute within a stage
+- the operation categories present in the query plan include:
+	- READ: read of one or more column from an input source or intermediate shuffle
+	- WRITE: write of one or more columns to an op table or intermediate result. for hash partitioned outputs from a stage, this includes the partition columns
+	- COMPUTE: expression evaluation or SQL function
+	- USER_DEfINED_fUNCTION: call to UDf
+	- JOIN: merging of two tables along with the columns involved
+	- AGGREGATE: operations such as group by or count
+	- fILTER: operator implementing WHERE, OMIT if, having
+	- LIMIT: operator implementing limit clause
+	- SORT: involves ordering or sorting operations along with columns and direction of sort
+	- ANALYTIC_fUNCTION: use of Window fn
+
+## Timeline md
+- timeline md is available for specific points in time
+- reports progress
+- involves:
+	- elapsedMs: milliseconds elapsed since the start of query execution
+	- totalSlotMs: cumulative slot milliseconds spent on the query execution
+	- activeUnits: total active units of work being processed by workers
+	- pendingUnits
+	- completedUnits
+- managed nature of bq limits whether some details are directly actionable
+- many optimizations happen automatically by using the service
+- but query plan a
 https://cloud.google.com/bigquery/docs/query-plan-explanation?_gl=1*cm6jj3*_ga*Mzg0MzczOTM3LjE3MjAwNzc2Mzk.*_ga_WH2QY8WWF5*MTcyMDYxNjQwNC4xOC4xLjE3MjA2MTgxNDkuMzEuMC4w&_ga=2.111928070.-384373937.1720077639

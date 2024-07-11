@@ -62,5 +62,16 @@
 	- completedUnits
 - managed nature of bq limits whether some details are directly actionable
 - many optimizations happen automatically by using the service
-- but query plan a
+- but query plan and timeline statistics can provide better idea on where the query is taking time
+	- ex: if a join stage that generates far more op than ip, it indicates to filter early
+	- also when the number of active units stays constant, while queued units of work increases this can mean reducing the number of concurrent queries can help
 https://cloud.google.com/bigquery/docs/query-plan-explanation?_gl=1*cm6jj3*_ga*Mzg0MzczOTM3LjE3MjAwNzc2Mzk.*_ga_WH2QY8WWF5*MTcyMDYxNjQwNC4xOC4xLjE3MjA2MTgxNDkuMzEuMC4w&_ga=2.111928070.-384373937.1720077639
+
+### Query performance
+- several factors to consider when evaluating query performance:
+	- how much data does my query read?
+	- how much data does my query write?(outputs and materialization)
+	- how much data does my query shuffle or pass onto the next stage or to each slot?
+	- how much CPU work does my query require?
+	- how many slots are available and how many other queries are running at the same time?
+	- are the queries following SQL best practices?

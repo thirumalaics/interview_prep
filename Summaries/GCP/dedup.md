@@ -75,3 +75,4 @@ https://cloud.google.com/bigquery/docs/query-plan-explanation?_gl=1*cm6jj3*_ga*M
 	- how much CPU work does my query require?
 	- how many slots are available and how many other queries are running at the same time?
 	- are the queries following SQL best practices?
+	- 

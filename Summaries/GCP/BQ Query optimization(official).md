@@ -151,6 +151,9 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 	- some times cross joins do not even complete
 - avoid dmls that update or insert single rows
 	- batch our updates and inserts
+	- UPDATE and DELETE in BQ are for periodic rewrites of data and not for single row mutations
+	- if our use case has frequent single row inserts, consider streaming the data instead
+
 - temp tables
 	- let's us save intermediate results to a table
 	- managed by bq, so we dont have to save or maintain them in a dataset
@@ -167,11 +170,10 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 	- `_SESSION.temptablename` - explicitly mention that we are referring a temp table
 	- bq interprets any request with multiple statements as multi-statement query
 - what is qualify
-```SELECT
-
+[Transform data with data manipulation language (DML)  |  BigQuery  |  Google Cloud](https://cloud.google.com/bigquery/docs/data-manipulation-language#quotas)
+```
+SELECT
  table_name, ddl
-
 FROM
-
  `adept-box-428408-s6`.thiru.INFORMATION_SCHEMA.TABLES where table_name = 'creating1';
 ```

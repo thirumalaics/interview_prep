@@ -5,5 +5,20 @@ https://www.projectpro.io/article/bigquery-interview-questions-and-answers/731
 	- There is jupiter which is the Google pb network which helps decoupling of compute and storage
 	- borg is the job scheduler and resource manager. spins up resources as needed
 - difference between legacy and std sql in bq
+	- the above two are two dialects supported by BQ and have different syntax, semantics and functions
+	- in the past, BQ used to execute queries using a non-std sql dialect called BQ SQL
+	- since BQ 2.0, the service now supports std SQL while the previous BQ SQL was renamed to Legacy SQL
+	- Std SQL is an ANSI compliant query language
+	- legacy sql is still maintained mostly for backward compatibility purposes
+		- some point in the future, legacy SQL will be deprecated
+	- DDL and DML are only supported by STD SQL
+	- every type in legacy sql has an equivalent in std sql and vice versa
+		- types in each dialect has a different name
+	- in legacy, colon was used as a separator when referencing a project name whilst std dialect requires a period 
+	- table names with common prefix are referenced differently in both dialects
+		- std sql does it via wildcard tables
+	- instead of \`, \[ was used
+- time travel:
+	- `SELECT * from t for SYSTEM TIME AS Of TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 HOUR);`
 - try dedup in bq
 - https://medium.com/@mrayandutta/enhancing-data-integrity-in-bigquery-mastering-deduplication-with-qualify-and-beyond-2cb48c815ba0#:~:text=1.-,Deduplication%20with%20QUALIFY,particularly%20useful%20for%20large%20datasets.

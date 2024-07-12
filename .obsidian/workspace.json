@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/GCP/BQ Interview questions.md",
+                "file": "Summaries/SQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/GCP/BQ Interview questions.md",
+                "file": "Summaries/SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/GCP/BQ Interview questions.md",
+                "file": "Summaries/SQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/GCP/BQ Interview questions.md"
+                "file": "Summaries/SQL.md"
               }
             }
           }
@@ -162,12 +161,13 @@
   },
   "active": "ab0e2f0ae638871d",
   "lastOpenFiles": [
+    "Summaries/SQL Query execution flow.md",
+    "Summaries/GCP/BQ Interview questions.md",
     "Pasted image 20240712094503.png",
     "Summaries/GCP/JOIN optimization.md",
     "Pasted image 20240711184255.png",
     "Summaries/GCP/BQ UI.md",
     "Summaries/GCP/BQuery opt summary.md",
-    "Summaries/GCP/BQ Interview questions.md",
     "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Query optimization(official).md",
     "Questions/UST - 2024-07-09.md",
@@ -184,8 +184,6 @@
     "Summaries/SPARK/Executor memory.md",
     "Summaries/SQL.md",
     "Pasted image 20240708195255.png",
-    "Pasted image 20240708183808.png",
-    "Summaries/SQL Query execution flow.md",
     "Summaries/SPARK/Spark shuffling.md",
     "Summaries/GCP",
     "Summaries/Spark.md",

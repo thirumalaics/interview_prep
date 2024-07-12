@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SQL.md",
+                "file": "Questions/ford.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SQL.md",
+                "file": "Questions/ford.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SQL.md",
+                "file": "Questions/ford.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SQL.md"
+                "file": "Questions/ford.md"
               }
             }
           }
@@ -161,6 +161,9 @@
   },
   "active": "ab0e2f0ae638871d",
   "lastOpenFiles": [
+    "Questions/UST - 2024-07-09.md",
+    "Questions/ford.md",
+    "Summaries/SQL.md",
     "Summaries/SQL Query execution flow.md",
     "Summaries/GCP/BQ Interview questions.md",
     "Pasted image 20240712094503.png",
@@ -170,7 +173,6 @@
     "Summaries/GCP/BQuery opt summary.md",
     "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Query optimization(official).md",
-    "Questions/UST - 2024-07-09.md",
     "Untitled.md",
     "Pasted image 20240710200116.png",
     "Pasted image 20240710190323.png",
@@ -182,7 +184,6 @@
     "Summaries/GCP.md",
     "Go Deep.md",
     "Summaries/SPARK/Executor memory.md",
-    "Summaries/SQL.md",
     "Pasted image 20240708195255.png",
     "Summaries/SPARK/Spark shuffling.md",
     "Summaries/GCP",

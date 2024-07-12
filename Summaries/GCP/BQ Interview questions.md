@@ -18,6 +18,17 @@ https://www.projectpro.io/article/bigquery-interview-questions-and-answers/731
 	- table names with common prefix are referenced differently in both dialects
 		- std sql does it via wildcard tables
 	- instead of \`, \[ was used
+	- std sql have many adv
+		- supports WITH clause
+		- UDfs
+		- subqueries in select and where clauses
+		- inserts, updates and deletes
+		- more data types such as array and structs
+		- correlated subqueries
+			- subquery that uses values from the outer query
+		- more complex join predicates
+	- to use legacy sql, use #legacySQL tag at the start of the query, #standardSQL
+	- ![[Pasted image 20240712094503.png]]
 - time travel:
 	- `SELECT * from t for SYSTEM TIME AS Of TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 HOUR);`
 - try dedup in bq

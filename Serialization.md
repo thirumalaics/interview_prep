@@ -1,0 +1,1 @@
+- serialization refers to creating a version of our data(rather than objects) that can be used for storage

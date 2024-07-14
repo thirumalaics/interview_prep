@@ -14,4 +14,14 @@ https://stackoverflow.com/questions/447898/what-is-object-serialization
 - when we implement serialization, we may skip to avoid certain parts of data being serialized
 - second answer also is good
 - read third answer
-- 
+
+https://stackoverflow.com/questions/2294551/java-io-writeabortedexception-writing-aborted-java-io-notserializableexception
+
+https://stackoverflow.com/questions/5660050/what-is-serialization-and-deserialization-conceptually?noredirect=1&lq=1
+- data is not always in a form which can be streamed. e.g. if you have a object which contains a reference, that reference as bytes is of no use if you stream it. instead you have to stream the data referenced.
+
+https://hazelcast.com/glossary/deserialization/
+https://hazelcast.com/glossary/serialization/
+
+https://www.youtube.com/watch?v=uS37TujnLRw
+- data can be serialized into text based formats such as json, YAML and XML

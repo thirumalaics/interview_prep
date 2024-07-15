@@ -1,0 +1,3 @@
+- to determine num of executors, memory for each exec and the number of cores, thee factors need to be studied:
+	- the amount of data
+	- 

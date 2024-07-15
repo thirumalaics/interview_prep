@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e8a11310c85e69f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Summaries/SPARK/Spark resource allocation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/Spark.md",
+                "file": "Summaries/SPARK/Spark resource allocation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/Spark.md",
+                "file": "Summaries/SPARK/Spark resource allocation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/Spark.md"
+                "file": "Summaries/SPARK/Spark resource allocation.md"
               }
             }
           }
@@ -160,8 +172,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ab0e2f0ae638871d",
+  "active": "e8a11310c85e69f0",
   "lastOpenFiles": [
+    "Summaries/SPARK/Spark Tuning.md",
+    "Summaries/SPARK/Spark resource allocation.md",
+    "Summaries/Spark.md",
+    "Summaries/SPARK/Executor memory.md",
     "Serialization.md",
     "Questions/ford.md",
     "Questions/UST - 2024-07-09.md",
@@ -184,14 +200,11 @@
     "Pasted image 20240710184944.png",
     "Summaries/GCP.md",
     "Go Deep.md",
-    "Summaries/SPARK/Executor memory.md",
     "Pasted image 20240708195255.png",
     "Summaries/SPARK/Spark shuffling.md",
     "Summaries/GCP",
-    "Summaries/Spark.md",
     "Summaries/how does computers process data.md",
     "Summaries/SPARK/Spark OOM.md",
-    "Summaries/SPARK/Spark Tuning.md",
     "Summaries/SPARK",
     "Summaries/Airflow.md",
     "Questions",

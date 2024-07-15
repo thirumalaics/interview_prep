@@ -9,3 +9,12 @@ https://sparkbyexamples.com/spark/spark-driver-maxresultsize/
 
 
 https://stackoverflow.com/questions/24622108/apache-spark-the-number-of-cores-vs-the-number-of-executors
+- the most intuitive thing would be to think that less num of executors with high cores mean that less shuffling
+- number of data nodes: 3 
+	- each comes with
+	- cores: 8
+	- RAM: 32 GB
+- i should allow cores for driver
+- i should also make room for pyspark mem, yarn mem overhead and off heap memory(if enabled)
+- yarn mem overhead: 10% of 32 gb = 3.2GB per node will go in YMO
+- 

@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Serialization.md",
+                "file": "Summaries/Spark.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Serialization.md",
+                "file": "Summaries/Spark.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Serialization.md",
+                "file": "Summaries/Spark.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Serialization.md"
+                "file": "Summaries/Spark.md"
               }
             }
           }
@@ -162,6 +161,7 @@
   },
   "active": "ab0e2f0ae638871d",
   "lastOpenFiles": [
+    "Serialization.md",
     "Questions/ford.md",
     "Questions/UST - 2024-07-09.md",
     "Summaries/SQL.md",
@@ -174,7 +174,6 @@
     "Summaries/GCP/BQuery opt summary.md",
     "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Query optimization(official).md",
-    "Serialization.md",
     "Pasted image 20240710200116.png",
     "Pasted image 20240710190323.png",
     "Pasted image 20240710190238.png",

@@ -17,4 +17,5 @@ https://stackoverflow.com/questions/24622108/apache-spark-the-number-of-cores-vs
 - i should allow cores for driver
 - i should also make room for pyspark mem, yarn mem overhead and off heap memory(if enabled)
 - yarn mem overhead: 10% of 32 gb = 3.2GB per node will go in YMO
-- 
+- per executor we leave out 1GB of mem and one core for OS use and hadoop daemons
+- 32-3.2-1 = 27.8 GB

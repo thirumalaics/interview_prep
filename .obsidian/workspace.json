@@ -43,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Spark resource allocation.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Spark resource allocation.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Spark resource allocation.md"
+                "file": "Summaries/SPARK/Executor memory.md"
               }
             }
           }
@@ -172,11 +171,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e8a11310c85e69f0",
+  "active": "2f7b73c576076c70",
   "lastOpenFiles": [
-    "Summaries/SPARK/Spark Tuning.md",
-    "Summaries/SPARK/Spark resource allocation.md",
     "Summaries/Spark.md",
+    "Summaries/SPARK/Spark resource allocation.md",
+    "Summaries/SPARK/Spark Tuning.md",
     "Summaries/SPARK/Executor memory.md",
     "Serialization.md",
     "Questions/ford.md",

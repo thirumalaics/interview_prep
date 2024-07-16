@@ -137,6 +137,21 @@
 	- if not set, spark will not limit python's mem use
 		- it is app's responsibility to avoid exceeding the overhead memory space shared with other non-JVM processes
 		- when pyspark is run in YARN or Kubernetes, this memory is added to executor resource requests
+- [In spark what is the meaning of spark.executor.pyspark.memory configuration option? - Stack Overflow](https://stackoverflow.com/questions/68249294/in-spark-what-is-the-meaning-of-spark-executor-pyspark-memory-configuration-opti)
+	- two big parts of spark mem management(SMM)
+		- Memory inside JVM
+			- divided into 4 different parts
+			- storage mem - spar cached data, broad cast variables
+			- execution memory - this memory is for storing data required during execution of spark tasks
+			- User memory - custom data structures, UDfs
+			- reserved memory: mem for spark's internal purposes
+		- Memory outside JVM
+			- off heap mem: outside JVM but for JVM purposes, and can be used for project tungsten
+			- external process mem: used by processes that reside out of JVM, like Python or R processes
+	- --executor-memory = mem allocated inside Java heap
+	- spark.executor.pyspark.memory is part of external process memory
+		- responsible for how much mem py daemon will be able to use
+		- one use of py daemon is for executing UDfs in python
 [Spark Memory Management - Cloudera Community - 317794](https://community.cloudera.com/t5/Community-Articles/Spark-Memory-Management/ta-p/317794#toc-hId-1674349369)
 [pyspark - What is user memory in spark? - Stack Overflow](https://stackoverflow.com/questions/74586108/what-is-user-memory-in-spark)
 [(6) Apache Spark Memory Management: Deep Dive | LinkedIn](https://www.linkedin.com/pulse/apache-spark-memory-management-deep-dive-deepak-rajak/)

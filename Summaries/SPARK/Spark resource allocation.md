@@ -1,3 +1,9 @@
 - to determine num of executors, memory for each exec and the number of cores, thee factors need to be studied:
 	- the amount of data
-	- 
+	- the time in which a job has to complete
+	- static or dynamic allocation of resources
+- running executors with too much mem often result in excessive garbage collection delays
+- two ways in which we configure the executor and core details to the spark job:
+	- static allocation: given during spark submit
+	- dynamic allocation: the values are picked up based on the requirement and released after use. helps resources to be re-used for other applications
+- IMPORTANT: per node, always leave out 1 core and 1gb of memory for OS and hadoop daemons

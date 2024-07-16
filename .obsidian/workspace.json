@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md",
+                "file": "Summaries/GCP/BQ Interview questions.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md",
+                "file": "Summaries/GCP/BQ Interview questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md",
+                "file": "Summaries/GCP/BQ Interview questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md"
+                "file": "Summaries/GCP/BQ Interview questions.md"
               }
             }
           }
@@ -170,8 +170,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2f7b73c576076c70",
+  "active": "ab69a536cc7bb049",
   "lastOpenFiles": [
+    "Summaries/GCP/BQ Query optimization(official).md",
     "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Interview questions.md",
     "Summaries/SPARK/Executor memory.md",
@@ -188,7 +189,6 @@
     "Pasted image 20240711184255.png",
     "Summaries/GCP/BQ UI.md",
     "Summaries/GCP/BQuery opt summary.md",
-    "Summaries/GCP/BQ Query optimization(official).md",
     "Pasted image 20240710200116.png",
     "Pasted image 20240710190323.png",
     "Pasted image 20240710190238.png",

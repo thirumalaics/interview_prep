@@ -32,4 +32,12 @@ https://www.projectpro.io/article/bigquery-interview-questions-and-answers/731
 - time travel:
 	- `SELECT * from t for SYSTEM TIME AS Of TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 HOUR);`
 - try dedup in bq
+- can clustering column be changed
+	- [yes](https://stackoverflow.com/questions/64137289/change-clustered-columns-in-an-existing-bigquery-table) 
+	- following two statements for reclustering
+	-  ```bq update --clustering_fields=fileStatus,fileExtension tboy.partitioned_Food_event```
+	- ```UPDATE tboy.partitioned_Food_events SET fileExtension=fileExtension, fileStatus=fileStatus WHERE true```
+	- intensive operation
+- can partitioning column be changed after table creation?
+	- nope, drop and recreate
 - https://medium.com/@mrayandutta/enhancing-data-integrity-in-bigquery-mastering-deduplication-with-qualify-and-beyond-2cb48c815ba0#:~:text=1.-,Deduplication%20with%20QUALIFY,particularly%20useful%20for%20large%20datasets.

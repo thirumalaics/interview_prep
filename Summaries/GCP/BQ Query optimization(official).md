@@ -1,4 +1,4 @@
-- if a query stage writes more than other stages, filter early in the query
+- if one stage of a query writes more than other stages, filter early in the query
 https://cloud.google.com/bigquery/docs/best-practices-performance-compute#avoid-oversharding-tables
 https://cloud.google.com/bigquery/docs/multi-statement-queries#temporary_tables
 https://cloud.google.com/bigquery/docs/query-insights
@@ -35,16 +35,18 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 	- bq must maintain a copy of schema and md for each date-named table
 		- bq needs to verify permission for each and every table when a wildcard table is used
 		- adds query overhead
+		- what if we specifically want to give a group of users access to only one year of data? is it possible through partitions
 - over-sharding tables
 	- bq storage is low cost
 	- creating large number of table shards has performance impacts that outweight any cost benefits
 	- each table in bq requires bq to maintain schema, md and permissions related to it
-- prune partitioned queries
+- filter on partitioned column
 	- filter based on the following columns:
 		- for ingestion time partitioned col: `_PARTITIONTIME`
 			- ![[Pasted image 20240707185908.png]]
 		- time-unit, column-based and integer-range, use the partitioning column
-	- group by is also an intensive operation, so use it when it benefits
+	- group by is also an intensive operation, so use it when it benefits #doubt
+		- this does not seem relevant to the heading, add more details if relevant
 - reduce data before using a join
 	- perform aggs earlier in the query
 - use the where clause
@@ -79,13 +81,13 @@ https://datacouch.medium.com/optimizations-in-bigquery-bb396b6ecab9
 		- ![[Pasted image 20240708093943.png]]
 		- `insert into thiru.orders VALUES(1,(1,'thiru'));`
 	- repeated data allows us to store data with one-to-many relationships
-		- `CREATE TABLE thiru.books_owned (cust_id INTEGER, books ARRAY<STRING>`
+		- `CREATE TABLE thiru.books_owned (cust_id INTEGER, books ARRAY<STRING>)`
 		- ![[Pasted image 20240708094150.png]]
 		- `insert into thiru.books_owned (1, ['book1', 'book2']);`
 			- when inserting into a col with repeated mode, we have to ensure the square brackets
 			- when I used round brackets, it gave an error as () are interpreted as struct entries
 			- `SELECT books[1], books[Offset(1)], books[ORDINAL(2)] from thiru.books_owned;`
-			- ORDINAL is one based indexing, all the above columns access the second element of the array cols books
+			- ORDINAL fn uses one based indexing, all the above columns access the second element of the array cols books
 	- nested repeated fields
 		- array of structs
 		- `CREATE TABLE thiru.books_owned_ext (cust_id INTEGER,books ARRAY<STRUCT<book_id INTEGER, book_name STRING>>);`

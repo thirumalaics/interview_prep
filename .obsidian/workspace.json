@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Executor memory.md",
+                "file": "Summaries/GCP/BQ Query optimization(official).md",
                 "mode": "source",
                 "source": false
               }
@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -110,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Executor memory.md",
+                "file": "Summaries/GCP/BQ Query optimization(official).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Executor memory.md",
+                "file": "Summaries/GCP/BQ Query optimization(official).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Executor memory.md"
+                "file": "Summaries/GCP/BQ Query optimization(official).md"
               }
             }
           }
@@ -173,22 +172,22 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/GCP/BQ Query.md",
+    "Summaries/GCP/BQ Interview questions.md",
+    "Summaries/SPARK/Executor memory.md",
     "Summaries/Spark.md",
     "Summaries/SPARK/Spark resource allocation.md",
     "Summaries/SPARK/Spark Tuning.md",
-    "Summaries/SPARK/Executor memory.md",
     "Serialization.md",
     "Questions/ford.md",
     "Questions/UST - 2024-07-09.md",
     "Summaries/SQL.md",
     "Summaries/SQL Query execution flow.md",
-    "Summaries/GCP/BQ Interview questions.md",
     "Pasted image 20240712094503.png",
     "Summaries/GCP/JOIN optimization.md",
     "Pasted image 20240711184255.png",
     "Summaries/GCP/BQ UI.md",
     "Summaries/GCP/BQuery opt summary.md",
-    "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Query optimization(official).md",
     "Pasted image 20240710200116.png",
     "Pasted image 20240710190323.png",

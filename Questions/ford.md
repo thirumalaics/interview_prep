@@ -89,3 +89,33 @@ else:
     output+=ch+str(c)
 print(output)
 ```
+
+
+SELECT * From tboy.partitioned_Food_events
+
+where DATE(lastUpdateTs) = (CASE WHEN EXTRACT(DAYOFWEEK From CURRENT_DATE()) = 1 THEN CURRENT_DATE -2 WHEN EXTRACT(DAYOFWEEK From CURRENT_DATE())= 7 THEN CURRENT_DATE() - 1 ELSE CURRENT_DATE() END)
+
+
+fF
+
+Car no int, Dealer string, Price float
+Composer : This job runs between Monday to Friday
+Per day average volume : 1 Million records
+This has 10 years of historical data
+Ask: Create view to Just show me only one day of data from this table
+*latest
+cre_ts timestamp
+
+
+
+CREATE TABLE dataset.vehicle (
+Car_Num INTEGER,
+Dealer STRING,
+Price FLOAT,
+Creation_Date DATE
+)
+PARTITION BY CREATION_DATE;
+
+
+CREATE OR REPLACE VIEW dataset.vehicle as 
+SELECT * From dataset.vehicle where Creation_date = (CASE WHEN DAYOFWEEK(CURRENT_DATE()) = 1 THEN CURRENT_DATE -2 WHEN DAYOFWEEK(CURRENT_DATE())= 7 THEN CURRENT_DATE() - 1 ELSE CURRENT_DATE() END)

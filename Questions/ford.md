@@ -1,4 +1,4 @@
-
+- date partition on a timestamp col
 
 
 Gender     c

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Questions/ford.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Questions/ford.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Questions/ford.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Questions/ford.md"
+                "file": "Summaries/SPARK/Executor memory.md"
               }
             }
           }
@@ -172,6 +173,7 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Questions/ford.md",
     "Summaries/GCP/BQ Query optimization(official).md",
     "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Interview questions.md",
@@ -180,7 +182,6 @@
     "Summaries/SPARK/Spark resource allocation.md",
     "Summaries/SPARK/Spark Tuning.md",
     "Serialization.md",
-    "Questions/ford.md",
     "Questions/UST - 2024-07-09.md",
     "Summaries/SQL.md",
     "Summaries/SQL Query execution flow.md",

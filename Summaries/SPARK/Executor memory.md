@@ -110,15 +110,16 @@
 - when an executor is killed, all cached data for that executor would be gone but with off-heap mem, the data would persist
 - The maximum memory size of container to running executor is determined by the sum of `spark.executor.memoryOverhead`, `spark.executor.memory`, `spark.memory.offHeap.size` and `spark.executor.pyspark.memory`. ^dd1ddf
 	- [ref](The maximum memory size of container to running executor is determined by the sum of `spark.executor.memoryOverhead`, `spark.executor.memory`, `spark.memory.offHeap.size` and `spark.executor.pyspark.memory`.)
-
-
+- until spark 2.x(inclusive), total off-heap memory = spark.executor.memoryOverhead(spark.offHeap.size included within)
+	- what this means is over head should account for offHeap.size as well
+- from spark 3.x, total off heap memory = spark.executor.memoryOverhead + spark.offHeap.size
+- spark 
 - there is YARN memory overhead
 	- set by spark.executor.memoryOverhead
-	- this causes OOM errors
+	- this causes OOM errors - not sure about that
 	- off-heap mem allocated to executor
-		- this is a wrong statement with proofs that I have now
-			- memory over head is not part of off-heap
-			- https://stackoverflow.com/questions/63561233/spark-memory-overhead
+		- [Difference between "spark.yarn.executor.memoryOverhead" and "spark.memory.offHeap.size" - Stack Overflow](https://stackoverflow.com/questions/58666517/difference-between-spark-yarn-executor-memoryoverhead-and-spark-memory-offhea/61723456#61723456)
+		- https://stackoverflow.com/questions/63561233/spark-memory-overhead
 	- stores spark internal objects, language specific objects
 		- thread stacks - maintains state of individual threads in a multithread app
 		- [Java NIO direct buffers]([Java NIO (oracle.com)](https://docs.oracle.com/en/java/javase//21/core/java-nio.html)) - 
@@ -152,9 +153,16 @@
 	- spark.executor.pyspark.memory is part of external process memory
 		- responsible for how much mem py daemon will be able to use
 		- one use of py daemon is for executing UDfs in python
+	- spark.python.worker.memory
+		- py4j bridge exposes objects between JVM and python
+		- JVM process and python process communicate to each other with py4j
+		- the config above determines how much mem can be occupied by py4j for creating objects b4 spilling them in to disk
 [Spark Memory Management - Cloudera Community - 317794](https://community.cloudera.com/t5/Community-Articles/Spark-Memory-Management/ta-p/317794#toc-hId-1674349369)
 [pyspark - What is user memory in spark? - Stack Overflow](https://stackoverflow.com/questions/74586108/what-is-user-memory-in-spark)
 [(6) Apache Spark Memory Management: Deep Dive | LinkedIn](https://www.linkedin.com/pulse/apache-spark-memory-management-deep-dive-deepak-rajak/)
 https://stackoverflow.com/questions/77812120/what-does-data-is-stored-in-deserialized-format-in-spark-mean
 [Apache Spark: Tackling Out-of-Memory Errors &Memory Management | LinkedIn](https://www.linkedin.com/pulse/apache-spark-tackling-out-of-memory-errors-memory-management-kumar/)
 https://michaelheil.medium.com/understanding-common-performance-issues-in-apache-spark-deep-dive-data-spill-7cdba81e697e
+
+
+[Decoding Memory in Spark — Parameters that are often confused | by Sohom Majumdar | Walmart Global Tech Blog | Medium](https://medium.com/walmartglobaltech/decoding-memory-in-spark-parameters-that-are-often-confused-c11be7488a24) - explore

@@ -1,3 +1,5 @@
+- spark.yarn.executor.memoryOverhead is deprecated!!!!
+	-  changed to `spark.executor.memoryOverhead`, which is common for YARN and Kubernetes
 ## What is a VM?
 - is no different than any physical computer
 - it has cpu, mem, disks and nw-ing capability
@@ -23,6 +25,8 @@
 - the size of this area can increase or decrease in size while the app runs
 - when the heap becomes full, garbage is collected
 - JVM uses more memory than just the heap
+- in spark, off-heap memory used for certain use-cases(interning of strings)
+	- as per caching level, off-heap memory can be used to store serialized dataframes
 ## Executor
 - executor: JVM process launched on a worker node
 	- important to understand JVM mem management

@@ -1,16 +1,16 @@
 - spark.yarn.executor.memoryOverhead is deprecated!!!!
 	-  changed to `spark.executor.memoryOverhead`, which is common for YARN and Kubernetes
 ## What is a VM?
-- is no different than any physical computer
-- it has cpu, mem, disks and nw-ing capability
-- VMs are sw defined computers within physical servers, existing only as code
-- sw based version of a computer with resources borrowed from a physical host computer
+- VMs are ***sw defined computers*** within physical servers, existing only as code
+	- is no different than any physical computer
+	- it has cpu, mem, disks and nw-ing capability
+- resources borrowed from a physical host computer
 - VM is a computer file, typically called an image that behaves like an actual computer
 	- specs of the VM goes in the image
 - partitioned from the host system - isolated
 ## What is JVM?
 - virtual machine that enables a computer to run
-	- java programs
+	- class files that contain java bytecode
 	- programs written in other languages that are also compiled to Java bytecode
 - does not understand java source code
 - understands \*.class
@@ -18,15 +18,17 @@
 	- class files contains byte codes that JVM understands
 - JVM is the entity that makes java to be a portable language
 - there are specific implementations of the JVM for different systems(windows, Linux, mac)
-## JVM Heap
-- now what the hell is heap?
+## What is JVM Heap?
 - it is an area in memory where java objects reside
 - heap is created when the JVM starts up
 - the size of this area can increase or decrease in size while the app runs
 - when the heap becomes full, garbage is collected
 - JVM uses more memory than just the heap
+
+## What is interning of Strings?
+## What is off-heap space used for in Spark?
 - in spark, off-heap memory used for certain use-cases(interning of strings)
-	- as per caching level, off-heap memory can be used to store serialized dataframes
+- as per caching level, off-heap memory can be used to store serialized dataframes
 ## Executor
 - executor: JVM process launched on a worker node
 	- important to understand JVM mem management
@@ -43,6 +45,7 @@
 - divided into two types:
 	- Static memory manager
 		- deprecated due to lack of flexibility
+		- can be activated using a config
 	- Unified mem manager(default from spark 1.6.0)
 - in both memory managers, portion of Java Heap is allocated for processing spark apps
 - rest is used for Java class references and md usage
@@ -117,7 +120,9 @@
 - until spark 2.x(inclusive), total off-heap memory = spark.executor.memoryOverhead(spark.offHeap.size included within)
 	- what this means is over head should account for offHeap.size as well
 - from spark 3.x, total off heap memory = spark.executor.memoryOverhead + spark.offHeap.size
-- spark 
+- spark uses off heap memory for two purposes:
+	- part of off heap memory is used by Java internally for purposes like String interning and JVM over heads
+	- used for storing its data as part of Project Tungsten
 - there is YARN memory overhead
 	- set by spark.executor.memoryOverhead
 	- this causes OOM errors - not sure about that

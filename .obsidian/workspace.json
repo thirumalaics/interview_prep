@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Go Deep.md"
+                "file": "Summaries/SPARK/Executor memory.md"
               }
             }
           }
@@ -172,6 +173,7 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Go Deep.md",
     "Summaries/SPARK/Executor memory.md",
     "Questions/ford.md",
     "Summaries/GCP/BQ Query optimization(official).md",
@@ -197,7 +199,6 @@
     "Pasted image 20240710185244.png",
     "Pasted image 20240710184944.png",
     "Summaries/GCP.md",
-    "Go Deep.md",
     "Pasted image 20240708195255.png",
     "Summaries/SPARK/Spark shuffling.md",
     "Summaries/GCP",

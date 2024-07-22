@@ -29,18 +29,34 @@
 ## What is off-heap space used for in Spark?
 - in spark, off-heap memory used for certain use-cases(interning of strings)
 - as per caching level, off-heap memory can be used to store serialized dataframes
+
+
+## What are the memory types in JVM?
+- heap memory
+	- Objects, created by the app, are allocated on the JVM heap and bound by GC
+	- discussed above as well
+- stack memory
+	- JV stores local variables and method information
+	- used for thread execution as well
+	- in an application, each thread has its own stack that stores information about the methods and variables it's currently using
+	- fixed size determined by the jvm at runtime
+	- StackOverflowError
+	- used to store temp vars or primitive data types in Java
+## How does JVM manages it's memory?
+- two ways:
+	- On-heap memory management(in-heap memory)
+	- off-heap memory management: objects are created in memory outside JVM by serialization, managed by the OS
+		- not bound by GC
+	- read write speed comparison:
+		- on-heap > off-heap > disk
+	- is off-heap within the memory available to JVM?
+		- uses [direct-memory portion]([Configuring Off-Heap Store (softwareag.com)](https://documentation.softwareag.com/terracotta/terracotta_440/webhelp/bigmemory-go-webhelp/index.html#page/bmg-webhelp/co-tiers_configuring_offheap_store.html)) of the JVM
+		- there is confusion, because above, off-heap memory is described as mem outside JVM
+
 ## Executor
 - executor: JVM process launched on a worker node
 	- important to understand JVM mem management
-	- categorized into two types
-		- On-heap memory management(in-heap memory): Objects are allocated on the JVM heap and bound by GC
-		- off-heap memory management: objects are created in memory outside JVM by serialization, managed by the OS
-			- not bound by GC
-		- read write speed comparison:
-			- on-heap > off-heap > disk
-		- is off-heap within the memory available to JVM?
-			- uses [direct-memory portion]([Configuring Off-Heap Store (softwareag.com)](https://documentation.softwareag.com/terracotta/terracotta_440/webhelp/bigmemory-go-webhelp/index.html#page/bmg-webhelp/co-tiers_configuring_offheap_store.html)) of the JVM
-			- there is confusion, because above, off-heap memory is described as mem outside JVM
+	
 ## Mem Management
 - divided into two types:
 	- Static memory manager

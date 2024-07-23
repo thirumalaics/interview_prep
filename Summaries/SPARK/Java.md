@@ -1,0 +1,11 @@
+## What are the memory types in JVM?
+- heap memory
+	- Objects, created by the app, are allocated on the JVM heap and bound by GC
+	- discussed above as well
+- stack memory
+	- JV stores local variables and method information
+	- used for thread execution as well
+	- in an application, each thread has its own stack that stores information about the methods and variables it's currently using
+	- fixed size determined by the jvm at runtime
+	- StackOverflowError
+	- used to store temp vars or primitive data types in Java

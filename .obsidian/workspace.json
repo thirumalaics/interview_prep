@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -172,8 +173,11 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
-    "[Configuring.md",
+    "Pasted image 20240723192944.png",
+    "Pasted image 20240723192659.png",
+    "Summaries/SPARK/Java.md",
     "Summaries/SPARK/Executor memory.md",
+    "[Configuring.md",
     "Go Deep.md",
     "Questions/ford.md",
     "Summaries/GCP/BQ Query optimization(official).md",
@@ -199,7 +203,6 @@
     "Pasted image 20240710185244.png",
     "Pasted image 20240710184944.png",
     "Summaries/GCP.md",
-    "Pasted image 20240708195255.png",
     "Summaries/SPARK/Spark shuffling.md",
     "Summaries/GCP",
     "Summaries/how does computers process data.md",

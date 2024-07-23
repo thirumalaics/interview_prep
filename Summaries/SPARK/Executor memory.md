@@ -24,25 +24,14 @@
 - the size of this area can increase or decrease in size while the app runs
 - when the heap becomes full, garbage is collected
 - JVM uses more memory than just the heap
+	- not too sure atm by this statement
 
 ## What is interning of Strings?
 ## What is off-heap space used for in Spark?
 - in spark, off-heap memory used for certain use-cases(interning of strings)
 - as per caching level, off-heap memory can be used to store serialized dataframes
-- https://medium.com/@sathamn.n/spark-on-heap-and-off-heap-memory-in-pyspark-7016b48f8512#:~:text=On%2DHeap%20memory%20refers%20to,managed%20by%20the%20operating%20system.%E2%80%9D
+- if we are running out of memory, we can try to use [off-heap memory more](https://medium.com/@sathamn.n/spark-on-heap-and-off-heap-memory-in-pyspark-7016b48f8512#:~:text=On%2DHeap%20memory%20refers%20to,managed%20by%20the%20operating%20system.%E2%80%9D)
 
-
-## What are the memory types in JVM?
-- heap memory
-	- Objects, created by the app, are allocated on the JVM heap and bound by GC
-	- discussed above as well
-- stack memory
-	- JV stores local variables and method information
-	- used for thread execution as well
-	- in an application, each thread has its own stack that stores information about the methods and variables it's currently using
-	- fixed size determined by the jvm at runtime
-	- StackOverflowError
-	- used to store temp vars or primitive data types in Java
 ## How does JVM manages it's memory?
 - two ways:
 	- On-heap memory management(in-heap memory)
@@ -53,35 +42,43 @@
 	- is off-heap within the memory available to JVM?
 		- uses [direct-memory portion]([Configuring Off-Heap Store (softwareag.com)](https://documentation.softwareag.com/terracotta/terracotta_440/webhelp/bigmemory-go-webhelp/index.html#page/bmg-webhelp/co-tiers_configuring_offheap_store.html)) of the JVM
 		- there is confusion, because above, off-heap memory is described as mem outside JVM
-
-## Executor
+- ![[Pasted image 20240723192659.png]]
+## How is executor memory managed?
 - executor: JVM process launched on a worker node
 	- important to understand JVM mem management
 	
-## Mem Management
-- divided into two types:
-	- Static memory manager
-		- deprecated due to lack of flexibility
-		- can be activated using a config
-	- Unified mem manager(default from spark 1.6.0)
+## What are the two types of executor mem managers?
+- Static memory manager
+	- deprecated due to lack of flexibility
+	- can be activated using a config
+- Unified mem manager(default from spark 1.6.0)
 - in both memory managers, portion of Java Heap is allocated for processing spark apps
 - rest is used for Java class references and md usage
 
-## SMM
+
+![[Pasted image 20240723192944.png]]
+##  What is SMM?
+- static memory manager
 - traditional model
-- divides mem into two fixed partitions statically
+- divides mem into two fixed partitions statically - storage and execution
 	- size of storage, execution and other memory is fixed during application processing
+		- even in the article, he mentioned [other memory]([Spark Memory Management - Cloudera Community - 317794](https://community.cloudera.com/t5/Community-Articles/Spark-Memory-Management/ta-p/317794#toc-hId-1674349369)) - what is other memory?
 	- configurable before app start
-## UMM
+
+## What is UMM?
+- unified memory manager
 - provides dynamic memory allocation
 - allocates region of memory as a unified memory container 
 	- shared by execution and storage
+	- unified because this memory is shared by execution and storage
 - borrowing of memory is possible bw storage and execution
 	- storage can borrow unused execution memory
 	- execution can borrow storage memory irrespective of whether it is in use or not
 - additional to heap and off-heap, there is external process memory
 	- this kind of memory is mainly used for PySpark and SparkR applications
 	- these processes reside outside the JVM
+
+## what is pyspark memory?
 #### Heap memory
 - by default spark uses on-heap mem only
 	- this size is configured by `spark.executor.memory` parameter when the spark application starts

@@ -87,40 +87,49 @@
 
 ## How is the total container memory split up in Spark?
 - ![[Pasted image 20240723195226.png]]
+
 ## How is the heap memory segregated by Spark?
 - spark supports three mem regions within an executor' heap memory
 	- ***reserved memory***
-		- used to store spark internal objects
-		- executor mem should be at least 1.5 times ***reserved memory***, other wise the app will fail stating that the exec mem is too low
-		- this value is hardcoded
-		- https://stackoverflow.com/questions/78692374/spark-executor-memory-overhead
-	- user memory
+	- ***user memory***
 		- set by (exec mem - reserved)\*(1 - `spark.memory.fraction`)
-		- spark internal md, including 
-		- used for user defined objects like UDfs, hashmap
-			- stores RDD dependency and transformations info
-			- data in here cannot spill into disk
-			- throws OOM error if objects exceed the given space
-			- user defined data structures: custom classes, collections or any other structures required for processing logics
-			- md and data structures related to RDD partitions may reside in user mem
-			- any external lib used, their objects and data structures will be allocated from user mem
-			- md related to the broadcast variables reside in user mem
-	- spark memory
+	- ***spark memory***
 		- memory pool managed by Spark
-		- used to store intermediate states while doing task execution
-		- cached persistent data stored here in storage mem
 		- set by (executor mem - reserved)\*`spark.memory.fraction`
 		- spark mem = storage mem + execution mem
 			- storage mem = `spark.memory.storageFraction` \* spark mem
 				- LRU to clear out old objects
 			- execution mem = 1- storage mem
-				- used to store objects required during the execution of spark tasks
-					- ex: stores hash map for hash agg step
 				- blocks from this pool cannot be forcefully evicted by other threads
-				- evicted immideately after each operation
-				- used for shuffles, joins, sorts and aggs
+				- evicted immediately after each operation
+				
+## What is reserved memory used for?
+- used to store spark internal objects
+- this value is hardcoded
+- https://stackoverflow.com/questions/78692374/spark-executor-memory-overhead
 
-#### off-Heap memory
+## What is user memory used for?
+- spark internal md
+- used for user defined objects like UDfs, hashmap
+- stores RDD dependency and transformations info
+- user defined data structures: custom classes, collections or any other structures required for processing logics
+- md and data structures related to RDD partitions may reside in user mem
+- any external lib used, their objects and data structures will be allocated from user mem
+- md related to the broadcast variables reside in user mem
+- data in here cannot spill into disk
+- throws OOM error if objects exceed the given space
+## What is the constraint that relates reserved memory to the total executor memory?
+- remember that executor memory comprises reserved memory
+- executor mem should be at least 1.5 times ***reserved memory***, other wise the app will fail stating that the exec mem is too low
+## What is the use of Spark mem and it's components?
+- used to store intermediate states while doing task execution
+- cached persistent data stored here in storage mem
+- execution memory
+	- used to store objects required during the execution of spark tasks
+		- ex: stores hash map for hash agg step
+	- used for shuffles, joins, sorts and aggs
+
+## off-Heap memory
 - allocate memory objects(serialized to byte array) to memory outside the heap of JVM
 	- directly managed by the OS and not the Virtual machine
 	- garbage collector does not have access to this

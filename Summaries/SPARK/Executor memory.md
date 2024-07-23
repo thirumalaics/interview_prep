@@ -29,6 +29,7 @@
 ## What is off-heap space used for in Spark?
 - in spark, off-heap memory used for certain use-cases(interning of strings)
 - as per caching level, off-heap memory can be used to store serialized dataframes
+- https://medium.com/@sathamn.n/spark-on-heap-and-off-heap-memory-in-pyspark-7016b48f8512#:~:text=On%2DHeap%20memory%20refers%20to,managed%20by%20the%20operating%20system.%E2%80%9D
 
 
 ## What are the memory types in JVM?

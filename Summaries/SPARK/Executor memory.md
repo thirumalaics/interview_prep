@@ -79,18 +79,21 @@
 	- these processes reside outside the JVM
 
 ## what is pyspark memory?
-#### Heap memory
+## How is heap memory used in Spark?
 - by default spark uses on-heap mem only
 	- this size is configured by `spark.executor.memory` parameter when the spark application starts
 	- can be set while initiating spark session
 - the concurrent tasks running inside executor share the JVM's on-heap memory
-- spark supports three mem regions within an executor
-	- reserved memory
-		- used to store spark internal objects
-		- executor mem should be at least 1.5 times reserved memory, other wise the app will fail stating that the exec mem is too low
-		- still this value is hardcoded
-		- https://stackoverflow.com/questions/78692374/spark-executor-memory-overhead
 
+## How is the total container memory split up in Spark?
+- ![[Pasted image 20240723195226.png]]
+## How is the heap memory segregated by Spark?
+- spark supports three mem regions within an executor' heap memory
+	- ***reserved memory***
+		- used to store spark internal objects
+		- executor mem should be at least 1.5 times ***reserved memory***, other wise the app will fail stating that the exec mem is too low
+		- this value is hardcoded
+		- https://stackoverflow.com/questions/78692374/spark-executor-memory-overhead
 	- user memory
 		- set by (exec mem - reserved)\*(1 - `spark.memory.fraction`)
 		- spark internal md, including 

@@ -31,7 +31,7 @@
 - user has to deal with managing the allocated memory
 ## What is interning of Strings?
 ## What is off-heap space used for in Spark?
-- in spark, off-heap memory used for certain use-cases(interning of strings)
+- in spark, off-heap memory used for certain use-cases(interning of strings and JVM overheads)
 - as per caching level, off-heap memory can be used to store ***serialized dataframes***
 - if we are running out of memory, we can try to use [off-heap memory more](https://medium.com/@sathamn.n/spark-on-heap-and-off-heap-memory-in-pyspark-7016b48f8512#:~:text=On%2DHeap%20memory%20refers%20to,managed%20by%20the%20operating%20system.%E2%80%9D)
 
@@ -144,16 +144,16 @@
 - off-heap mem usage can improve performance as it is safe from GC
 - when an executor is killed, all cached data for that executor would be gone but with off-heap mem, the data would persist
 
-
 ## How is total off-hep memory split up?
 - until spark 2.x(inclusive), total off-heap memory = spark.executor.memoryOverhead(spark.offHeap.size included within)
-	- what this means is over head should account for offHeap.size as well
+	- what this means is over head should account for [offHeap.size](https://medium.com/walmartglobaltech/decoding-memory-in-spark-parameters-that-are-often-confused-c11be7488a24#:~:text=The%20amount%20of%20off%2Dheap%20memory%20used%20by%20Spark%20to%20store%20actual%20data%20frames%20is%20governed%20by%20spark.memory.offHeap.size) as well
+		- this is used to store dataframes and/or broad cast vars exclusively
 - from spark 3.x, total off heap memory = spark.executor.memoryOverhead + spark.offHeap.size
-- spark uses off heap memory for two purposes:
-	- part of off heap memory is used by Java internally for purposes like String interning and JVM over heads
-	- used for storing its data as part of Project Tungsten
-- there is YARN memory overhead
-	- set by spark.executor.memoryOverhead
+- in conclusion, in the most recent version(3.x), total off heap mem is sum of memory overhead and off heap size(if enabled)
+
+## What is memory overhead?
+
+- set by spark.executor.memoryOverhead
 	- this causes OOM errors - not sure about that
 	- off-heap mem allocated to executor
 		- [Difference between "spark.yarn.executor.memoryOverhead" and "spark.memory.offHeap.size" - Stack Overflow](https://stackoverflow.com/questions/58666517/difference-between-spark-yarn-executor-memoryoverhead-and-spark-memory-offhea/61723456#61723456)
@@ -204,3 +204,5 @@ https://michaelheil.medium.com/understanding-common-performance-issues-in-apache
 
 
 [Decoding Memory in Spark — Parameters that are often confused | by Sohom Majumdar | Walmart Global Tech Blog | Medium](https://medium.com/walmartglobaltech/decoding-memory-in-spark-parameters-that-are-often-confused-c11be7488a24) - explore
+
+https://stackoverflow.com/questions/32621990/what-are-workers-executors-cores-in-spark-standalone-cluster

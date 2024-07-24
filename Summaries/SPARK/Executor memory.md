@@ -25,11 +25,14 @@
 - when the heap becomes full, garbage is collected
 - JVM uses more memory than just the heap
 	- not too sure atm by this statement
-
+## What is JVM off-heap?
+- directly managed by the OS and not the JVirtual machine
+- garbage collector does not have access to this
+- user has to deal with managing the allocated memory
 ## What is interning of Strings?
 ## What is off-heap space used for in Spark?
 - in spark, off-heap memory used for certain use-cases(interning of strings)
-- as per caching level, off-heap memory can be used to store serialized dataframes
+- as per caching level, off-heap memory can be used to store ***serialized dataframes***
 - if we are running out of memory, we can try to use [off-heap memory more](https://medium.com/@sathamn.n/spark-on-heap-and-off-heap-memory-in-pyspark-7016b48f8512#:~:text=On%2DHeap%20memory%20refers%20to,managed%20by%20the%20operating%20system.%E2%80%9D)
 
 ## How does JVM manages it's memory?
@@ -88,6 +91,9 @@
 ## How is the total container memory split up in Spark?
 - ![[Pasted image 20240723195226.png]]
 
+- The maximum memory size of container to running executor is determined by the sum of `spark.executor.memoryOverhead`, `spark.executor.memory`, `spark.memory.offHeap.size` and `spark.executor.pyspark.memory`. ^dd1ddf
+	- [ref](The maximum memory size of container to running executor is determined by the sum of `spark.executor.memoryOverhead`, `spark.executor.memory`, `spark.memory.offHeap.size` and `spark.executor.pyspark.memory`.)
+
 ## How is the heap memory segregated by Spark?
 - spark supports three mem regions within an executor' heap memory
 	- ***reserved memory***
@@ -115,7 +121,7 @@
 - user defined data structures: custom classes, collections or any other structures required for processing logics
 - md and data structures related to RDD partitions may reside in user mem
 - any external lib used, their objects and data structures will be allocated from user mem
-- md related to the broadcast variables reside in user mem
+- md related to the broadcast variables
 - data in here cannot spill into disk
 - throws OOM error if objects exceed the given space
 ## What is the constraint that relates reserved memory to the total executor memory?
@@ -129,20 +135,17 @@
 		- ex: stores hash map for hash agg step
 	- used for shuffles, joins, sorts and aggs
 
-## off-Heap memory
-- allocate memory objects(serialized to byte array) to memory outside the heap of JVM
-	- directly managed by the OS and not the Virtual machine
-	- garbage collector does not have access to this
-- slower read writes to this space
-- user has to deal with managing the allocated memory
+## What are the characteristics of off-Heap memory in spark?
 - by default off-heap memory is disabled
 - off heap mem utilization can be seen in UI
 - execution memory and storage mem once the off heap mem is abled
 	- exec mem and storage mem =  inside heap + outside heap
-- offheap mem usage can improve performance as it is safe from GC
+	- sourced from cloudera blog
+- off-heap mem usage can improve performance as it is safe from GC
 - when an executor is killed, all cached data for that executor would be gone but with off-heap mem, the data would persist
-- The maximum memory size of container to running executor is determined by the sum of `spark.executor.memoryOverhead`, `spark.executor.memory`, `spark.memory.offHeap.size` and `spark.executor.pyspark.memory`. ^dd1ddf
-	- [ref](The maximum memory size of container to running executor is determined by the sum of `spark.executor.memoryOverhead`, `spark.executor.memory`, `spark.memory.offHeap.size` and `spark.executor.pyspark.memory`.)
+
+
+## How is total off-hep memory split up?
 - until spark 2.x(inclusive), total off-heap memory = spark.executor.memoryOverhead(spark.offHeap.size included within)
 	- what this means is over head should account for offHeap.size as well
 - from spark 3.x, total off heap memory = spark.executor.memoryOverhead + spark.offHeap.size

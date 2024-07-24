@@ -206,3 +206,5 @@ https://michaelheil.medium.com/understanding-common-performance-issues-in-apache
 [Decoding Memory in Spark — Parameters that are often confused | by Sohom Majumdar | Walmart Global Tech Blog | Medium](https://medium.com/walmartglobaltech/decoding-memory-in-spark-parameters-that-are-often-confused-c11be7488a24) - explore
 
 https://stackoverflow.com/questions/32621990/what-are-workers-executors-cores-in-spark-standalone-cluster
+
+https://stackoverflow.com/questions/63561233/spark-memory-overhead

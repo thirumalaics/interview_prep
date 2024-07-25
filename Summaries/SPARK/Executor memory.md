@@ -151,13 +151,15 @@
 - from spark 3.x, total off heap memory = spark.executor.memoryOverhead + spark.offHeap.size
 - in conclusion, in the most recent version(3.x), total off heap mem is sum of memory overhead and off heap size(if enabled)
 
-## What is memory overhead?
-
+## What is memory overhead and what is it used for?
 - set by spark.executor.memoryOverhead
 	- this causes OOM errors - not sure about that
-	- off-heap mem allocated to executor
+	- this memory is used
+	- off-heap mem allocated to container
 		- [Difference between "spark.yarn.executor.memoryOverhead" and "spark.memory.offHeap.size" - Stack Overflow](https://stackoverflow.com/questions/58666517/difference-between-spark-yarn-executor-memoryoverhead-and-spark-memory-offhea/61723456#61723456)
 		- https://stackoverflow.com/questions/63561233/spark-memory-overhead
+	- accounts for [VM overheads](https://stackoverflow.com/questions/49988475/why-increase-spark-yarn-executor-memoryoverhead)
+		- with whatever I have searched, I understand that VM overhead is the memory required by the VM to start
 	- stores spark internal objects, language specific objects
 		- thread stacks - maintains state of individual threads in a multithread app
 		- [Java NIO direct buffers]([Java NIO (oracle.com)](https://docs.oracle.com/en/java/javase//21/core/java-nio.html)) - 
@@ -165,15 +167,19 @@
 			- charsets are mapping bw bytes and unicode characters
 			- channels represent connections to entities capable of performing IO operations
 		- [interned strings](https://blog.cloudera.com/how-to-tune-your-apache-spark-jobs-part-2/#:~:text=for%20example%20for%20interned%20Strings%20and%20direct%20byte%20buffers.)
+			- this means storing only one copy of each distinct string which must be immutable
+			- the distinct value will then be referenced as required
 	- by default 10% of executor mem or 384 mb, whichever is higher
 	- [Resolve the error "Container killed by YARN for exceeding memory limits" in Spark on Amazon EMR | AWS re:Post (repost.aws)](https://repost.aws/knowledge-center/emr-spark-yarn-memory-limit)
 		- reducing the num of cores reduces the max number of tasks
 			- which reduces the amount of memory required
+
+## What is pyspark memory and what is it used for?
 - `spark.executor.pyspark.memory`
 	- amount of mem allocated to pyspark in each executor
 	- in MB unless specified otherwise
 	- if set, pyspark mem will be limited to this number
-	- if not set, spark will not limit python's mem use
+	- if not set, spark will not limit python's mem use - from official doc
 		- it is app's responsibility to avoid exceeding the overhead memory space shared with other non-JVM processes
 		- when pyspark is run in YARN or Kubernetes, this memory is added to executor resource requests
 - [In spark what is the meaning of spark.executor.pyspark.memory configuration option? - Stack Overflow](https://stackoverflow.com/questions/68249294/in-spark-what-is-the-meaning-of-spark-executor-pyspark-memory-configuration-opti)

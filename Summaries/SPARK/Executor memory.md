@@ -29,11 +29,23 @@
 - directly managed by the OS and not the JVirtual machine
 - garbage collector does not have access to this
 - user has to deal with managing the allocated memory
-## What is interning of Strings?
+
+## What is heap space used for in spark?
+- Memory inside JVM
+	- divided into 4 different parts
+	- storage mem - spar cached data, broad cast variables
+	- execution memory - this memory is for storing data required during execution of spark tasks
+	- User memory - custom data structures, UDfs
+	- reserved memory: mem for spark's internal purposes
 ## What is off-heap space used for in Spark?
-- in spark, off-heap memory used for certain use-cases(interning of strings and JVM overheads)
+- in spark, off-heap memory used for certain use-cases
 - as per caching level, off-heap memory can be used to store ***serialized dataframes***
 - if we are running out of memory, we can try to use [off-heap memory more](https://medium.com/@sathamn.n/spark-on-heap-and-off-heap-memory-in-pyspark-7016b48f8512#:~:text=On%2DHeap%20memory%20refers%20to,managed%20by%20the%20operating%20system.%E2%80%9D)
+- Memory outside JVM
+	- off heap mem: 
+		- overhead mem: string internings, VM overhead, thread stacks
+		- off heap mem: used to store serialized cached dataframes
+	- external process mem: used by processes that reside out of JVM, like Python or R processes
 
 ## How does JVM manages it's memory?
 - two ways:
@@ -144,7 +156,7 @@
 - off-heap mem usage can improve performance as it is safe from GC
 - when an executor is killed, all cached data for that executor would be gone but with off-heap mem, the data would persist
 
-## How is total off-hep memory split up?
+## How is total off-heap memory split up?
 - until spark 2.x(inclusive), total off-heap memory = spark.executor.memoryOverhead(spark.offHeap.size included within)
 	- what this means is over head should account for [offHeap.size](https://medium.com/walmartglobaltech/decoding-memory-in-spark-parameters-that-are-often-confused-c11be7488a24#:~:text=The%20amount%20of%20off%2Dheap%20memory%20used%20by%20Spark%20to%20store%20actual%20data%20frames%20is%20governed%20by%20spark.memory.offHeap.size) as well
 		- this is used to store dataframes and/or broad cast vars exclusively
@@ -181,26 +193,21 @@
 	- if set, pyspark mem will be limited to this number
 	- if not set, spark will not limit python's mem use - from official doc
 		- it is app's responsibility to avoid exceeding the overhead memory space shared with other non-JVM processes
+			- so is this number set by spark, if not then how much is requested from the resource manager?
 		- when pyspark is run in YARN or Kubernetes, this memory is added to executor resource requests
+	- responsible for how much mem py daemon will be able to use
+	- one use of py daemon is for executing UDfs in python
+	- external process memory
+
+## What is python worker memory?
+- spark.python.worker.memory
+	- py4j bridge exposes objects between JVM and python
+	- JVM process and python process communicate to each other with py4j
+	- the config above determines how much mem can be occupied by py4j for creating objects b4 spilling them in to disk
+	- mem used per python worker process during aggregation
+	- if the memory used during agg goes above this amount, it will spill the data into disks
 - [In spark what is the meaning of spark.executor.pyspark.memory configuration option? - Stack Overflow](https://stackoverflow.com/questions/68249294/in-spark-what-is-the-meaning-of-spark-executor-pyspark-memory-configuration-opti)
-	- two big parts of spark mem management(SMM)
-		- Memory inside JVM
-			- divided into 4 different parts
-			- storage mem - spar cached data, broad cast variables
-			- execution memory - this memory is for storing data required during execution of spark tasks
-			- User memory - custom data structures, UDfs
-			- reserved memory: mem for spark's internal purposes
-		- Memory outside JVM
-			- off heap mem: outside JVM but for JVM purposes, and can be used for project tungsten
-			- external process mem: used by processes that reside out of JVM, like Python or R processes
-	- --executor-memory = mem allocated inside Java heap
-	- spark.executor.pyspark.memory is part of external process memory
-		- responsible for how much mem py daemon will be able to use
-		- one use of py daemon is for executing UDfs in python
-	- spark.python.worker.memory
-		- py4j bridge exposes objects between JVM and python
-		- JVM process and python process communicate to each other with py4j
-		- the config above determines how much mem can be occupied by py4j for creating objects b4 spilling them in to disk
+	
 [Spark Memory Management - Cloudera Community - 317794](https://community.cloudera.com/t5/Community-Articles/Spark-Memory-Management/ta-p/317794#toc-hId-1674349369)
 [pyspark - What is user memory in spark? - Stack Overflow](https://stackoverflow.com/questions/74586108/what-is-user-memory-in-spark)
 [(6) Apache Spark Memory Management: Deep Dive | LinkedIn](https://www.linkedin.com/pulse/apache-spark-memory-management-deep-dive-deepak-rajak/)

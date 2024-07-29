@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Executor memory.md",
+                "file": "Summaries/SPARK/YARN.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Executor memory.md",
+                "file": "Summaries/SPARK/YARN.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Executor memory.md",
+                "file": "Summaries/SPARK/YARN.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Executor memory.md"
+                "file": "Summaries/SPARK/YARN.md"
               }
             }
           }
@@ -172,21 +173,22 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
-    "The.md",
+    "Go Deep.md",
+    "Summaries/SPARK/YARN.md",
+    "Configuring.md",
+    "Summaries/SPARK/Spark Tuning.md",
     "Summaries/SPARK/Executor memory.md",
+    "The.md",
     "Pasted image 20240723195226.png",
     "Pasted image 20240723192944.png",
     "Pasted image 20240723192659.png",
     "Summaries/SPARK/Java.md",
-    "[Configuring.md",
-    "Go Deep.md",
     "Questions/ford.md",
     "Summaries/GCP/BQ Query optimization(official).md",
     "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Interview questions.md",
     "Summaries/Spark.md",
     "Summaries/SPARK/Spark resource allocation.md",
-    "Summaries/SPARK/Spark Tuning.md",
     "Serialization.md",
     "Questions/UST - 2024-07-09.md",
     "Summaries/SQL.md",
@@ -210,7 +212,6 @@
     "Summaries/Airflow.md",
     "Questions",
     "Summaries/Python.md",
-    "Summaries",
-    "Welcome.md"
+    "Summaries"
   ]
 }

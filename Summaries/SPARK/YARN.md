@@ -32,6 +32,10 @@
 	- a slave service running on every node(YARN NodeManager, Mesos slave or spark standalone slave) 
 		- actually starts the processes
 		- these may also monitor their liveliness and resource consumption
+
+
+- what is YARN Scheduler?
+- 
 - Why run on YARN?
 	- allows us to dynamically share and centrally configure the same pool of cluster resources between all fws that run on YARN
 		- we can throw our entire cluster to run a MR job, then use some of it on an impala query and the rest of spark application without any changes in config

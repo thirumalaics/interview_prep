@@ -16,7 +16,15 @@
 		- driver is alive for the time of existence of the application
 	- in MR, client process can go away and the job can continue running
 
-
+- what is YARN and what is the need for YARN? 
+	- Yet another resource negotiator
+	- used to manage resources in a typical cluster
+	- YARN enables multiple applications to run simultaneously on the same shared cluster
+	- allows applications to negotiate resources based on need
+	- resource allocation/management is central to YARN
+	- earlier in hadoop there was JobTracker which was responsible for resource management among other things
+		- this was part of map reduce
+- https://learning.oreilly.com/library/view/yarn-essentials/9781784391737/ch01.html#ch01lvl1sec08
 - what is a [cluster manager]([Cluster manager - IBM Documentation](https://www.ibm.com/docs/en/powerha-aix/7.2?topic=software-cluster-manager))?
 	- daemon that runs in each node of a cluster
 	- main task of the CM is to respond to unplanned events, such as recovering from sw and hw failures, or user-initiated events

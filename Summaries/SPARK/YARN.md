@@ -18,12 +18,13 @@
 
 - what is YARN and what is the need for YARN? 
 	- Yet another resource negotiator
-	- used to manage resources in a typical cluster
+	- used to manage resources in a typical cluster and also schedule jobs
 	- YARN enables multiple applications to run simultaneously on the same shared cluster
 	- allows applications to negotiate resources based on need
 	- resource allocation/management is central to YARN
 	- earlier in hadoop there was JobTracker which was responsible for resource management among other things
 		- this was part of map reduce
+	- 
 - https://learning.oreilly.com/library/view/yarn-essentials/9781784391737/ch01.html#ch01lvl1sec08
 - what is a [cluster manager]([Cluster manager - IBM Documentation](https://www.ibm.com/docs/en/powerha-aix/7.2?topic=software-cluster-manager))?
 	- daemon that runs in each node of a cluster
@@ -44,11 +45,24 @@
 	- a slave service running on every node (YARN NodeManager, Mesos slave or spark standalone slave) 
 		- actually starts the processes required by applications
 		- these may also monitor their liveliness and resource consumption
+
+
+
 - what is YARN ResourceManager?
+	- responsible for the management of resources including RAMs, CPUs and other resources throughout the cluster
+	- obviously a daemon
+	- makes allocation decisions
+	- resource manager has two main components
+		- scheduler: 
+		- applications manager
+- what is application master?
+	- responsible for application scheduling throughout the life cycle
 - what is YARN NodeManager?
+	- responsible for the supply and isolation of resources on this node
 
 - what is YARN Scheduler?
-- 
+	- ![[Pasted image 20240731183902.png]]
+	- 
 - Why run on YARN?
 	- allows us to dynamically share and centrally configure the same pool of cluster resources between all fws that run on YARN
 		- we can throw our entire cluster to run a MR job, then use some of it on an impala query and the rest of spark application without any changes in config

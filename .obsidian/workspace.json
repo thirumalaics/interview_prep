@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -172,6 +173,7 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Pasted image 20240731183902.png",
     "Go Deep.md",
     "Summaries/SPARK/YARN.md",
     "Configuring.md",
@@ -210,7 +212,6 @@
     "Summaries/SPARK",
     "Summaries/Airflow.md",
     "Questions",
-    "Summaries/Python.md",
     "Summaries"
   ]
 }

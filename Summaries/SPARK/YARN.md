@@ -23,16 +23,6 @@
 		- ***monitoring***: continuously tracking resource usage to ensure that apps do not exceed their allocated resources
 		- ***balancing***: distributing workloads evenly across the cluster to prevent any single node from becoming a bottleneck
 		- ***isolation***: ensuring that different jobs or applications do not interfere with each other, maintaining performance and security
-- what is YARN and what is the need for YARN? 
-	- Yet another resource negotiator
-	- used to manage resources in a typical cluster and also schedule jobs
-	- YARN enables multiple applications to run simultaneously on the same shared cluster
-	- allows applications to negotiate resources based on need
-	- resource allocation/management is central to YARN
-	- earlier in hadoop there was JobTracker which was responsible for resource management among other things
-		- this was part of map reduce
-	- YARN allows diff processing engines like graph, interactive and stream processing as well to run and process data stored in HDFS
-- https://learning.oreilly.com/library/view/yarn-essentials/9781784391737/ch01.html#ch01lvl1sec08
 - what is a [cluster manager]([Cluster manager - IBM Documentation](https://www.ibm.com/docs/en/powerha-aix/7.2?topic=software-cluster-manager))?
 	- daemon that runs in each node of a cluster
 	- main task of the CM is to respond to unplanned events, such as recovering from sw and hw failures, or user-initiated events
@@ -44,7 +34,15 @@
 	- spark supports pluggable cluster management
 	- cluster manager is responsible for starting the executor processes
 	- spark supports YARN, Mesos and its own standalone cluster manager
-- what are the components of the CMs which are supported?
+- what is YARN and what is the need for YARN? 
+	- Yet another resource negotiator
+	- used to manage resources in a typical cluster and also schedule jobs
+	- YARN enables multiple applications to run simultaneously on the same shared cluster
+	- allows applications to negotiate resources based on need
+	- earlier in hadoop there was JobTracker which was responsible for resource management among other things
+		- this was part of map reduce
+	- YARN allows diff processing engines like graph, interactive and stream processing as well to run and process data stored in HDFS
+- what are the components of the supported CMs?
 	- two components in each of the CMs
 	- central master service(YARN ResourceManager), mesos master, Spark master
 		- these decide which applications get to run executor processes
@@ -52,6 +50,9 @@
 	- a slave service running on every node (YARN NodeManager, Mesos slave or spark standalone slave) 
 		- actually starts the processes required by applications
 		- these may also monitor their liveliness and resource consumption
+
+
+
 - what are the components in YARN?
 	- split up the functionalities of resource management and job scheduling/monitoring into separate daemons
 	- global ResourceManager
@@ -62,7 +63,18 @@
 	- responsible for the management of resources including RAMs, CPUs and other resources throughout the cluster
 	- obviously a daemon
 	- makes resource allocation decisions for various running applications
-
+	- in the medium primer he has mentioned that it schedules applications
+- what is YARN NodeManager?
+	- per node daemon
+	- manages resources on individual nodes
+	- also monitors resource usage of containers(CPU, Memory)
+	- reports monitored metrics to RM
+- what is application master?
+	- framework specific library
+	- tasked with negotiating resources from the resource manager
+	- works with node managers to execute and monitor the tasks
+- what is a container?
+	- encapsulation of all the resources(CPU, mem, etc.) necessary for running a task 
 - what are the two components in resource manager?
 	- resource manager has two main components
 		- scheduler: decides allocation of resources to various running applications
@@ -70,8 +82,7 @@
 		- applications manager
 - what is application master?
 	- responsible for application scheduling throughout the life cycle
-- what is YARN NodeManager?
-	- responsible for the supply and isolation of resources on this node
+
 
 - what is YARN Scheduler?
 	- ![[Pasted image 20240731183902.png]]

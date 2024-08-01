@@ -31,7 +31,7 @@
 	- resource allocation/management is central to YARN
 	- earlier in hadoop there was JobTracker which was responsible for resource management among other things
 		- this was part of map reduce
-	- YARN aloows diff processing engines like graph, interactive and streaaam processing as well to run and process data stored in HDfs
+	- YARN allows diff processing engines like graph, interactive and stream processing as well to run and process data stored in HDFS
 - https://learning.oreilly.com/library/view/yarn-essentials/9781784391737/ch01.html#ch01lvl1sec08
 - what is a [cluster manager]([Cluster manager - IBM Documentation](https://www.ibm.com/docs/en/powerha-aix/7.2?topic=software-cluster-manager))?
 	- daemon that runs in each node of a cluster
@@ -52,7 +52,10 @@
 	- a slave service running on every node (YARN NodeManager, Mesos slave or spark standalone slave) 
 		- actually starts the processes required by applications
 		- these may also monitor their liveliness and resource consumption
-
+- what are the components in YARN?
+	- split up the functionalities of resource management and job scheduling/monitoring into separate daemons
+	- global ResourceManager
+	- per-application ApplicationMaster(AM) - an application is a job or a group of jobs
 [YARN (Hadoop): A primer. Whats YARN? | by Abhinav Vinci | Jul, 2024 | Medium](https://medium.com/@vinciabhinav7/yarn-hadoop-a-primer-a381378768ae)
 
 - what is YARN ResourceManager?

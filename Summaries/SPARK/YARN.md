@@ -15,7 +15,14 @@
 		- in YARN mode, the driver can run on the cluster
 		- driver is alive for the time of existence of the application
 	- in MR, client process can go away and the job can continue running
-
+- what is resource management?
+	- allocation and management of computational resources(including nw bw)
+	- resource management involves:
+		- ***allocation***: determining how much of each resource should be assigned to each application or job
+		- ***scheduling***: deciding the order and priority in which jobs should be executed
+		- ***monitoring***: continuously tracking resource usage to ensure that apps do not exceed their allocated resources
+		- ***balancing***: distributing workloads evenly across the cluster to prevent any single node from becoming a bottleneck
+		- ***isolation***: ensuring that different jobs or applications do not interfere with each other, maintaining performance and security
 - what is YARN and what is the need for YARN? 
 	- Yet another resource negotiator
 	- used to manage resources in a typical cluster and also schedule jobs
@@ -24,7 +31,7 @@
 	- resource allocation/management is central to YARN
 	- earlier in hadoop there was JobTracker which was responsible for resource management among other things
 		- this was part of map reduce
-	- 
+	- YARN aloows diff processing engines like graph, interactive and streaaam processing as well to run and process data stored in HDfs
 - https://learning.oreilly.com/library/view/yarn-essentials/9781784391737/ch01.html#ch01lvl1sec08
 - what is a [cluster manager]([Cluster manager - IBM Documentation](https://www.ibm.com/docs/en/powerha-aix/7.2?topic=software-cluster-manager))?
 	- daemon that runs in each node of a cluster
@@ -46,14 +53,17 @@
 		- actually starts the processes required by applications
 		- these may also monitor their liveliness and resource consumption
 
-
+[YARN (Hadoop): A primer. Whats YARN? | by Abhinav Vinci | Jul, 2024 | Medium](https://medium.com/@vinciabhinav7/yarn-hadoop-a-primer-a381378768ae)
 
 - what is YARN ResourceManager?
 	- responsible for the management of resources including RAMs, CPUs and other resources throughout the cluster
 	- obviously a daemon
-	- makes allocation decisions
+	- makes resource allocation decisions for various running applications
+
+- what are the two components in resource manager?
 	- resource manager has two main components
-		- scheduler: 
+		- scheduler: decides allocation of resources to various running applications
+		- pure scheduler does not monitor or track the status of application
 		- applications manager
 - what is application master?
 	- responsible for application scheduling throughout the life cycle

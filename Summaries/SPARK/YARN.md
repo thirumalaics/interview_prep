@@ -50,13 +50,14 @@
 	- a slave service running on every node (YARN NodeManager, Mesos slave or spark standalone slave) 
 		- actually starts the processes required by applications
 		- these may also monitor their liveliness and resource consumption
-
-
-
 - what are the components in YARN?
-	- split up the functionalities of resource management and job scheduling/monitoring into separate daemons
+	- split up the functionalities of resource management and job scheduling/monitoring into separate daemons is the idea behind YARN
 	- global ResourceManager
 	- per-application ApplicationMaster(AM) - an application is a job or a group of jobs
+	- node manager
+
+
+
 [YARN (Hadoop): A primer. Whats YARN? | by Abhinav Vinci | Jul, 2024 | Medium](https://medium.com/@vinciabhinav7/yarn-hadoop-a-primer-a381378768ae)
 
 - what is YARN ResourceManager?
@@ -75,6 +76,29 @@
 	- works with node managers to execute and monitor the tasks
 - what is a container?
 	- encapsulation of all the resources(CPU, mem, etc.) necessary for running a task 
+
+- what are the benefits of using YARN?
+	- multiple diff applications can run at the same time in a cluster without having to worry about resource management
+		- possible due to the decoupling of resource management from the processing models
+	- support
+		- supports multiple data processing fws
+	- improved utilization
+		- minimizing idle resources
+	- enhanced scheduling
+		- different policies supported: FIFO, capacity, and fair scheduling
+		- this enables fine grained control over how resources are allocated and ensures that critical jobs get the necessary resources when needed
+	- Data Locality awareness
+		- designed to take advantage of data locality
+		- tries to schedule tasks on nodes where the data resides
+		- reduces data movement and improves processing speeds
+	- isolation
+		- multiple users and apps can share the same cluster without interfering with each other
+	- fault tolerance
+		- distributing resource management and app monitoring tasks
+		- making it easier to recover from node failures
+
+
+
 - what are the two components in resource manager?
 	- resource manager has two main components
 		- scheduler: decides allocation of resources to various running applications

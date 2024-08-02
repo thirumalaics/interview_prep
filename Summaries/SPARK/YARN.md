@@ -111,7 +111,10 @@
 - what is YARN Scheduler?
 	- ![[Pasted image 20240731183902.png]]
 	- 
-- Why run on YARN?
-	- allows us to dynamically share and centrally configure the same pool of cluster resources between all fws that run on YARN
-		- we can throw our entire cluster to run a MR job, then use some of it on an impala query and the rest of spark application without any changes in config
-	- we can take advantage of YARN schedulers for categorizing, isolating, prioritizing workloads
+- how YARN works?
+	- job submission: the client submits a job to the resource manager, which assigns it to an appropriate application master
+	- application master initialization: the resource manager allocates a container for the application master on one of the nodes. The AM then starts and initializes
+	- resource request: ***app master*** requests additional resources(containers) from the ***resource manager*** for executing tasks
+	- resource allocation: resource manager allocates containers on different nodes based on availability and resource policies
+	- task execution: the application master communicates with the ***node manager*** to launch tasks in the allocated containers. Each node manager manages the lifecycle of these tasks
+	- monitoring and completion: the application master monitors the progress of tasks and resource usage

@@ -101,9 +101,8 @@
 
 - what are the two components in resource manager?
 	- resource manager has two main components
-		- scheduler: decides allocation of resources to various running applications
-		- pure scheduler does not monitor or track the status of application
-		- applications manager
+		- scheduler: allocates resources to various running applications based on the configured policies
+		- Applications manager: manages application lifecycle, including starting the application master and monitoring the resource usage of jobs
 - what is application master?
 	- responsible for application scheduling throughout the life cycle
 
@@ -113,8 +112,10 @@
 	- 
 - how YARN works?
 	- job submission: the client submits a job to the resource manager, which assigns it to an appropriate application master
-	- application master initialization: the resource manager allocates a container for the application master on one of the nodes. The AM then starts and initializes
-	- resource request: ***app master*** requests additional resources(containers) from the ***resource manager*** for executing tasks
+	- application master initialization: the resource manager allocates ***a container*** for the application master on ***one of the nodes***. The AM then starts and initializes
+	- ***resource request***: ***app master*** requests additional resources(containers) from the ***resource manager*** for executing tasks
 	- resource allocation: resource manager allocates containers on different nodes based on availability and resource policies
-	- task execution: the application master communicates with the ***node manager*** to launch tasks in the allocated containers. Each node manager manages the lifecycle of these tasks
-	- monitoring and completion: the application master monitors the progress of tasks and resource usage
+	- ***task execution***: the application master communicates with the ***node manager*** to launch tasks in the allocated containers. Each node manager manages the lifecycle of these tasks
+	- ***monitoring and completion***: the application master monitors the progress of tasks and resource usage
+- 
+[How to design a Read Heavy system ? Some strategies and best practices | by Abhinav Vinci | Medium](https://medium.com/@vinciabhinav7/how-to-design-a-read-heavy-system-some-strategies-and-best-practices-20e416a77cfd)

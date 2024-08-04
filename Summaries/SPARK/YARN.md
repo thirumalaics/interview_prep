@@ -8,7 +8,6 @@
 		- advantage is that any tasks can immediately run without having to wait for fresh resources to be allocated
 	- in MR, for each task to run a process must be spawned - con
 	- there will not be any process in MR that will be lingering without having a purpose
-
 - what is the lifetime of driver and what are their uses? 
 	- spark relies on ***driver*** for task scheduling and job flow
 		- driver process is the same as the client process used to initiate the job
@@ -55,11 +54,7 @@
 	- global ResourceManager
 	- per-application ApplicationMaster(AM) - an application is a job or a group of jobs
 	- node manager
-
-
-
 [YARN (Hadoop): A primer. Whats YARN? | by Abhinav Vinci | Jul, 2024 | Medium](https://medium.com/@vinciabhinav7/yarn-hadoop-a-primer-a381378768ae)
-
 - what is YARN ResourceManager?
 	- responsible for the management of resources including RAMs, CPUs and other resources throughout the cluster
 	- obviously a daemon
@@ -76,7 +71,6 @@
 	- works with node managers to execute and monitor the tasks
 - what is a container?
 	- encapsulation of all the resources(CPU, mem, etc.) necessary for running a task 
-
 - what are the benefits of using YARN?
 	- multiple diff applications can run at the same time in a cluster without having to worry about resource management
 		- possible due to the decoupling of resource management from the processing models
@@ -96,9 +90,6 @@
 	- fault tolerance
 		- distributing resource management and app monitoring tasks
 		- making it easier to recover from node failures
-
-
-
 - what are the two components in resource manager?
 	- resource manager has two main components
 		- scheduler: allocates resources to various running applications based on the configured policies
@@ -121,3 +112,10 @@
 	- ***task execution***: the application master communicates with the ***node manager*** to launch tasks in the allocated containers. Each node manager manages the lifecycle of these tasks
 	- ***monitoring and completion***: the application master monitors the progress of tasks and resource usage
 [How to design a Read Heavy system ? Some strategies and best practices | by Abhinav Vinci | Medium](https://medium.com/@vinciabhinav7/how-to-design-a-read-heavy-system-some-strategies-and-best-practices-20e416a77cfd)
+
+- why run spark on YARN?
+	- fine grained control on how the jobs can be scheduled(policies)
+	- using spark standalone CM, requires each application to run an executor on every node in the cluster
+		- where as in YARN, we choose the number of executors to use
+	- YARN is the only cm for spark that supports security
+	- with YARN, spark can run against [Kerberized]([Things you should know about Kerberos in Hadoop Clusters | by BW L. | Data Engineering Insight | Medium](https://medium.com/data-engineering-insight/things-you-should-know-about-kerberos-in-hadoop-clusters-325861aee182)) Hadoop clusters and use secure authentication bw it's processes

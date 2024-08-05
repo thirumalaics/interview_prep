@@ -119,3 +119,24 @@
 		- where as in YARN, we choose the number of executors to use
 	- YARN is the only cm for spark that supports security
 	- with YARN, spark can run against [Kerberized]([Things you should know about Kerberos in Hadoop Clusters | by BW L. | Data Engineering Insight | Medium](https://medium.com/data-engineering-insight/things-you-should-know-about-kerberos-in-hadoop-clusters-325861aee182)) Hadoop clusters and use secure authentication bw it's processes
+- how does executor run in YARN?
+	- executor runs on YARN container
+	- where as map reduce schedules a container and fires up a JVM for each task
+	- Spark hosts multiple tasks within the same container
+- how many modes does spark support for running on YARN?
+	- yarn-cluster mode and yarn-client mode
+	- yarn cluster mode for production job
+	- yarn-client mode for interactive and debugging uses where we want to see our app's op immediately
+- what is the difference between the above two modes spark support for running on YARN?
+	- in YARN each application has an Application master process which is the first container started for that application
+	- the AM is responsible for requesting resources from the ResourceManager and asking the NM to start the containers on it's behalf
+	- application masters remove the need for an active client 
+		- the process starting the app can go away and coordination continues from a process managed(AM) by YARN running on the cluster
+	- in YARN cluster more, driver runs in the AM
+		- same process responsible for both driving the app and requesting resources from YARN
+		- this process runs inside a YARN container
+		- ![[Pasted image 20240805200121.png]]
+		- a misleading diagram that depicts the client automatically starts the application
+			- remember application requests go to application manager
+			- from there Application manager gets resource from scheduler to start the applicatio
+			- 

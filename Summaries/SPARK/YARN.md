@@ -1,4 +1,7 @@
 [Apache Spark Resource Management and YARN App Models - Cloudera Engineering Blog (wpengine.com)](https://clouderatemp.wpengine.com/blog/2014/05/apache-spark-resource-management-and-yarn-app-models/)
+- what is executor?
+	- jvm instance on a node that serves a single spark app
+	- a node may have multiple executors
 - what is the lifetime of worker processes, in which tasks are executed for spark and MR?
 	- executors stick around for the lifetime of spark application, even when no jobs are running
 		- in spark, many tasks can run concurrently in a single process (executor)
@@ -130,6 +133,8 @@
 - what is the difference between the above two modes spark support for running on YARN?
 	- in YARN each application has an Application master process which is the first container started for that application
 	- the AM is responsible for requesting resources from the ResourceManager and asking the NM to start the containers on it's behalf
+		- resource requests made to AM by driver
+		- one AM per app
 	- application masters remove the need for an active client 
 		- the process starting the app can go away and coordination continues from a process managed(AM) by YARN running on the cluster
 	- in YARN cluster more, driver runs in the AM
@@ -138,5 +143,10 @@
 		- ![[Pasted image 20240805200121.png]]
 		- a misleading diagram that depicts the client automatically starts the application
 			- remember application requests go to application manager
-			- from there Application manager gets resource from scheduler to start the applicatio
-			- 
+			- from there Application manager gets resource from scheduler to start the application master
+	- yarn cluster mode not suited to using spark interactively
+	- in yarn client mode, AM is merely present to request executor containers from YARN
+		- driver runs inside the client process that initiates spark app
+		- the client comms with those containers to schedule work after they start
+		- ![[Pasted image 20240805200814.png]]
+- ![[Pasted image 20240805200902.png]]

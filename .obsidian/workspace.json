@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Questions/Australia.md",
+                "file": "Questions/Visa.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Questions/Australia.md",
+                "file": "Questions/Visa.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Questions/Australia.md",
+                "file": "Questions/Visa.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Questions/Australia.md"
+                "file": "Questions/Visa.md"
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
-    "Summaries/SPARK/YARN.md",
     "Questions/Australia.md",
+    "Questions/Visa.md",
+    "Summaries/SPARK/YARN.md",
     "Pasted image 20240805200902.png",
     "Pasted image 20240805200814.png",
     "Pasted image 20240805200233.png",
@@ -185,7 +186,6 @@
     "Summaries/how does computers process data.md",
     "Summaries/SPARK/Spark OOM.md",
     "Summaries/SPARK",
-    "Summaries/Airflow.md",
     "Questions",
     "Summaries"
   ]

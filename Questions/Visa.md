@@ -1,0 +1,1 @@
+https://leetcode.com/discuss/interview-question/3715285/Block-or-OA-or-Build-obstacles-and-check-if-new-constructions-can-take-place

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/YARN.md",
+                "file": "Questions/Australia.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/YARN.md",
+                "file": "Questions/Australia.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/YARN.md",
+                "file": "Questions/Australia.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/YARN.md"
+                "file": "Questions/Australia.md"
               }
             }
           }
@@ -148,13 +148,14 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/SPARK/YARN.md",
+    "Questions/Australia.md",
     "Pasted image 20240805200902.png",
     "Pasted image 20240805200814.png",
     "Pasted image 20240805200233.png",
     "Pasted image 20240805200121.png",
     "Pasted image 20240731183902.png",
     "Go Deep.md",
-    "Summaries/SPARK/YARN.md",
     "Configuring.md",
     "Summaries/SPARK/Spark Tuning.md",
     "Summaries/SPARK/Executor memory.md",
@@ -178,7 +179,6 @@
     "Pasted image 20240711184255.png",
     "Summaries/GCP/BQ UI.md",
     "Summaries/GCP/BQuery opt summary.md",
-    "Pasted image 20240710200116.png",
     "Summaries/GCP.md",
     "Summaries/SPARK/Spark shuffling.md",
     "Summaries/GCP",

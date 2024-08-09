@@ -1,0 +1,3 @@
+- how to split a large csv file without reading it to memory?
+- https://www.youtube.com/watch?v=PLS8BUXGp40
+- https://pastebin.com/5X3w6HxX

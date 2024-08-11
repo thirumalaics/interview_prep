@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Questions/Visa.md",
+                "file": "Questions/Walmart Jan.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Questions/Visa.md",
+                "file": "Questions/Walmart Jan.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Questions/Visa.md",
+                "file": "Questions/Walmart Jan.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Questions/Visa.md"
+                "file": "Questions/Walmart Jan.md"
               }
             }
           }
@@ -148,8 +149,11 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
-    "Questions/Australia.md",
+    "Pasted image 20240811081542.png",
+    "Pasted image 20240811080943.png",
     "Questions/Visa.md",
+    "Questions/Walmart Jan.md",
+    "Questions/Australia.md",
     "Summaries/SPARK/YARN.md",
     "Pasted image 20240805200902.png",
     "Pasted image 20240805200814.png",
@@ -177,14 +181,11 @@
     "Summaries/SQL Query execution flow.md",
     "Pasted image 20240712094503.png",
     "Summaries/GCP/JOIN optimization.md",
-    "Pasted image 20240711184255.png",
     "Summaries/GCP/BQ UI.md",
     "Summaries/GCP/BQuery opt summary.md",
     "Summaries/GCP.md",
     "Summaries/SPARK/Spark shuffling.md",
     "Summaries/GCP",
-    "Summaries/how does computers process data.md",
-    "Summaries/SPARK/Spark OOM.md",
     "Summaries/SPARK",
     "Questions",
     "Summaries"

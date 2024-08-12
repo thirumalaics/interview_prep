@@ -8,3 +8,5 @@
 8. https://blog.cloudera.com/how-does-apache-spark-3-0-increase-the-performance-of-your-sql-workloads/
 9. https://medium.com/firebase-developers/using-the-unnest-function-in-bigquery-to-analyze-event-parameters-in-analytics-fb828f890b42
 10. how is computing different in spark?
+11. https://stackoverflow.com/questions/68249294/in-spark-what-is-the-meaning-of-spark-executor-pyspark-memory-configuration-opti
+12. If I have a python script that reads data from a file and does some simple transformation. The data is read in to memory and operations are done right?

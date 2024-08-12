@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Questions/Walmart Jan.md",
+                "file": "Summaries/SPARK/Spark Tuning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4e9dfe38b8189895",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Summaries/SPARK/Executor memory.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Questions/Walmart Jan.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Questions/Walmart Jan.md",
+                "file": "Summaries/SPARK/Executor memory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Questions/Walmart Jan.md"
+                "file": "Summaries/SPARK/Executor memory.md"
               }
             }
           }
@@ -147,12 +160,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2f7b73c576076c70",
+  "active": "4e9dfe38b8189895",
   "lastOpenFiles": [
+    "Summaries/SPARK/Spark Tuning.md",
+    "Questions/Walmart Jan.md",
     "Pasted image 20240811081542.png",
     "Pasted image 20240811080943.png",
     "Questions/Visa.md",
-    "Questions/Walmart Jan.md",
     "Questions/Australia.md",
     "Summaries/SPARK/YARN.md",
     "Pasted image 20240805200902.png",
@@ -162,7 +176,6 @@
     "Pasted image 20240731183902.png",
     "Go Deep.md",
     "Configuring.md",
-    "Summaries/SPARK/Spark Tuning.md",
     "Summaries/SPARK/Executor memory.md",
     "The.md",
     "Pasted image 20240723195226.png",
@@ -179,7 +192,6 @@
     "Questions/UST - 2024-07-09.md",
     "Summaries/SQL.md",
     "Summaries/SQL Query execution flow.md",
-    "Pasted image 20240712094503.png",
     "Summaries/GCP/JOIN optimization.md",
     "Summaries/GCP/BQ UI.md",
     "Summaries/GCP/BQuery opt summary.md",

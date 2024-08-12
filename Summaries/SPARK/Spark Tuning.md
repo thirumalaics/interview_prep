@@ -99,14 +99,6 @@
 		- what is job group and description
 
 
-
-
-
-
-
-
-
-
 - in yarn running mode, the default for the following are:
 	- [reference](https://spark.apache.org/docs/latest/running-on-yarn.html) for the following
 		- spark.executor.instances = 2

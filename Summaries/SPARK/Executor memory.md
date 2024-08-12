@@ -165,7 +165,6 @@
 ## What is memory overhead and what is it used for?
 - set by spark.executor.memoryOverhead
 	- this causes OOM errors - not sure about that
-	- this memory is used
 	- off-heap mem allocated to container
 		- [Difference between "spark.yarn.executor.memoryOverhead" and "spark.memory.offHeap.size" - Stack Overflow](https://stackoverflow.com/questions/58666517/difference-between-spark-yarn-executor-memoryoverhead-and-spark-memory-offhea/61723456#61723456)
 		- https://stackoverflow.com/questions/63561233/spark-memory-overhead
@@ -221,3 +220,5 @@ https://michaelheil.medium.com/understanding-common-performance-issues-in-apache
 https://stackoverflow.com/questions/32621990/what-are-workers-executors-cores-in-spark-standalone-cluster
 
 https://stackoverflow.com/questions/63561233/spark-memory-overhead
+
+[Difference between "spark.yarn.executor.memoryOverhead" and "spark.memory.offHeap.size" - Stack Overflow](https://stackoverflow.com/questions/58666517/difference-between-spark-yarn-executor-memoryoverhead-and-spark-memory-offhea/61723456#61723456)

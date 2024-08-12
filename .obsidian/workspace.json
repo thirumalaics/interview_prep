@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Spark Tuning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4e9dfe38b8189895",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Summaries/SPARK/Executor memory.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -160,9 +147,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4e9dfe38b8189895",
+  "active": "2f7b73c576076c70",
   "lastOpenFiles": [
     "Summaries/SPARK/Spark Tuning.md",
+    "[Java.md",
+    "Summaries/SPARK/Executor memory.md",
     "Questions/Walmart Jan.md",
     "Pasted image 20240811081542.png",
     "Pasted image 20240811080943.png",
@@ -176,7 +165,6 @@
     "Pasted image 20240731183902.png",
     "Go Deep.md",
     "Configuring.md",
-    "Summaries/SPARK/Executor memory.md",
     "The.md",
     "Pasted image 20240723195226.png",
     "Pasted image 20240723192944.png",

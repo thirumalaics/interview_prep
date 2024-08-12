@@ -124,7 +124,6 @@
 ## What is reserved memory used for?
 - used to store spark internal objects
 - this value is hardcoded
-- https://stackoverflow.com/questions/78692374/spark-executor-memory-overhead
 
 ## What is user memory used for?
 - spark internal md
@@ -185,6 +184,7 @@
 	- [Resolve the error "Container killed by YARN for exceeding memory limits" in Spark on Amazon EMR | AWS re:Post (repost.aws)](https://repost.aws/knowledge-center/emr-spark-yarn-memory-limit)
 		- reducing the num of cores reduces the max number of tasks
 			- which reduces the amount of memory required
+	- https://stackoverflow.com/questions/78692374/spark-executor-memory-overhead
 
 ## What is pyspark memory and what is it used for?
 - `spark.executor.pyspark.memory`

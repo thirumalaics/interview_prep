@@ -23,12 +23,34 @@
 - does not support non equi join
 - does not require sortable join key
 
-## Sort merge join
-
+## Shuffle Sort merge join
+- when both datasets are large
+- [Spark Sort Merge Join: Efficient Data Joining : Spark SQL interview questions (youtube.com)](https://www.youtube.com/watch?v=5d9JuBX7kVA&t=21s)
+- 3 phases
+	- shuffle - both are shuffled
+	- sort - records sorted by the join key on both sides
+	- merge - both sides of the join condition are iterated based on join key
+- records with identical keys are grouped
+	- so when the iteration takes place and the key is matched, a cartesian product is performed with the records in this group
+	- check data savvy video above
 - does not support non equi join
+- require sortable join key
+- default join
 
+## shuffle-and-replicated nested loop join
+- similar to BHJ
+- entire partition of the dataset is replicated to all the partitions for a nested loop join
+- works for both equi and non-equi
+- works only for inner like joins
+
+## broadcast nested loop join (BNLJ)
+- broadcasting one of the entire datasets and performing a nested loop to join the data
+- every record of dataset 1 is attempted to join with every record from dataset 2
+- works for both equi and non-equi
+- works for all join types
 
 [Using join hints in Spark SQL - AWS Prescriptive Guidance (amazon.com)](https://docs.aws.amazon.com/prescriptive-guidance/latest/spark-tuning-glue-emr/using-join-hints-in-spark-sql.html#:~:text=The%20Shuffle%20Hash%20join%2C%20as,is%20performed%20within%20the%20partition.)
 [How nested loop, hash, and merge joins work. (youtube.com)](https://www.youtube.com/watch?v=-htbah3eCYg)
 [Crack Interview Problems in an Animated Way (youtube.com)](https://www.youtube.com/watch?v=pJWCwfv983Q&t=23s)
 [Different Types of Spark Join Strategies | by ONGCJ | Medium](https://medium.com/@ongchengjie/different-types-of-spark-join-strategies-997671fbf6b0)
+https://towardsdatascience.com/strategies-of-spark-join-c0e7b4572bcf

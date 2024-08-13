@@ -57,3 +57,4 @@
 [Different Types of Spark Join Strategies | by ONGCJ | Medium](https://medium.com/@ongchengjie/different-types-of-spark-join-strategies-997671fbf6b0)
 https://towardsdatascience.com/strategies-of-spark-join-c0e7b4572bcf
 https://stackoverflow.com/questions/73939433/how-does-cartesian-product-join-transfer-data-internally-for-join-in-spark
+https://medium.com/@amarkrgupta96/join-strategies-in-apache-spark-a-hands-on-approach-d0696fc0a6c9

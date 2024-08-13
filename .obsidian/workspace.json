@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Join strats.md",
+                "file": "Summaries/SPARK/Executor tuning.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Join strats.md",
+                "file": "Summaries/SPARK/Executor tuning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Join strats.md",
+                "file": "Summaries/SPARK/Executor tuning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Join strats.md"
+                "file": "Summaries/SPARK/Executor tuning.md"
               }
             }
           }
@@ -149,10 +149,12 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Pasted image 20240813204341.png",
+    "Summaries/SPARK/Join strats.md",
+    "Summaries/SPARK/Executor tuning.md",
     "Pasted image 20240813093911.png",
     "Pasted image 20240813093700.png",
     "Summaries/SPARK/Executor memory.md",
-    "Summaries/SPARK/Join strats.md",
     "Go Deep.md",
     "Summaries/SPARK/Spark Tuning.md",
     "[Java.md",
@@ -170,7 +172,6 @@
     "Configuring.md",
     "The.md",
     "Pasted image 20240723195226.png",
-    "Pasted image 20240723192944.png",
     "Summaries/SPARK/Java.md",
     "Questions/ford.md",
     "Summaries/GCP/BQ Query optimization(official).md",
@@ -184,7 +185,6 @@
     "Summaries/SQL Query execution flow.md",
     "Summaries/GCP/JOIN optimization.md",
     "Summaries/GCP/BQ UI.md",
-    "Summaries/GCP/BQuery opt summary.md",
     "Summaries/GCP",
     "Summaries/SPARK",
     "Questions",

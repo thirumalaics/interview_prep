@@ -49,8 +49,11 @@
 - works for both equi and non-equi
 - works for all join types
 
+![[Pasted image 20240813093700.png]]
+![[Pasted image 20240813093911.png]]
 [Using join hints in Spark SQL - AWS Prescriptive Guidance (amazon.com)](https://docs.aws.amazon.com/prescriptive-guidance/latest/spark-tuning-glue-emr/using-join-hints-in-spark-sql.html#:~:text=The%20Shuffle%20Hash%20join%2C%20as,is%20performed%20within%20the%20partition.)
 [How nested loop, hash, and merge joins work. (youtube.com)](https://www.youtube.com/watch?v=-htbah3eCYg)
 [Crack Interview Problems in an Animated Way (youtube.com)](https://www.youtube.com/watch?v=pJWCwfv983Q&t=23s)
 [Different Types of Spark Join Strategies | by ONGCJ | Medium](https://medium.com/@ongchengjie/different-types-of-spark-join-strategies-997671fbf6b0)
 https://towardsdatascience.com/strategies-of-spark-join-c0e7b4572bcf
+https://stackoverflow.com/questions/73939433/how-does-cartesian-product-join-transfer-data-internally-for-join-in-spark

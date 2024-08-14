@@ -30,5 +30,13 @@
 		- in DS API, `spark.sql.shuffle.partitions` decides the number of shuffle partitions for most of the APIs requiring shuffling
 			- default is 200
 		- in few DS API requiring shuffling, we can give it explicitly
+- what is shuffle write?
+	- writing of serialized data on all executors before transmitting
+- what is shuffle read?
+	- reading serialized data on all executors at the beginning of a stage
+- what is shuffle block?
+	- uniquely identifies a block of data which belongs to a single shuffled partition and is produced from executing shuffle write operation(by ShuffleMap task) on a single input partition
  [Revealing Apache Spark Shuffling Magic | by Ajay Gupta | The Startup | Medium](https://medium.com/swlh/revealing-apache-spark-shuffling-magic-b2c304306142)
- 
+ https://www.slideshare.net/slideshow/spark-shuffle-introduction/43046270
+For Shuffle read and write
+https://stackoverflow.com/questions/27276884/what-is-shuffle-read-shuffle-write-in-apache-spark#:~:text=Shuffling%20means%20the%20reallocation%20of,the%20beginning%20of%20a%20stage.

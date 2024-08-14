@@ -43,6 +43,22 @@ https://medium.com/analytics-vidhya/how-does-pyspark-work-step-by-step-with-pict
 	- so the two process can either write messages in to a file or they can talk to each other over a nw socket
 		- both require serialization and deserialization
 
+```
+some_string = spark.sparkContext.parallelize("hello hello hello")
+some_string.take(5)
+```
+
+- what happened here is 
+	- python serialized the string and wrote it into a temp file
+	- via py4j, communicates to JVM to pick the file and create a Java RDD
+	- creates a py variable to store info about the Java RDD
+	- JVM reads the file into a collection
+	- creates a java rdd object from this collection(partitions and distributes the data in memory)
+	- tell py where to find the object in the JVM
+	- ask jvm for first five records from the data stored in spark mem
+	- returns results via py4j
+	- py process unpickles data to display
+
 https://ankiweb.net/shared/info/2004145278
 https://norvig.com/21-days.html#answers
 

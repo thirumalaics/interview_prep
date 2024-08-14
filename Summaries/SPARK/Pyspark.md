@@ -27,4 +27,23 @@ https://medium.com/analytics-vidhya/how-does-pyspark-work-step-by-step-with-pict
 	- represents connection to a Spark cluster
 	- can be used to create RDD and broadcast variables on that cluster
 	- but in python, SparkContext is way to communicate with SparkContext object in JVM
-		- python spark context te
+		- python spark context tells the java spark context what we want done
+		- python object is a mouth piece through which we talk to Java object
+- python is able to make stuff happen inside a JVM process thanks to py4j
+- py4j allows py program to
+	- open up a port to listen on(25334)
+	- start up a JVM
+	- make the JVM programme listen on a different nw port(25333)
+	- send commands to the Java process and listen for responses
+![[Pasted image 20240814085834.png]]
+
+- using pyspark makes our Spark based apps slower
+	- as we are performing inter process comms
+	- again python process and JVM process cannot have access to the same data in memory
+	- so the two process can either write messages in to a file or they can talk to each other over a nw socket
+		- both require serialization and deserialization
+
+https://ankiweb.net/shared/info/2004145278
+https://norvig.com/21-days.html#answers
+
+https://norvig.com/

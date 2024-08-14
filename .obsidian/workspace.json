@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -149,6 +148,7 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Pasted image 20240814085834.png",
     "Pasted image 20240814085022.png",
     "Pasted image 20240814083612.png",
     "Summaries/SPARK/Join strats.md",
@@ -170,7 +170,6 @@
     "Pasted image 20240805200902.png",
     "Pasted image 20240805200814.png",
     "Pasted image 20240805200233.png",
-    "Pasted image 20240805200121.png",
     "Configuring.md",
     "The.md",
     "Summaries/SPARK/Java.md",

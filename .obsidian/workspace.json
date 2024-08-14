@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Pyspark.md",
+                "file": "Summaries/SPARK/Spark shuffling.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Pyspark.md",
+                "file": "Summaries/SPARK/Spark shuffling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Pyspark.md",
+                "file": "Summaries/SPARK/Spark shuffling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Pyspark.md"
+                "file": "Summaries/SPARK/Spark shuffling.md"
               }
             }
           }
@@ -148,11 +149,11 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/SPARK/Pyspark.md",
     "Pasted image 20240814085834.png",
     "Pasted image 20240814085022.png",
     "Pasted image 20240814083612.png",
     "Summaries/SPARK/Join strats.md",
-    "Summaries/SPARK/Pyspark.md",
     "Go Deep.md",
     "Summaries/SPARK/Executor tuning.md",
     "Pasted image 20240813204341.png",
@@ -169,7 +170,6 @@
     "Summaries/SPARK/YARN.md",
     "Pasted image 20240805200902.png",
     "Pasted image 20240805200814.png",
-    "Pasted image 20240805200233.png",
     "Configuring.md",
     "The.md",
     "Summaries/SPARK/Java.md",

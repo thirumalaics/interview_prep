@@ -20,7 +20,7 @@
 	- pyspark allows us to use py process to send commands to a JVM process named spark
 	- this is needed as Spark is written in Java and scala, but not in python
 ![[Pasted image 20240814085022.png]]
-https://medium.com/analytics-vidhya/how-does-pyspark-work-step-by-step-with-pictures-c011402ccd57
+
 
 - spark.sparkContext
 	- entry point for spark functionality
@@ -58,8 +58,17 @@ some_string.take(5)
 	- ask jvm for first five records from the data stored in spark mem
 	- returns results via py4j
 	- py process unpickles data to display
+- what will happen if I use map function of pyspark to run an upper method on the strings and create a new dataframe
+	- spark does not map all the functions in the python language to the equivalent functions in JAva/scala
+	- [spark creates python worker processes to execute python functions](https://github.com/apache/spark/blob/7dff3b125de23a4d6ce834217ee08973b259414c/core/src/main/scala/org/apache/spark/SparkEnv.scala#L75)
+	- spark shares the serialized data and serialized python functions to execute
+	- python process unpickles the data and code received from spark, performs the function and serializes and shares the results
 
 https://ankiweb.net/shared/info/2004145278
 https://norvig.com/21-days.html#answers
 
 https://norvig.com/
+
+
+
+https://medium.com/analytics-vidhya/how-does-pyspark-work-step-by-step-with-pictures-c011402ccd57

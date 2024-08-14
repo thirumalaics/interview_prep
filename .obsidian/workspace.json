@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Executor tuning.md",
+                "file": "Summaries/SPARK/Join strats.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Executor tuning.md",
+                "file": "Summaries/SPARK/Join strats.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Executor tuning.md",
+                "file": "Summaries/SPARK/Join strats.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Executor tuning.md"
+                "file": "Summaries/SPARK/Join strats.md"
               }
             }
           }
@@ -149,13 +148,13 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
-    "Pasted image 20240813204341.png",
+    "Go Deep.md",
     "Summaries/SPARK/Join strats.md",
     "Summaries/SPARK/Executor tuning.md",
+    "Pasted image 20240813204341.png",
     "Pasted image 20240813093911.png",
     "Pasted image 20240813093700.png",
     "Summaries/SPARK/Executor memory.md",
-    "Go Deep.md",
     "Summaries/SPARK/Spark Tuning.md",
     "[Java.md",
     "Questions/Walmart Jan.md",
@@ -171,7 +170,6 @@
     "Pasted image 20240731183902.png",
     "Configuring.md",
     "The.md",
-    "Pasted image 20240723195226.png",
     "Summaries/SPARK/Java.md",
     "Questions/ford.md",
     "Summaries/GCP/BQ Query optimization(official).md",

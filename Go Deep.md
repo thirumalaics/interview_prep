@@ -10,3 +10,4 @@
 10. how is computing different in spark?
 11. https://stackoverflow.com/questions/68249294/in-spark-what-is-the-meaning-of-spark-executor-pyspark-memory-configuration-opti
 12. If I have a python script that reads data from a file and does some simple transformation. The data is read in to memory and operations are done right?
+13. how does pyspark work?

@@ -90,7 +90,11 @@ https://0x0fff.com/spark-architecture-shuffle/
 		- later some optimizations were included
 		- i have skipped much of the stuff in hash shuffle implementation because it is deprecated
 		- pros:
-			- fast, no sorting required
+			- fast, no sorting required, no hash table maintained
+			- no IO overhead - data is written to HDD exactly once and read exactly once
+		- cons:
+			- when the amount of partitions is big, num of output files are more
+		- 
 ![[Pasted image 20240815093134.png]]
 
  [Revealing Apache Spark Shuffling Magic | by Ajay Gupta | The Startup | Medium](https://medium.com/swlh/revealing-apache-spark-shuffling-magic-b2c304306142)

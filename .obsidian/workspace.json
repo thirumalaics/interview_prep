@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -149,6 +148,7 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Pasted image 20240815093134.png",
     "Pasted image 20240814200412.png",
     "Summaries/SPARK/Pyspark.md",
     "Pasted image 20240814085834.png",
@@ -170,7 +170,6 @@
     "Questions/Australia.md",
     "Summaries/SPARK/YARN.md",
     "Pasted image 20240805200902.png",
-    "Pasted image 20240805200814.png",
     "Configuring.md",
     "The.md",
     "Summaries/SPARK/Java.md",

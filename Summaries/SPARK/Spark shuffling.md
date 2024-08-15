@@ -75,6 +75,24 @@
 		- after all shuffle blocks are fetched, all spilled files are again read and merged to generate final iterator of the data records for further use
 	- these spills incur disk write costs and ser/deser cycles(in case where data records are java objects)
 	- shuffle spill metric is also available
+
+https://0x0fff.com/spark-architecture-shuffle/
+- spark.shuffle.manager parameter determines the shuffle implementation
+	- there are many implementations
+	- hash, sort, tungsten-sort
+	- sort operation is default from spark 1.2.0
+	- hash shuffle was default b4
+		- creates many files
+		- each mapper task creates a separate file for each separate reducer
+		- so total files on the cluster = M\*R
+			- num of mappers * num of reducers
+			- number of reducers here means number of partitions on the reduce side
+		- later some optimizations were included
+		- i have skipped much of the stuff in hash shuffle implementation because it is deprecated
+		- pros:
+			- fast, no sorting required
+![[Pasted image 20240815093134.png]]
+
  [Revealing Apache Spark Shuffling Magic | by Ajay Gupta | The Startup | Medium](https://medium.com/swlh/revealing-apache-spark-shuffling-magic-b2c304306142)
  https://www.slideshare.net/slideshow/spark-shuffle-introduction/43046270
 For Shuffle read and write

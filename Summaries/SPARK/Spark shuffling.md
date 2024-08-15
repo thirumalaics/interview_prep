@@ -46,7 +46,21 @@
 	- map id uniquely identifies each of the input partition
 	- reduceId uniquely identifies each of the shuffled partition
 	- ![[Pasted image 20240814200412.png]]
-- 
+	- a shuffle block is hosted in a disk file on cluster nodes, and is either serviced by the block manager of an executor, or via external shuffle service
+	- all shuffle blocks of a shuffle stage are tracked by mapoutputtracker hosted in the driver
+		- If the status of a Shuffle block is absent against a shuffle stage tracked by MapOutPutTracker, then it leads to ‘MetadataFetchFailedException’ in the reducer task corresponding to ReduceId in Shuffle block. Also, failure in fetching the shuffle block from the designated Block manager leads to ‘FetchFailedException’ in the corresponding reducer task.
+- shuffle read/write
+	- a shuffle operation introduces a pair of stage in a spark application
+	- shuffle write happens in one of the stage while shuffle read happens in subsequent stage
+	- shuffle write executed independently for each of the input partition which needs to be shuffled
+	- shuffle read executed independently for each of the shuffled partition
+	- shuffle write operation is executed mostly using either sortshufflewriter(for rdds) or unsafeshufflewriter(for DF, DS)
+	- both shuffle writers produce an index file and a data file
+		- corresponding to each ip partition to be shuffled
+	- index file contains locations inside the data file for each of the shuffled partition
+	- data file contains actual shuffled data records ordered by shuffled partitions
+	- shuffle read operation is executed using BlockStoreShuffleReader which first queries for all relevant shuffle blocks and their locations
+	- this is then followed by pulling or fetching of the blocks from respective locations using block manager module
  [Revealing Apache Spark Shuffling Magic | by Ajay Gupta | The Startup | Medium](https://medium.com/swlh/revealing-apache-spark-shuffling-magic-b2c304306142)
  https://www.slideshare.net/slideshow/spark-shuffle-introduction/43046270
 For Shuffle read and write

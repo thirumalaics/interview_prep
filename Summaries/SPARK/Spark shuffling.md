@@ -36,6 +36,17 @@
 	- reading serialized data on all executors at the beginning of a stage
 - what is shuffle block?
 	- uniquely identifies a block of data which belongs to a single shuffled partition and is produced from executing shuffle write operation(by ShuffleMap task) on a single input partition
+	- a shuffle block comes from a single input partition's shuffle write operation
+	- a shuffle block belongs to a single shuffled partition
+	- there is a one-to-one mapping that goes both ways
+		- i/p partition <- > block <-> shuffled partition
+		- remember this block belongs to either of these partitions
+	- unique identifier for the shuffle block: (shuffleId, MapID, ReduceId)
+	- shuffle id uniquely identifies each shuffle write/read stage in a spark application
+	- map id uniquely identifies each of the input partition
+	- reduceId uniquely identifies each of the shuffled partition
+	- ![[Pasted image 20240814200412.png]]
+- 
  [Revealing Apache Spark Shuffling Magic | by Ajay Gupta | The Startup | Medium](https://medium.com/swlh/revealing-apache-spark-shuffling-magic-b2c304306142)
  https://www.slideshare.net/slideshow/spark-shuffle-introduction/43046270
 For Shuffle read and write

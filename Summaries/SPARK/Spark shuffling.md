@@ -55,12 +55,26 @@
 	- shuffle write executed independently for each of the input partition which needs to be shuffled
 	- shuffle read executed independently for each of the shuffled partition
 	- shuffle write operation is executed mostly using either sortshufflewriter(for rdds) or unsafeshufflewriter(for DF, DS)
+		- sortshuffle writer there is only one consolidated shuffle data file sorted by reduce partitions
 	- both shuffle writers produce an index file and a data file
 		- corresponding to each ip partition to be shuffled
 	- index file contains locations inside the data file for each of the shuffled partition
 	- data file contains actual shuffled data records ordered by shuffled partitions
 	- shuffle read operation is executed using BlockStoreShuffleReader which first queries for all relevant shuffle blocks and their locations
 	- this is then followed by pulling or fetching of the blocks from respective locations using block manager module
+	- shuffle operation generally involves remote fetches of shuffle blocks over network
+- shuffle spill
+	- before writing to a final index and data file, a buffer is used to store the data records(while iterating over the input partition) in order to sort the records on the basis of targeted shuffled partitions
+	- if the memory limits of this buffer is breached, the contents of the buffer are first sorted and then spilled to disk in a temporary shuffle file
+		- this process is called as shuffle spilling
+		- if the breach happens multiple times, multiple spill files could be created during the iteration process
+		- after iteration, these spilled files are read again and merged to produce final shuffle index and data file
+	- on the shuffle read side as well there is a buffer
+		- data records in shuffle blocks being fetched are required to be sorted on the basis of key values in records
+		- if the buffer size is breached, sort and spill records to disk
+		- after all shuffle blocks are fetched, all spilled files are again read and merged to generate final iterator of the data records for further use
+	- these spills incur disk write costs and ser/deser cycles(in case where data records are java objects)
+	- shuffle spill metric is also available
  [Revealing Apache Spark Shuffling Magic | by Ajay Gupta | The Startup | Medium](https://medium.com/swlh/revealing-apache-spark-shuffling-magic-b2c304306142)
  https://www.slideshare.net/slideshow/spark-shuffle-introduction/43046270
 For Shuffle read and write

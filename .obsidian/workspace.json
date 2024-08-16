@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Spark shuffling.md",
+                "file": "Summaries/SPARK/tungsten.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Spark shuffling.md",
+                "file": "Summaries/SPARK/tungsten.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Spark shuffling.md",
+                "file": "Summaries/SPARK/tungsten.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Spark shuffling.md"
+                "file": "Summaries/SPARK/tungsten.md"
               }
             }
           }
@@ -148,6 +149,9 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Pasted image 20240816093625.png",
+    "Summaries/SPARK/Spark shuffling.md",
+    "Summaries/SPARK/tungsten.md",
     "Pasted image 20240815093134.png",
     "Pasted image 20240814200412.png",
     "Summaries/SPARK/Pyspark.md",
@@ -169,7 +173,6 @@
     "Questions/Visa.md",
     "Questions/Australia.md",
     "Summaries/SPARK/YARN.md",
-    "Pasted image 20240805200902.png",
     "Configuring.md",
     "The.md",
     "Summaries/SPARK/Java.md",
@@ -182,8 +185,6 @@
     "Serialization.md",
     "Questions/UST - 2024-07-09.md",
     "Summaries/SQL.md",
-    "Summaries/SQL Query execution flow.md",
-    "Summaries/GCP/JOIN optimization.md",
     "Summaries/GCP",
     "Summaries/SPARK",
     "Questions",

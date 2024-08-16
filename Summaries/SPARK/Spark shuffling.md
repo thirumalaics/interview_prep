@@ -88,7 +88,7 @@ https://0x0fff.com/spark-architecture-shuffle/
 			- num of mappers * num of reducers
 			- number of reducers here means number of partitions on the reduce side
 		- later some optimizations were included
-		- i have skipped much of the stuff in hash shuffle implementation because it is deprecated
+		- i have skipped much of the stuff in hash shuffle implementation because it is deprecated and also because I am not able to understand 
 		- pros:
 			- fast, no sorting required, no hash table maintained
 			- no IO overhead - data is written to HDD exactly once and read exactly once
@@ -96,7 +96,16 @@ https://0x0fff.com/spark-architecture-shuffle/
 			- when the amount of partitions is big, num of output files are more
 		- 
 ![[Pasted image 20240815093134.png]]
-
+- sort shuffle
+	- from spark 1.2 default shuffle algo
+	- this is an attempt to implement the shuffle logic similar to the one used by Hadoop MR
+	- per reducer one file created inside which data is ordered by reducer id, this way we can easily fetch the chunk of the data related to reducer x
+		- get info on the position of the related data block and doing an fseek before fread
+		- for smaller amount of reducers, hashing to separate files would work faster than sorting
+		- there is a threshold below which hash shuffle is preferred, again this might not be applicable to latest version of spark
+- unsafe shuffle or tungsten sort
+	- from spark 1.4.0, he did not mention if this is the default but only that this is avilable from 1.4
+	- operate directly on serialized binary data without the need to deserialize it
  [Revealing Apache Spark Shuffling Magic | by Ajay Gupta | The Startup | Medium](https://medium.com/swlh/revealing-apache-spark-shuffling-magic-b2c304306142)
  https://www.slideshare.net/slideshow/spark-shuffle-introduction/43046270
 For Shuffle read and write

@@ -34,11 +34,17 @@
 		- array of chars to represent each char of the string
 			- this char array itself has hash code, header and other overheads
 			- in the array each char is stored with 2 bytes
+- garbage collection challeges
+	- gc in java works generationally
+		- objects that are shorter lived are better candidates for early garbage collection 
+	- cost of performing garbage collection is proportional to the number of distinct objects in heap
 - using the knowledge of data schema to directly layout the memory ourselves
 	- gets rid of GC
 	- helps serialize data in less memory
+- sun.misc.unsafe API is used to manipulate memory without safety checks(hence unsafe)
+	- build data structures in both on- and off-heap memory
 - there are encoders available for primitive types and product types(case classes) are supported by importing sqlContext.implicits._ for serializing data
-- aggregation and sorting can be don over serialized data
+- aggregation and sorting can be done over serialized data
 
 
 [Deep Dive into Project Tungsten Bringing Spark Closer to Bare Metal -Josh Rosen (Databricks) (youtube.com)](https://www.youtube.com/watch?v=5ajs8EIPWGI)

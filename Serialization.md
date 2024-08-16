@@ -4,6 +4,7 @@ https://stackoverflow.com/questions/1360632/what-are-object-serialization-and-de
 	- why is string, an option for serialization?
 		- so that humans can also understand?
 	- an object does not just have data associated with it, it has methods as well
+	- it is important to notice that what gets serialized is the "value" of the object, or the contents, and not the class definition. Thus methods are not serialized.
 https://stackoverflow.com/questions/447898/what-is-object-serialization
 - everything in computer is bytes, no denying that
 - those bytes are scattered around
@@ -25,3 +26,5 @@ https://hazelcast.com/glossary/serialization/
 
 https://www.youtube.com/watch?v=uS37TujnLRw
 - data can be serialized into text based formats such as json, YAML and XML
+
+[Discover the secrets of the Java Serialization API (oracle.com)](https://www.oracle.com/technical-resources/articles/java/serializationapi.html)

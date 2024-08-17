@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/tungsten.md",
+                "file": "Summaries/SPARK/Spark Tuning.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "dremel",
+                "query": "default",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,11 +65,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 443.5
+    "width": 313.5
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/tungsten.md",
+                "file": "Summaries/SPARK/Spark Tuning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/tungsten.md",
+                "file": "Summaries/SPARK/Spark Tuning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/tungsten.md"
+                "file": "Summaries/SPARK/Spark Tuning.md"
               }
             }
           }
@@ -148,18 +149,19 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
-    "Serialization.md",
+    "Summaries/Spark.md",
+    "Go Deep.md",
+    "Summaries/SPARK/Pyspark.md",
     "Summaries/SPARK/tungsten.md",
+    "Serialization.md",
     "Pasted image 20240816093625.png",
     "Summaries/SPARK/Spark shuffling.md",
     "Pasted image 20240815093134.png",
     "Pasted image 20240814200412.png",
-    "Summaries/SPARK/Pyspark.md",
     "Pasted image 20240814085834.png",
     "Pasted image 20240814085022.png",
     "Pasted image 20240814083612.png",
     "Summaries/SPARK/Join strats.md",
-    "Go Deep.md",
     "Summaries/SPARK/Executor tuning.md",
     "Pasted image 20240813204341.png",
     "Pasted image 20240813093911.png",
@@ -179,7 +181,6 @@
     "Summaries/GCP/BQ Query optimization(official).md",
     "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Interview questions.md",
-    "Summaries/Spark.md",
     "Summaries/SPARK/Spark resource allocation.md",
     "Questions/UST - 2024-07-09.md",
     "Summaries/SQL.md",

@@ -11,3 +11,4 @@
 11. https://stackoverflow.com/questions/68249294/in-spark-what-is-the-meaning-of-spark-executor-pyspark-memory-configuration-opti
 12. If I have a python script that reads data from a file and does some simple transformation. The data is read in to memory and operations are done right?
 13. how does pyspark work?
+14. https://stackoverflow.com/questions/46638901/how-spark-read-a-large-file-petabyte-when-file-can-not-be-fit-in-sparks-main

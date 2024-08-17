@@ -108,6 +108,7 @@
 		- spark.driver.memory has a default of 1GB
 		- spark.executor.memory has a default of 1GB
 - [Spark Task Memory allocation - Stack Overflow](https://stackoverflow.com/questions/45553492/spark-task-memory-allocation)
+- https://stackoverflow.com/questions/66386963/how-is-a-spark-dataframe-partitioned-by-default
 [Distribution of Executors, Cores and Memory for a Spark Application running in Yarn: | spark-notes (spoddutur.github.io)](https://spoddutur.github.io/spark-notes/distribution_of_executors_cores_and_memory_for_spark_application.html)
 [Advanced Apache Spark Training - Sameer Farooqui (Databricks) (youtube.com)](https://www.youtube.com/watch?v=7ooZ4S7Ay6Y)
 [apache spark - What is the relationship between a Node, Worker, Executor, Task and Partition - Stack Overflow](https://stackoverflow.com/questions/68560515/what-is-the-relationship-between-a-node-worker-executor-task-and-partition)

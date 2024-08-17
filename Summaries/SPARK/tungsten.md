@@ -48,3 +48,5 @@
 
 
 [Deep Dive into Project Tungsten Bringing Spark Closer to Bare Metal -Josh Rosen (Databricks) (youtube.com)](https://www.youtube.com/watch?v=5ajs8EIPWGI)
+
+https://teepika-r-m.medium.com/spark-shines-brighter-with-project-tungsten-7317c630e708

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Spark Tuning.md",
+                "file": "Summaries/SPARK/tungsten.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,12 +65,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Spark Tuning.md",
+                "file": "Summaries/SPARK/tungsten.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Spark Tuning.md",
+                "file": "Summaries/SPARK/tungsten.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Spark Tuning.md"
+                "file": "Summaries/SPARK/tungsten.md"
               }
             }
           }
@@ -149,6 +149,8 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/SPARK/spark performance.md",
+    "Summaries/SPARK/Spark Tuning.md",
     "Summaries/Spark.md",
     "Go Deep.md",
     "Summaries/SPARK/Pyspark.md",
@@ -167,7 +169,6 @@
     "Pasted image 20240813093911.png",
     "Pasted image 20240813093700.png",
     "Summaries/SPARK/Executor memory.md",
-    "Summaries/SPARK/Spark Tuning.md",
     "[Java.md",
     "Questions/Walmart Jan.md",
     "Pasted image 20240811081542.png",

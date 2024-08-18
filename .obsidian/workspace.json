@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Spark OOM.md",
+                "file": "Go Deep.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Spark OOM.md",
+                "file": "Go Deep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Spark OOM.md",
+                "file": "Go Deep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Spark OOM.md"
+                "file": "Go Deep.md"
               }
             }
           }
@@ -148,8 +148,9 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
-    "Go Deep.md",
+    "Summaries/Spark.md",
     "Summaries/SPARK/Spark OOM.md",
+    "Go Deep.md",
     "Pasted image 20240818083217.png",
     "Questions/ford.md",
     "Summaries/SPARK/Executor memory.md",
@@ -161,7 +162,6 @@
     "Summaries/SPARK/Spark resource allocation.md",
     "Summaries/SPARK/tungsten.md",
     "Summaries/SPARK/Spark Tuning.md",
-    "Summaries/Spark.md",
     "Serialization.md",
     "Pasted image 20240816093625.png",
     "Summaries/SPARK/Spark shuffling.md",

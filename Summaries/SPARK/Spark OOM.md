@@ -46,3 +46,6 @@ https://medium.com/road-to-data-engineering/spark-performance-optimization-serie
 https://stackoverflow.com/questions/78216245/spark-how-is-it-even-possible-to-get-an-oom#:~:text=Here%2C%20the%20OOM%20occurs%20when,it%20throws%20an%20OOM%20error.
 
 [Spark working internals, and why should you care? (anhcodes.dev)](https://anhcodes.dev/blog/tune-spark/)
+
+
+https://blog.devgenius.io/spark-spill-7e027085ca4c

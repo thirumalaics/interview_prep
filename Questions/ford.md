@@ -1,6 +1,6 @@
 - date partition on a timestamp col
 
-
+i/p 
 Gender     c
 M    		75
 F    		64
@@ -8,7 +8,7 @@ Male    	10
 Female    	12
 
 
-
+o/P
 Gender    Count(*)
 M    		76
 F    		85

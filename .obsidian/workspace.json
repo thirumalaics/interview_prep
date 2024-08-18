@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Spark OOM.md",
+                "file": "Questions/ford.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Spark OOM.md",
+                "file": "Questions/ford.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Spark OOM.md",
+                "file": "Questions/ford.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Spark OOM.md"
+                "file": "Questions/ford.md"
               }
             }
           }
@@ -148,13 +149,13 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/SPARK/Spark OOM.md",
     "Go Deep.md",
     "Summaries/SPARK/Executor memory.md",
     "Summaries/SPARK/Executor tuning.md",
     "Summaries/SPARK/Java.md",
     "Summaries/SPARK/Join strats.md",
     "Summaries/SPARK/Pyspark.md",
-    "Summaries/SPARK/Spark OOM.md",
     "Summaries/SPARK/spark performance.md",
     "Summaries/SPARK/Spark resource allocation.md",
     "Summaries/SPARK/tungsten.md",

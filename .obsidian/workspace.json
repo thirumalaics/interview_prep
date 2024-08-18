@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Questions/ford.md",
+                "file": "Summaries/SPARK/Spark OOM.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Questions/ford.md",
+                "file": "Summaries/SPARK/Spark OOM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Questions/ford.md",
+                "file": "Summaries/SPARK/Spark OOM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Questions/ford.md"
+                "file": "Summaries/SPARK/Spark OOM.md"
               }
             }
           }
@@ -149,6 +149,8 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Pasted image 20240818083217.png",
+    "Questions/ford.md",
     "Summaries/SPARK/Spark OOM.md",
     "Go Deep.md",
     "Summaries/SPARK/Executor memory.md",
@@ -180,11 +182,9 @@
     "Summaries/SPARK/YARN.md",
     "Configuring.md",
     "The.md",
-    "Questions/ford.md",
     "Summaries/GCP/BQ Query optimization(official).md",
     "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Interview questions.md",
-    "Questions/UST - 2024-07-09.md",
     "Summaries/GCP",
     "Summaries/SPARK",
     "Questions",

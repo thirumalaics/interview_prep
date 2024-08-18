@@ -14,3 +14,4 @@
 14. https://stackoverflow.com/questions/46638901/how-spark-read-a-large-file-petabyte-when-file-can-not-be-fit-in-sparks-main
 15. https://teepika-r-m.medium.com/spark-shines-brighter-with-project-tungsten-7317c630e708
 16. https://sparkbyexamples.com/spark/spark-performance-tuning/#performance-guidelines
+17. https://stackoverflow.com/questions/41645679/spark-driver-memory-and-executor-memory

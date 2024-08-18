@@ -27,6 +27,18 @@
 - if memory overhead is exceeded, we may get OOM
 	- used for spark internal objects, language specific objects, thread stacks and nio buffers
 - high concurrency
-	- 
+	- disproportionate number of cores for executors, we will be processing too many partitions
+	- each partition will have its md and memory overhead
+- big partitions
+	- if an executor is trying to process a big partition it will throw an OOM error
+	- big partition may have resulted from decompression or md overhead of file format(exploding parquet file)
+- fetch failed exception, increase exec mem or shuffle partitions
 
+## Driver side mem errors
+- collect operation
+	- limit the result size by using spark.driver.maxResultSize
+- broadcast
+	- before a relation is broadcasted to executors it is materialized at the the driver node
+	- even with single relation, if the size is bigger than the driver's mem it will throw an OOM error
 https://michaelheil.medium.com/understanding-common-performance-issues-in-apache-spark-deep-dive-data-spill-7cdba81e697e
+https://medium.com/road-to-data-engineering/spark-performance-optimization-series-2-spill-685126e9d21f

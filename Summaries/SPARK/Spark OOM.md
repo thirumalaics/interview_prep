@@ -42,3 +42,7 @@
 	- even with single relation, if the size is bigger than the driver's mem it will throw an OOM error
 https://michaelheil.medium.com/understanding-common-performance-issues-in-apache-spark-deep-dive-data-spill-7cdba81e697e
 https://medium.com/road-to-data-engineering/spark-performance-optimization-series-2-spill-685126e9d21f
+
+https://stackoverflow.com/questions/78216245/spark-how-is-it-even-possible-to-get-an-oom#:~:text=Here%2C%20the%20OOM%20occurs%20when,it%20throws%20an%20OOM%20error.
+
+[Spark working internals, and why should you care? (anhcodes.dev)](https://anhcodes.dev/blog/tune-spark/)

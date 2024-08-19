@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Summaries/Python.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Summaries/Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Summaries/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Go Deep.md"
+                "file": "Summaries/Python.md"
               }
             }
           }
@@ -148,10 +148,10 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Go Deep.md",
     "Summaries/SPARK/Spark OOM.md",
     "Summaries/SPARK/spills.md",
     "Summaries/SPARK/Spark shuffling.md",
-    "Go Deep.md",
     "Summaries/SPARK/Spark Tuning.md",
     "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Interview questions.md",

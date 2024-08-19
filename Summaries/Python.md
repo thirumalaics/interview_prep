@@ -1,0 +1,2 @@
+- how to convert hexa to bin, hexa to dec
+- any, all functions

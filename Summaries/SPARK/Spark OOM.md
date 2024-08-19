@@ -47,7 +47,6 @@
 	- transformation is applied on these partitions as well
 	- this process continues till all data is read and transformed
 	- even if we just apply count on the df, spark reads in partitions but in this case it will not write any file
-	- on
 https://michaelheil.medium.com/understanding-common-performance-issues-in-apache-spark-deep-dive-data-spill-7cdba81e697e
 https://medium.com/road-to-data-engineering/spark-performance-optimization-series-2-spill-685126e9d21f
 

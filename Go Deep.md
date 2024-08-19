@@ -15,8 +15,9 @@
 15. https://teepika-r-m.medium.com/spark-shines-brighter-with-project-tungsten-7317c630e708
 16. https://sparkbyexamples.com/spark/spark-performance-tuning/#performance-guidelines
 17. https://stackoverflow.com/questions/41645679/spark-driver-memory-and-executor-memory
-18. https://blog.devgenius.io/spark-questions-interview-series-c31cedf41652
+18. https://blog.devgenius.io/spark-questions-interview-series-c31cedf41652 #interviewquestions
 19. https://www.reddit.com/r/apachespark/comments/t48kz6/how_can_i_get_oom_if_data_that_does_not_fit_in/
 20. https://tsaiprabhanj.medium.com/spark-if-spark-spill-data-to-disk-why-we-are-getting-oom-exception-59588448a5c1
 21. https://stackoverflow.com/questions/78216245/spark-how-is-it-even-possible-to-get-an-oom#:~:text=Here%2C%20the%20OOM%20occurs%20when,it%20throws%20an%20OOM%20error
 22. https://www.reddit.com/r/apachespark/comments/t48kz6/how_can_i_get_oom_if_data_that_does_not_fit_in/
+23. https://blog.devgenius.io/spark-questions-interview-series-c31cedf41652

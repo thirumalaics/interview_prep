@@ -48,12 +48,12 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "default",
+                "query": "question",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -148,8 +148,13 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/SPARK/Spark shuffling.md",
+    "Summaries/SPARK/Spark Tuning.md",
+    "Summaries/GCP/BQ Query.md",
+    "Summaries/GCP/BQ Interview questions.md",
     "Summaries/Spark.md",
     "Summaries/SPARK/Spark OOM.md",
+    "Summaries/SPARK/Pyspark.md",
     "Go Deep.md",
     "Pasted image 20240818083217.png",
     "Questions/ford.md",
@@ -157,14 +162,11 @@
     "Summaries/SPARK/Executor tuning.md",
     "Summaries/SPARK/Java.md",
     "Summaries/SPARK/Join strats.md",
-    "Summaries/SPARK/Pyspark.md",
     "Summaries/SPARK/spark performance.md",
     "Summaries/SPARK/Spark resource allocation.md",
     "Summaries/SPARK/tungsten.md",
-    "Summaries/SPARK/Spark Tuning.md",
     "Serialization.md",
     "Pasted image 20240816093625.png",
-    "Summaries/SPARK/Spark shuffling.md",
     "Pasted image 20240815093134.png",
     "Pasted image 20240814200412.png",
     "Pasted image 20240814085834.png",
@@ -181,8 +183,6 @@
     "Configuring.md",
     "The.md",
     "Summaries/GCP/BQ Query optimization(official).md",
-    "Summaries/GCP/BQ Query.md",
-    "Summaries/GCP/BQ Interview questions.md",
     "Summaries/GCP",
     "Summaries/SPARK",
     "Questions",

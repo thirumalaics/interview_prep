@@ -34,4 +34,6 @@
 
 [How to tune spark executor number, cores and executor memory? - Stack Overflow](https://stackoverflow.com/questions/37871194/how-to-tune-spark-executor-number-cores-and-executor-memory)
 - more than one executor in a node is possible
-- 
+- when using dynamic allocation, we can give, initial executors, max executors, min executors
+	- also interval - if there are pending tasks waiting for more than this time, request. num of executors requested in each round increases exponentially from the previous round
+	- another interval to determine which can executor be killed - idle timeout

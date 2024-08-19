@@ -21,3 +21,4 @@
 21. https://stackoverflow.com/questions/78216245/spark-how-is-it-even-possible-to-get-an-oom#:~:text=Here%2C%20the%20OOM%20occurs%20when,it%20throws%20an%20OOM%20error
 22. https://www.reddit.com/r/apachespark/comments/t48kz6/how_can_i_get_oom_if_data_that_does_not_fit_in/
 23. https://blog.devgenius.io/spark-questions-interview-series-c31cedf41652
+24. https://mrpowers.medium.com/managing-spark-partitions-with-coalesce-and-repartition-4050c57ad5c4#.36o8a7b5j

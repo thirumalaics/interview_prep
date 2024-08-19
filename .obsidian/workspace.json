@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Spark OOM.md",
+                "file": "Go Deep.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5,
-    "collapsed": true
+    "width": 313.5
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Spark OOM.md",
+                "file": "Go Deep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Spark OOM.md",
+                "file": "Go Deep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Spark OOM.md"
+                "file": "Go Deep.md"
               }
             }
           }
@@ -149,8 +148,8 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
-    "Summaries/SPARK/spills.md",
     "Summaries/SPARK/Spark OOM.md",
+    "Summaries/SPARK/spills.md",
     "Summaries/SPARK/Spark shuffling.md",
     "Go Deep.md",
     "Summaries/SPARK/Spark Tuning.md",

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Summaries/SPARK/Spark OOM.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Summaries/SPARK/Spark OOM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Summaries/SPARK/Spark OOM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Go Deep.md"
+                "file": "Summaries/SPARK/Spark OOM.md"
               }
             }
           }
@@ -148,14 +149,15 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/SPARK/spills.md",
+    "Summaries/SPARK/Spark OOM.md",
     "Summaries/SPARK/Spark shuffling.md",
+    "Go Deep.md",
     "Summaries/SPARK/Spark Tuning.md",
     "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Interview questions.md",
     "Summaries/Spark.md",
-    "Summaries/SPARK/Spark OOM.md",
     "Summaries/SPARK/Pyspark.md",
-    "Go Deep.md",
     "Pasted image 20240818083217.png",
     "Questions/ford.md",
     "Summaries/SPARK/Executor memory.md",

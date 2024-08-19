@@ -40,6 +40,14 @@
 - broadcast
 	- before a relation is broadcasted to executors it is materialized at the the driver node
 	- even with single relation, if the size is bigger than the driver's mem it will throw an OOM error
+- [rdd - How spark read a large file (petabyte) when file can not be fit in spark's main memory - Stack Overflow](https://stackoverflow.com/questions/46638901/how-spark-read-a-large-file-petabyte-when-file-can-not-be-fit-in-sparks-main)
+	- all concurrently loaded partitions must fit into memory, or we will get OOM
+	- assuming several stages are there for the current job, spark runs transformations from the first stage on the loaded partitions only
+	- once this is done, it stores the output as shuffle-data and then reads in more partitions
+	- transformation is applied on these partitions as well
+	- this process continues till all data is read and transformed
+	- even if we just apply count on the df, spark reads in partitions but in this case it will not write any file
+	- on
 https://michaelheil.medium.com/understanding-common-performance-issues-in-apache-spark-deep-dive-data-spill-7cdba81e697e
 https://medium.com/road-to-data-engineering/spark-performance-optimization-series-2-spill-685126e9d21f
 

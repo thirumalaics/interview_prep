@@ -30,3 +30,8 @@
 	- try same as executors
 
 [Part 3: Cost Efficient Executor Configuration for Apache Spark | by Brad Caffey | Expedia Group Technology | Medium](https://medium.com/expedia-group-tech/part-3-efficient-executor-configuration-for-apache-spark-b4602929262)
+
+
+[How to tune spark executor number, cores and executor memory? - Stack Overflow](https://stackoverflow.com/questions/37871194/how-to-tune-spark-executor-number-cores-and-executor-memory)
+- more than one executor in a node is possible
+- 

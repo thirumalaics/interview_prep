@@ -23,3 +23,4 @@
 23. https://blog.devgenius.io/spark-questions-interview-series-c31cedf41652
 24. https://mrpowers.medium.com/managing-spark-partitions-with-coalesce-and-repartition-4050c57ad5c4#.36o8a7b5j #coalesce
 25. https://towardsdatascience.com/stop-using-the-limit-clause-wrong-with-spark-646e328774f5 #limit
+26. [Tuning Apache Spark for Large Scale Workloads - Sital Kedia & Gaoxiang Liu (youtube.com)](https://www.youtube.com/watch?v=5dga0UT4RI8) #tuning

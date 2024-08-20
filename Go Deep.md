@@ -24,3 +24,6 @@
 24. https://mrpowers.medium.com/managing-spark-partitions-with-coalesce-and-repartition-4050c57ad5c4#.36o8a7b5j #coalesce
 25. https://towardsdatascience.com/stop-using-the-limit-clause-wrong-with-spark-646e328774f5 #limit
 26. [Tuning Apache Spark for Large Scale Workloads - Sital Kedia & Gaoxiang Liu (youtube.com)](https://www.youtube.com/watch?v=5dga0UT4RI8) #tuning
+27. [apache spark - Number of dataframe partitions after sorting? - Stack Overflow](https://stackoverflow.com/questions/53786188/number-of-dataframe-partitions-after-sorting) #sorting
+28. https://medium.com/@ghoshsiddharth25/partitioning-vs-bucketing-in-apache-spark-a37b342082e4 #bucketing
+29. https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/4861715144695760/2994977456373837/5701837197372837/latest.html

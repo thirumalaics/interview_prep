@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Executor tuning.md",
+                "file": "Go Deep.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5,
-    "collapsed": true
+    "width": 313.5
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Executor tuning.md",
+                "file": "Go Deep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Executor tuning.md",
+                "file": "Go Deep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Executor tuning.md"
+                "file": "Go Deep.md"
               }
             }
           }
@@ -149,6 +148,7 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/SPARK/Executor tuning.md",
     "Summaries/SPARK/Spark Tuning.md",
     "Go Deep.md",
     "Summaries/Spark.md",
@@ -162,7 +162,6 @@
     "Pasted image 20240818083217.png",
     "Questions/ford.md",
     "Summaries/SPARK/Executor memory.md",
-    "Summaries/SPARK/Executor tuning.md",
     "Summaries/SPARK/Java.md",
     "Summaries/SPARK/Join strats.md",
     "Summaries/SPARK/spark performance.md",

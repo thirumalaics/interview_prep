@@ -25,3 +25,46 @@ def obstacle(queries):
 obstacle([[1, 2], [1, 5],[2, 3, 2], [2,0,2],[1,-1],[2, 3, 3], [2,0,2], [2, 1, 1], [2, 1, 2]])
 obstacle([[2,0,2]])
 ```
+
+
+
+a= [school , sckool , Kiran, Karan, Amol , Amul , Anil ]
+ 
+Input :
+School
+Sckool
+Amol
+Anil
+ 
+Ouput:
+Sch
+Sck
+Amo
+An
+            s -2 
+           c - 2
+         h-1   k - 1
+
+
+
+n length of input string -> O(n)
+
+class Tree:
+	def __init__(self, val):
+		self.children = {}
+		self.val = val
+		self.count = 1
+	def addWord(self, word):
+		curr = self
+		for i in word:
+			if i in curr.children:
+				curr.children[i].count+=1
+			else:
+				node = Tree(i)
+				curr.children[i] = node
+			curr = curr.children[i]
+		
+
+node = Tree('')
+for i in a:
+	

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Questions/Visa.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Questions/Visa.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Questions/Visa.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Go Deep.md"
+                "file": "Questions/Visa.md"
               }
             }
           }
@@ -148,9 +149,9 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Go Deep.md",
     "Summaries/Spark.md",
     "Summaries/GCP/BQ Query optimization(official).md",
-    "Go Deep.md",
     "Summaries/SPARK/Executor tuning.md",
     "Summaries/SPARK/Spark Tuning.md",
     "Summaries/Python.md",

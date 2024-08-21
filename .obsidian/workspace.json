@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md",
+                "file": "Go Deep.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5,
-    "collapsed": true
+    "width": 313.5
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md",
+                "file": "Go Deep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md",
+                "file": "Go Deep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/GCP/BQ Query optimization(official).md"
+                "file": "Go Deep.md"
               }
             }
           }
@@ -149,10 +148,11 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/Spark.md",
+    "Summaries/GCP/BQ Query optimization(official).md",
     "Go Deep.md",
     "Summaries/SPARK/Executor tuning.md",
     "Summaries/SPARK/Spark Tuning.md",
-    "Summaries/Spark.md",
     "Summaries/Python.md",
     "Summaries/SPARK/Spark OOM.md",
     "Summaries/SPARK/spills.md",
@@ -184,7 +184,6 @@
     "Questions/Australia.md",
     "Summaries/SPARK/YARN.md",
     "Configuring.md",
-    "The.md",
     "Summaries/GCP",
     "Summaries/SPARK",
     "Questions",

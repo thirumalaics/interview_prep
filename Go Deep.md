@@ -28,3 +28,4 @@
 28. https://medium.com/@ghoshsiddharth25/partitioning-vs-bucketing-in-apache-spark-a37b342082e4 #bucketing
 29. https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/4861715144695760/2994977456373837/5701837197372837/latest.html
 30. https://stackoverflow.com/questions/56857453/what-is-the-difference-between-partitioning-and-bucketing-in-spark
+31. https://www.youtube.com/watch?v=YetRD4nncas

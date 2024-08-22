@@ -67,4 +67,26 @@ class Tree:
 
 node = Tree('')
 for i in a:
-	
+
+
+- data quality
+	- accuracy
+		- extent to which data accurately represents real-word values or events
+		- data validation rules to prevent inaccurate info from entering our sys
+	- completeness
+		- whether a dataset contains all necessary records, without missing values or gaps
+		- filling missing values, merging multiple information sources or utilizing external reference datasets
+	- timeliness and currency
+		- up to date data makes it relevant for analysis and decision making purposes
+		- incremental updates, scheduled refreshes
+	- consistency
+		- the extent to which data values are coherent and compatible across different datasets or systems
+		- using consistent naming conventions, formats and units of measurement
+	- uniqueness
+		- dups can skew analysis by over-representing specific data points or trends
+		- deduplication
+	- data granularity and relevance
+		- striking a balance between granular low level data and high level data
+		- too granular can make it complex to analyze
+		- high granularity might loose some details and make the data useless for specific use cases
+	- 

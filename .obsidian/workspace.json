@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Questions/Visa.md",
+                "file": "Go Deep.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Questions/Visa.md",
+                "file": "Go Deep.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Questions/Visa.md",
+                "file": "Go Deep.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Questions/Visa.md"
+                "file": "Go Deep.md"
               }
             }
           }
@@ -146,12 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ab69a536cc7bb049",
+  "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Questions/Visa.md",
     "Summaries/SPARK/Pyspark.md",
     "Summaries/SQL.md",
     "Summaries/SQL Query execution flow.md",
-    "Questions/Visa.md",
     "Go Deep.md",
     "Summaries/Spark.md",
     "Summaries/GCP/BQ Query optimization(official).md",

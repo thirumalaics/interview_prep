@@ -29,3 +29,5 @@
 29. https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/4861715144695760/2994977456373837/5701837197372837/latest.html
 30. https://stackoverflow.com/questions/56857453/what-is-the-difference-between-partitioning-and-bucketing-in-spark
 31. https://www.youtube.com/watch?v=YetRD4nncas
+32. https://stackoverflow.com/questions/70985235/what-is-opencostinbytes
+33. https://stackoverflow.com/questions/31508083/difference-between-dataframe-dataset-and-rdd-in-spark?rq=1

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Questions/Visa.md",
+                "file": "Summaries/SQL.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Questions/Visa.md",
+                "file": "Summaries/SQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Questions/Visa.md",
+                "file": "Summaries/SQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Questions/Visa.md"
+                "file": "Summaries/SQL.md"
               }
             }
           }
@@ -148,6 +148,8 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/SQL Query execution flow.md",
+    "Questions/Visa.md",
     "Go Deep.md",
     "Summaries/Spark.md",
     "Summaries/GCP/BQ Query optimization(official).md",
@@ -180,10 +182,8 @@
     "Pasted image 20240813093700.png",
     "[Java.md",
     "Questions/Walmart Jan.md",
-    "Questions/Visa.md",
     "Questions/Australia.md",
     "Summaries/SPARK/YARN.md",
-    "Configuring.md",
     "Summaries/GCP",
     "Summaries/SPARK",
     "Questions",

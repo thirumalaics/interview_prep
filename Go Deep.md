@@ -31,3 +31,4 @@
 31. https://www.youtube.com/watch?v=YetRD4nncas
 32. https://stackoverflow.com/questions/70985235/what-is-opencostinbytes
 33. https://stackoverflow.com/questions/31508083/difference-between-dataframe-dataset-and-rdd-in-spark?rq=1
+34. https://stackoverflow.com/questions/26994025/whats-the-meaning-of-locality-levelon-spark-cluster

@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "question",
+                "query": "logical",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,12 +65,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 313.5,
-    "collapsed": true
+    "width": 313.5
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -147,7 +147,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2f7b73c576076c70",
+  "active": "629bf254231d7454",
   "lastOpenFiles": [
     "Summaries/SQL.md",
     "Summaries/SQL Query execution flow.md",

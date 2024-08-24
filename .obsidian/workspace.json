@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SQL.md",
+                "file": "Summaries/SPARK/Pyspark.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SQL.md",
+                "file": "Summaries/SPARK/Pyspark.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SQL.md",
+                "file": "Summaries/SPARK/Pyspark.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SQL.md"
+                "file": "Summaries/SPARK/Pyspark.md"
               }
             }
           }
@@ -148,6 +149,7 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/SQL.md",
     "Summaries/SQL Query execution flow.md",
     "Questions/Visa.md",
     "Go Deep.md",
@@ -183,7 +185,6 @@
     "[Java.md",
     "Questions/Walmart Jan.md",
     "Questions/Australia.md",
-    "Summaries/SPARK/YARN.md",
     "Summaries/GCP",
     "Summaries/SPARK",
     "Questions",

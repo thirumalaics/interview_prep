@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Summaries/SPARK/Pyspark.md",
+                "file": "Questions/Visa.md",
                 "mode": "source",
                 "source": false
               }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Summaries/SPARK/Pyspark.md",
+                "file": "Questions/Visa.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Summaries/SPARK/Pyspark.md",
+                "file": "Questions/Visa.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Summaries/SPARK/Pyspark.md"
+                "file": "Questions/Visa.md"
               }
             }
           }
@@ -147,8 +146,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "629bf254231d7454",
+  "active": "ab69a536cc7bb049",
   "lastOpenFiles": [
+    "Summaries/SPARK/Pyspark.md",
     "Summaries/SQL.md",
     "Summaries/SQL Query execution flow.md",
     "Questions/Visa.md",
@@ -163,7 +163,6 @@
     "Summaries/SPARK/Spark shuffling.md",
     "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Interview questions.md",
-    "Summaries/SPARK/Pyspark.md",
     "Pasted image 20240818083217.png",
     "Questions/ford.md",
     "Summaries/SPARK/Executor memory.md",

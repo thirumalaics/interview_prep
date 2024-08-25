@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Summaries/SPARK/Join strats.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Summaries/SPARK/Join strats.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Go Deep.md",
+                "file": "Summaries/SPARK/Join strats.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Go Deep.md"
+                "file": "Summaries/SPARK/Join strats.md"
               }
             }
           }
@@ -148,11 +149,12 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Summaries/GCP/JOIN optimization.md",
+    "Go Deep.md",
     "Questions/Visa.md",
     "Summaries/SPARK/Pyspark.md",
     "Summaries/SQL.md",
     "Summaries/SQL Query execution flow.md",
-    "Go Deep.md",
     "Summaries/Spark.md",
     "Summaries/GCP/BQ Query optimization(official).md",
     "Summaries/SPARK/Executor tuning.md",
@@ -183,7 +185,6 @@
     "Pasted image 20240813093700.png",
     "[Java.md",
     "Questions/Walmart Jan.md",
-    "Questions/Australia.md",
     "Summaries/GCP",
     "Summaries/SPARK",
     "Questions",

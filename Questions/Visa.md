@@ -89,4 +89,53 @@ for i in a:
 		- striking a balance between granular low level data and high level data
 		- too granular can make it complex to analyze
 		- high granularity might loose some details and make the data useless for specific use cases
-	- 
+/*
+trip_id
+driver_id
+customer_id
+start_time "String" "2023/01/01 23:59:59"
+end_time "String" "2024/01/01 23:59:59"
+pickup_location
+dropoff_location
+trip_cost
+rating
+payment_type */
+
+start_time "2023/01/01 11:59:59"
+end_time "2023/01/01 23:59:59"
+
+
+/* checks for start_time < end_time and ensure all match this condition */
+checkDataValidity(trips: DataFrame) {
+    trips = trips.where(to_date(trips.start_time, 'yyyy/MM/dd HH:mm:ss') < to_date(trips.end_time, 'yyyy/MM/dd HH:mm:ss'))
+    trips = trips.where(unixtimestamp(trips.start_time, 'yyyy/MM/dd HH:mm:ss') < unixtimestamp(trips.end_time,'yyyy/MM/dd HH:mm:ss'))
+}
+
+/* pickup_location = "23.673,582.99" " , longitutde"
+
+lattitude =23.673
+longitutde  = 582.99
+
+convertLocation(trips: DataFrame) : DataFrame ={
+    trips.select(*trips.columns, split('lattitude', ',',0).alias('lattitude'), split('longitutde', ',',0).alias('longitutde')).drop('pickup_location')
+}
+
+
+[select filter]->[GroupBy agg GroupBy filter] 
+
+
+ 
+spark.read.format("jdbc")
+...
+...
+.option("query", "SELECT * FROM table_name")
+.option("paritionColumn", "start_date")
+.option("lowerBound", "0").load()
+
+df1.select - \
+                -  Join - filter - groupBy - agg - select
+df2.select - /
+
+https://sparkbyexamples.com/pyspark/pyspark-split-dataframe-column-into-multiple-columns/
+It is not allowed to specify `query` and `partitionColumn` options at the same time. When specifying `partitionColumn` option is required, the subquery can be specified using `dbtable` option instead and partition columns can be qualified using the subquery alias provided as part of `dbtable`.
+https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html

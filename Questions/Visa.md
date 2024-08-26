@@ -111,7 +111,7 @@ checkDataValidity(trips: DataFrame) {
     trips = trips.where(unixtimestamp(trips.start_time, 'yyyy/MM/dd HH:mm:ss') < unixtimestamp(trips.end_time,'yyyy/MM/dd HH:mm:ss'))
 }
 
-/* pickup_location = "23.673,582.99" " , longitutde"
+/* pickup_location = "23.673,582.99" " , longitutde" -> splitting
 
 lattitude =23.673
 longitutde  = 582.99
@@ -139,3 +139,7 @@ df2.select - /
 https://sparkbyexamples.com/pyspark/pyspark-split-dataframe-column-into-multiple-columns/
 It is not allowed to specify `query` and `partitionColumn` options at the same time. When specifying `partitionColumn` option is required, the subquery can be specified using `dbtable` option instead and partition columns can be qualified using the subquery alias provided as part of `dbtable`.
 https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html
+
+
+
+3 ways to connect to hive server

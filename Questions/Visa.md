@@ -137,9 +137,11 @@ df1.select - \
 df2.select - /
 
 https://sparkbyexamples.com/pyspark/pyspark-split-dataframe-column-into-multiple-columns/
+can I specify partitionColumn when using query?
 It is not allowed to specify `query` and `partitionColumn` options at the same time. When specifying `partitionColumn` option is required, the subquery can be specified using `dbtable` option instead and partition columns can be qualified using the subquery alias provided as part of `dbtable`.
 https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html
 
 
 
 3 ways to connect to hive server
+bq architecture

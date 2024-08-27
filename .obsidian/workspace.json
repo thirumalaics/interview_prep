@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Questions/Visa.md",
+                "file": "Questions/walmart aug.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Questions/Visa.md",
+                "file": "Questions/walmart aug.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Questions/Visa.md",
+                "file": "Questions/walmart aug.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Questions/Visa.md"
+                "file": "Questions/walmart aug.md"
               }
             }
           }
@@ -148,8 +148,10 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
-    "Questions/Tiger.md",
+    "Questions/Walmart Jan.md",
+    "Questions/walmart aug.md",
     "Questions/Visa.md",
+    "Questions/Tiger.md",
     "Summaries/SPARK/Join strats.md",
     "Summaries/GCP/JOIN optimization.md",
     "Go Deep.md",
@@ -173,7 +175,6 @@
     "Summaries/SPARK/spark performance.md",
     "Summaries/SPARK/Spark resource allocation.md",
     "Summaries/SPARK/tungsten.md",
-    "Serialization.md",
     "Pasted image 20240816093625.png",
     "Pasted image 20240815093134.png",
     "Pasted image 20240814200412.png",
@@ -183,7 +184,6 @@
     "Pasted image 20240813204341.png",
     "Pasted image 20240813093911.png",
     "Pasted image 20240813093700.png",
-    "[Java.md",
     "Summaries/GCP",
     "Summaries/SPARK",
     "Questions",

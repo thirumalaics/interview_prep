@@ -145,3 +145,4 @@ https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html
 
 3 ways to connect to hive server
 bq architecture
+static partitioning dynamic partition in hive

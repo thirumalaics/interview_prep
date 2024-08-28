@@ -145,4 +145,10 @@ https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html
 
 3 ways to connect to hive server
 bq architecture
-static partitioning dynamic partition in hive
+- static partitioning dynamic partition in hive
+	- as I know, partitioning is useful to prune data during query
+	- in static partitioning, we add a partition in table and move the file into the partition of the table
+		- in each and every load statement, we specify the partition column's value
+		- if table partitioned by country, each time we need to provide country value
+	- dynamic partitioning - whole file, every row of the data is read and data is partitioned through a MR job into the destination tables depending on certain field in file
+		- we do not have to specify partition column value each time

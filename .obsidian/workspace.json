@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Questions/walmart aug.md",
+                "file": "Questions/Visa.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Questions/walmart aug.md",
+                "file": "Questions/Visa.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Questions/walmart aug.md",
+                "file": "Questions/Visa.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Questions/walmart aug.md"
+                "file": "Questions/Visa.md"
               }
             }
           }
@@ -148,8 +149,8 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
-    "Questions/Walmart Jan.md",
     "Questions/walmart aug.md",
+    "Questions/Walmart Jan.md",
     "Questions/Visa.md",
     "Questions/Tiger.md",
     "Summaries/SPARK/Join strats.md",

@@ -16,4 +16,18 @@ e1.dept = tmp.dept
 - can we restrict dataproc resources for different job requests
 - masking data pii
 - spark resource allocation question 16cores, 64 gigb
-- 
+
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName('my_app').getOrCreate()
+
+df = spark.read.format('csv').option('header','true').option('inferSchema','true').load('gs://bucket/my-file.csv')
+
+df.write.partitionBy('STATUS').format('parquet').save('gs://bucket/partitioned_data/')
+
+
+1 -> job = 1 action
+
+2 stages ->  reading ->  writing
+
+logical and physical storage

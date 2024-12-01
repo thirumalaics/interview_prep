@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -164,10 +165,11 @@
   },
   "active": "2f7b73c576076c70",
   "lastOpenFiles": [
+    "Questions/ford.md",
+    "Questions/Tiger.md",
     "Questions/Visa.md",
     "Questions/walmart aug.md",
     "Questions/Walmart Jan.md",
-    "Questions/Tiger.md",
     "Summaries/SPARK/Join strats.md",
     "Summaries/GCP/JOIN optimization.md",
     "Go Deep.md",
@@ -185,7 +187,6 @@
     "Summaries/GCP/BQ Query.md",
     "Summaries/GCP/BQ Interview questions.md",
     "Pasted image 20240818083217.png",
-    "Questions/ford.md",
     "Summaries/SPARK/Executor memory.md",
     "Summaries/SPARK/Java.md",
     "Summaries/SPARK/spark performance.md",

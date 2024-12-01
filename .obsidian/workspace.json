@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Questions/Tiger.md",
+                "file": "Questions/Walmart Jan.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tiger"
+              "title": "Walmart Jan"
             }
           }
         ]
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5,
-    "collapsed": true
+    "width": 313.5
   },
   "right": {
     "id": "1a43fe8818ee1be4",
@@ -163,12 +162,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2f7b73c576076c70",
+  "active": "ab69a536cc7bb049",
   "lastOpenFiles": [
-    "Questions/ford.md",
-    "Questions/Tiger.md",
-    "Questions/Visa.md",
     "Questions/walmart aug.md",
+    "Questions/Australia.md",
+    "Questions/Visa.md",
+    "Questions/UST - 2024-07-09.md",
+    "Questions/Tiger.md",
+    "Questions/ford.md",
     "Questions/Walmart Jan.md",
     "Summaries/SPARK/Join strats.md",
     "Summaries/GCP/JOIN optimization.md",
@@ -190,8 +191,6 @@
     "Summaries/SPARK/Executor memory.md",
     "Summaries/SPARK/Java.md",
     "Summaries/SPARK/spark performance.md",
-    "Summaries/SPARK/Spark resource allocation.md",
-    "Summaries/SPARK/tungsten.md",
     "Pasted image 20240816093625.png",
     "Pasted image 20240815093134.png",
     "Pasted image 20240814200412.png",
